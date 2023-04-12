@@ -1,0 +1,194 @@
+[
+  {
+    "section": "Student Information",
+    "sample": "~(fee_runningbal_init)<tr>~[tlist;Fee;studentid=~(curstudid);thisyear;thisschool;alternatecolor;sortcmd;DateTime,&gt;]~(fee_runningbal_update)</tr>",
+    "tags": [
+      {
+        "name": "Student Photo",
+        "disp": "&#126;(studentphoto)",
+        "desc": "Displays the current student photo",
+        "ex": "<noquote>~(studentphoto)</noquote>"
+      },
+      {
+        "name": "Student Photo - Small",
+        "disp": "&#126;[studenttitlephoto]",
+        "desc": "Displays the current student photo. Creates a link to open a popup window with the full size photo.",
+        "ex": "<noquote>~[studenttitlephoto]</noquote>"
+      },
+      {
+        "name": "Current Student ID",
+        "disp": "&#126;(curstudid)",
+        "desc": "Displays the current student ID",
+        "ex": "~(curstudid)"
+      },
+      {
+        "name": "Student Name",
+        "disp": "&#126;(studentname)",
+        "desc": "Displays the current student name",
+        "ex": "~(studentname)"
+      },
+      {
+        "name": "Student Number",
+        "disp": "&#126;(studentnumber)",
+        "desc": "Displays the current student number",
+        "ex": "~(studentnumber)"
+      },
+      {
+        "name": "Student Number",
+        "disp": "&#126;(student_number)",
+        "desc": "Displays the current student number",
+        "ex": "~(student_number)"
+      },
+      {
+        "name": "Current Section ID",
+        "disp": "&#126;(cursecid)",
+        "desc": "Displays the current section ID",
+        "ex": "~(cursecid)"
+      },
+      {
+        "name": "Student Age",
+        "disp": "&#126;(age)",
+        "desc": "Displays the student's age.",
+        "ex": "~(age)"
+      },
+      {
+        "name": "Student Long Age",
+        "disp": "&#126;(age;long)",
+        "desc": "Displays the student's age in long format.",
+        "ex": "~(age;long)"
+      },
+      {
+        "name": "Student Age in Years",
+        "disp": "&#126;(age;years)",
+        "desc": "Displays the student's age in years.",
+        "ex": "~(age;years)"
+      },
+      {
+        "name": "he/she",
+        "disp": "&#126;(he/she)",
+        "desc": "Displays he or she based on the student",
+        "ex": "~(he/she)"
+      },
+      {
+        "name": "He/She",
+        "disp": "&#126;(He/She)",
+        "desc": "Displays He or She based on the student",
+        "ex": "~(He/She)"
+      },
+      {
+        "name": "him/her",
+        "disp": "&#126;(him/her)",
+        "desc": "Displays him or her based on the student",
+        "ex": "~(him/her)"
+      },
+      {
+        "name": "His/Her",
+        "disp": "&#126;(His/Her)",
+        "desc": "Displays His or Her based on the student",
+        "ex": "~(His/Her)"
+      },
+      {
+        "name": "son/daughter",
+        "disp": "&#126;(son/daughter)",
+        "desc": "Displays son or daughter based on the student.",
+        "ex": "~(son/daughter)"
+      },
+      {
+        "name": "Student Current Enrollment School",
+        "disp": "&#126;(curenrollmentschool)",
+        "desc": "Displays the student's current enrollment school.",
+        "ex": "~(curenrollmentschool)"
+      },
+      {
+        "name": "Student School Name",
+        "disp": "&#126;(studentschoolname)",
+        "desc": "Displays the student's current school.",
+        "ex": "~(studentschoolname)"
+      },
+      {
+        "name": "Student School Abbreviation",
+        "disp": "&#126;(studschoolabbr)",
+        "desc": "Displays the student's current school abbreviation.",
+        "ex": "~(studschoolabbr)"
+      },
+      {
+        "name": "Student School Abbreviation",
+        "disp": "&#126;(studschoolabbr;usestudschool)",
+        "desc": "Displays the student's enrolled school abbreviation.",
+        "ex": "~(studschoolabbr;usestudschool)"
+      },
+      {
+        "name": "Students School Address",
+        "disp": "&#126;(studschooladdrpdf)",
+        "desc": "Displays the full address for the students current school.",
+        "ex": "~(studschooladdrpdf)"
+      },
+      {
+        "name": "Students School Address",
+        "disp": "&#126;(studentschooladdrpdf)",
+        "desc": "Displays the full address for the students current school.",
+        "ex": "~(studentschooladdrpdf)"
+      },
+      {
+        "name": "Student Current School ID",
+        "disp": "&#126;(studentcurrschoolid)",
+        "desc": "Displays the student's current school ID.",
+        "ex": "~(studentcurrschoolid)"
+      },
+      {
+        "name": "Student Next School Name",
+        "disp": "&#126;(nextschoolname)",
+        "desc": "Displays the student's next school.",
+        "ex": "~(nextschoolname)"
+      },
+      {
+        "name": "Fee Balance",
+        "disp": "&#126;(Fee_GetStudentBalance)",
+        "desc": "Returns the student's current fee balance.",
+        "ex": "~(Fee_GetStudentBalance)"
+      },
+      {
+        "name": "Running Fee Amount",
+        "disp": "&#126;(fee_runningbal_amount)",
+        "desc": "Returns the student's calculated fee amount.<br /><i>Only available after &#126;(fee_runningbal_init) & &#126;(fee_runningbal_update)</i>",
+        "ex": "~(fee_runningbal_amount)"
+      },
+      {
+        "name": "Running Fee Prorated Amount",
+        "disp": "&#126;(fee_runningbal_prorated)",
+        "desc": "Returns the student's calculated fee prorated amount.<br /><i>Only available after &#126;(fee_runningbal_init) & &#126;(fee_runningbal_update)</i>",
+        "ex": "~(fee_runningbal_prorated)"
+      },
+      {
+        "name": "Running Fee Paid Amount",
+        "disp": "&#126;(fee_runningbal_paid)",
+        "desc": "Returns the student's calculated fee paid.<br /><i>Only available after &#126;(fee_runningbal_init) & &#126;(fee_runningbal_update)</i>",
+        "ex": "~(fee_runningbal_paid)"
+      },
+      {
+        "name": "Running Fee Balance",
+        "disp": "&#126;(fee_runningbal_bal)",
+        "desc": "Returns the student's calculated fee balance.<br /><i>Only available after &#126;(fee_runningbal_init) & &#126;(fee_runningbal_update)</i>",
+        "ex": "~(fee_runningbal_bal)"
+      },
+      {
+        "name": "Running Fee Link",
+        "disp": "&#126;(fee_payment_link)",
+        "desc": "Returns the student's calculated fee link.<br /><i>Only available after &#126;(fee_runningbal_init) & &#126;(fee_runningbal_update)</i>",
+        "ex": "<noquote>~(fee_payment_link)</noquote>"
+      },
+      {
+        "name": "Student Alerts",
+        "disp": "&#126;[studentalert]",
+        "desc": "Returns the student's Alert icons",
+        "ex": "<noquote>~[studentalert]</noquote>"
+      },
+      {
+        "name": "Enrollment Status",
+        "disp": "&#126;[enrollmentstatus]",
+        "desc": "Returns the student's Enrollment Status.<br /><i>Current Enrollment returns blank</i>",
+        "ex": "<noquote>~[enrollmentstatus]</noquote>"
+      }
+    ]
+  }
+]

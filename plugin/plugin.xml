@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://plugin.powerschool.pearson.com"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation='http://plugin.powerschool.pearson.com plugin.xsd'
+		name="META PS DAT Reference"
+		version="23.04.2.0"
+		description="PSHTML Tags, Descriptions, and Examples">
+		<publisher name="META Solutions">
+	    <contact email="ITDevelopmentHelp@metasolutions.net"/>
+	  </publisher>
+		<access_request>
+			<cdn_request>
+				<cdn name="https://apps2.metasolutions.net" />
+			</cdn_request>
+		</access_request>
+</plugin>

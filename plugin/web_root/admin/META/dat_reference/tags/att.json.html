@@ -1,0 +1,161 @@
+[
+  {
+    "section": "Attendance and Membership Tags",
+    "description": "This section includes DATs used to return attendance and membership information.",
+    "tags": [
+      {
+        "name": "Attendance Points by Expression",
+        "disp": "&#126;(attpointsperiod;{expression})",
+        "desc": "Total attendance points in the student's current {expression} class.",
+        "code": "&#126;(attpointsperiod;2(A))",
+        "ex": "~(attpointsperiod;2(A))"
+      },
+      {
+        "name": "Attendance Points by Period",
+        "disp": "&#126;(attpointsperiod;{period_number})",
+        "desc": "Total attendance points in the student's current Period {period_number} class.",
+        "code": "&#126;(attpointsperiod;2)",
+        "ex": "~(attpointsperiod;2)"
+      },
+      {
+        "name": "Attendance Points (per term)",
+        "disp": "&#126;(attpointsperiod;{expression_or_period};{term})",
+        "desc": "Total attendance points in the student's Period {period_number} class during {term}.",
+        "code": "&#126;(attpointsperiod;2(A);Q1)",
+        "ex": "~(attpointsperiod;2(A);Q1)"
+      },
+      {
+        "name": "Attendance Points (by date)",
+        "disp": "&#126;(attpointsperiod;{expression_or_period};{start_date};{end_date})",
+        "desc": "Attendance points the student earned in his or her Period {period_number} class between {start_date} and {end_date}.",
+        "code": "&#126;(attpointsperiod;2(A);3/1/2021;3/31/2021)",
+        "ex": "~(attpointsperiod;2(A);3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Period Attendance - By Expression",
+        "disp": "&#126;(per.att;{expression})",
+        "desc": "Total absences in the student's current {expression} class.",
+        "code": "&#126;(per.att;2(A))",
+        "ex": "~(per.att;2(A))"
+      },
+      {
+        "name": "Period Attendance - By Period",
+        "disp": "&#126;(per.att;{period_number})",
+        "desc": "Total absences in the student's current Period {period_number} class.",
+        "code": "&#126;(per.att;2)",
+        "ex": "~(per.att;2)"
+      },
+      {
+        "name": "Period Attendance - By Attendance Code or Category",
+        "disp": "&#126;(per.att;{expression_or_period};{att_code})",
+        "desc": "Displays the total period attendance codes for the specified Attendance Codes or Cateogry.",
+        "code": "&#126;(per.att;2(A);A)",
+        "ex": "~(per.att;2(A);A)"
+      },
+      {
+        "name": "Period Attendance - By Term",
+        "disp": "&#126;(per.att;{expression_or_period};{att_code_or_cat};{term})",
+        "desc": "Displays the total period attendance codes for the specified term.",
+        "code": "&#126;(per.att;2(A);;Q4)",
+        "ex": "~(per.att;2(A);;Q4)"
+      },
+      {
+        "name": "Period Attendance - By Date Range",
+        "disp": "&#126;(per.att;{expression_or_period};{att_code_or_cat};{start_date};{end_date})",
+        "desc": "Displays the total period attendance codes for the specified date range.",
+        "code": "&#126;(per.att;2(A);;3/1/2021;3/31/2021)",
+        "ex": "~(per.att;2(A);;3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Daily Membership",
+        "disp": "&#126;(*DM)",
+        "desc": "Total Days of membership for a single student.",
+        "code": "&#126;(*DM)",
+        "ex": "~(*DM)"
+      },
+      {
+        "name": "Daily Membership (by term)",
+        "disp": "&#126;(*DM;{term})",
+        "desc": "Days of membership for a single student during the specified term.",
+        "code": "&#126;(*DM;Q1)",
+        "ex": "~(*DM;Q1)"
+      },
+      {
+        "name": "Daily Membership (by date)",
+        "disp": "&#126;(*DM;{start_date};{end_date})",
+        "desc": "Days of membership for a single student during the specified dates.",
+        "code": "&#126;(*DM;3/1/2021;3/31/2021)",
+        "ex": "~(*DM;3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Ada/Adm Percentage",
+        "disp": "&#126;(*ADAADM)",
+        "desc": "Displays total days in attendance divided by the total daily membership as a percentage.",
+        "code": "&#126;(*ADAADM)",
+        "ex": "~(*ADAADM)"
+      },
+      {
+        "name": "Ada/Adm Percentage (by term)",
+        "disp": "&#126;(*ADAADM;{term})",
+        "desc": "Displays total days in attendance divided by the total daily membership as a percentage for the specified term.",
+        "code": "&#126;(*ADAADM;Q1)",
+        "ex": "~(*ADAADM;Q1)"
+      },
+      {
+        "name": "Ada/Adm Percentage (by date)",
+        "disp": "&#126;(*ADAADM;{start_date};{end_date})",
+        "desc": "Displays total days in attendance divided by the total daily membership as a percentage for the specified date range.",
+        "code": "&#126;(*ADAADM;3/1/2021;3/31/2021)",
+        "ex": "~(*ADAADM;3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Ada/Adm Percentage (with formatting)",
+        "disp": "&#126;(*ADAADM;{start_date};{end_date};format={format})",
+        "desc": "Displays total days in attendance divided by the total daily membership as a percentage for the specified date range using the specified format.",
+        "code": "&#126;(*ADAADM;3/1/2021;3/31/2021;format=##0.000)",
+        "ex": "~(*ADAADM;3/1/2021;3/31/2021;format=##0.000)"
+      },
+      {
+        "name": "Daily Attendance (by date)",
+        "disp": "&#126;(*DA;{start_date};{end_date})",
+        "desc": "Days of attendance for a single student during the specified dates.",
+        "code": "&#126;(*DA;3/1/2021;3/31/2021)",
+        "ex": "~(*DA;3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Daily Absences (by term)",
+        "disp": "&#126;(*DABS;{term})",
+        "desc": "Days of absences by term for a single student.",
+        "code": "&#126;(*DABS;Q1)",
+        "ex": "~(*DABS;Q1)"
+      },
+      {
+        "name": "Daily Absences (by date)",
+        "disp": "&#126;(*DABS;{start_date};{end_date})",
+        "desc": "Days of absences by date for a single student during the specified dates.",
+        "code": "&#126;(*DABS;3/1/2021;3/31/2021)",
+        "ex": "~(*DABS;3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Aggregate Membership Days",
+        "disp": "&#126;(aggmemdays)",
+        "desc": "Calculates the aggregate membership days per student for the term in which you are currently working in PowerSchool SIS.",
+        "ex": "~(aggmemdays)"
+      },
+      {
+        "name": "Aggregate Membership Days by date",
+        "disp": "&#126;(aggmemdays;{start_date};{end_date})",
+        "desc": "The system inserts the total number of membership days per student that fall within the specified date range.",
+        "code": "&#126;(aggmemdays;3/1/2021;3/31/2021)",
+        "ex": "~(aggmemdays;3/1/2021;3/31/2021)"
+      },
+      {
+        "name": "Dates of Attendance",
+        "disp": "&#126;(dates.of.attendance;{expression};{display_format};{attendance_codes};{start_date};{end_date})",
+        "desc": "Returns a list of dates for meeting attendance codes entered for an individual student.<br>The display format parameter defines how the results of the DAT will be printed; in more technical terms, it is the delimiter that will be used between each returned attendance code instance. Any character may be used as the record delimiter, such as the slash (\"/\") or pipe (\"|\").",
+        "code": "&#126;(dates.of.attendance;2(A); / ;A; 1/1/21;5/1/21)",
+        "ex": "~(dates.of.attendance;2(A); / ;A; 1/1/21;5/1/21)"
+      }
+    ]
+  }
+]

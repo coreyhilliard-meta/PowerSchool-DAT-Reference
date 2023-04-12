@@ -1,0 +1,141 @@
+[
+  {
+    "section": "Time Format Operators",
+    "tags": [
+      {
+        "name": "Current Time",
+        "disp": "&#126;[time]",
+        "desc": "Displays today's time: HH:MI AM.",
+        "ex": "~[time]"
+      },
+      {
+        "name": "Internationalization Time",
+        "disp": "&#126;[i18DorT:{time},param:{timeformat}]",
+        "desc": "Displays the i18n time from {time}",
+        "code": "&#126;[i18DorT:14:55,param:hhmm]",
+        "ex": "~[i18DorT:14:55,param:hhmm;format=hhmm]"
+      },
+      {
+        "name": "Current Time (without colons)",
+        "disp": "&#126;[current.time.no.colon]",
+        "desc": "Displays today's time: HH:MI AM.",
+        "ex": "~[current.time.no.colon]"
+      },
+      {
+        "name": "Current Public Time (without colons)",
+        "disp": "&#126;[publictime]",
+        "desc": "Displays today's time.",
+        "ex": "~[publictime]"
+      },
+      {
+        "name": "Current Time",
+        "disp": "&#126;(f.currenttime)",
+        "desc": "Displays today's time: HH24:MI:SS.",
+        "ex": "~(f.currenttime)"
+      },
+      {
+        "name": "HHMM",
+        "disp": "&#126;(f.currenttime;format=HHMM)",
+        "desc": "Displays today's time: HH24:MI.",
+        "ex": "~(f.currenttime;format=HHMM)"
+      },
+      {
+        "name": "HHMM_AMPM",
+        "disp": "&#126;(f.currenttime;format=HHMM_AMPM)",
+        "desc": "Displays today's time: HH:MI AM.",
+        "ex": "~(f.currenttime;format=HHMM_AMPM)"
+      },
+      {
+        "name": "HHMMSS",
+        "disp": "&#126;(f.currenttime;format=HHMMSS)",
+        "desc": "Displays today's time: HH24:MI:SS.",
+        "ex": "~(f.currenttime;format=HHMMSS)"
+      },
+      {
+        "name": "HHMMSS,nocolon",
+        "disp": "&#126;(f.currenttime;format=HHMMSS,nocolon)",
+        "desc": "Displays today's time: HH24MISS.",
+        "ex": "~(f.currenttime;format=HHMMSS,nocolon)"
+      },
+      {
+        "name": "Hour Min",
+        "disp": "&#126;(f.currenttime;format=Hour Min)",
+        "desc": "Displays today's time: ## hours ## minutes.",
+        "ex": "~(f.currenttime;format=Hour Min)"
+      },
+      {
+        "name": "Hour Min Sec",
+        "disp": "&#126;(f.currenttime;format=Hour Min Sec)",
+        "desc": "Displays today's time: ## hours ## minutes ## seconds.",
+        "ex": "~(f.currenttime;format=Hour Min Sec)"
+      },
+      {
+        "name": "[h]",
+        "disp": "&#126;(f.currenttime;format=[h])",
+        "desc": "Custom Format: hour, number, no leading 0.",
+        "ex": "~(f.currenttime;format=[h])"
+      },
+      {
+        "name": "[hh]",
+        "disp": "&#126;(f.currenttime;format=[hh])",
+        "desc": "Custom Format: hour, number, leading 0.",
+        "ex": "~(f.currenttime;format=[hh])"
+      },
+      {
+        "name": "[m]",
+        "disp": "&#126;(f.currenttime;format=[m])",
+        "desc": "Custom Format: minute, number, no leading 0.",
+        "ex": "~(f.currenttime;format=[m])"
+      },
+      {
+        "name": "[mm]",
+        "disp": "&#126;(f.currenttime;format=[mm])",
+        "desc": "Custom Format: minute, number, leading 0.",
+        "ex": "~(f.currenttime;format=[mm])"
+      },
+      {
+        "name": "[s]",
+        "disp": "&#126;(f.currenttime;format=[s])",
+        "desc": "Custom Format: minute, number, no leading 0.",
+        "ex": "~(f.currenttime;format=[s])"
+      },
+      {
+        "name": "[ss]",
+        "disp": "&#126;(f.currenttime;format=[ss])",
+        "desc": "Custom Format: minute, number, leading 0.",
+        "ex": "~(f.currenttime;format=[ss])"
+      },
+      {
+        "name": "[ampm] or [AMPM]",
+        "disp": "&#126;(f.currenttime;format=[{format}])",
+        "desc": "Custom Format: {format} = ampm or AMPM.",
+        "ex": "~(f.currenttime;format=[ampm])"
+      },
+      {
+        "name": "Internationalization AM/PM",
+        "disp": "&#126;[i18ampm:{ampm}]",
+        "desc": "Displays the i18n time am/pm",
+        "ex": "~[i18ampm]"
+      },
+      {
+        "name": "[sc]",
+        "disp": "&#126;(f.currenttime;format=[hh][sc][mm])",
+        "desc": "Custom Format (semicolon): HH;MI.",
+        "ex": "~(f.currenttime;format=[hh][sc][mm])"
+      },
+      {
+        "name": "[comma]",
+        "disp": "&#126;(f.currenttime;format=[hh][comma][mm])",
+        "desc": "Custom Format (comma): HH,MI.",
+        "ex": "~(f.currenttime;format=[hh][comma][mm])"
+      },
+      {
+        "name": "Internationalization Time Format",
+        "disp": "&#126;[timeformat]",
+        "desc": "Displays the i18n time format using the optional {time_format}",
+        "ex": "~[timeformat]"
+      }
+      
+    ]
+  }
+]

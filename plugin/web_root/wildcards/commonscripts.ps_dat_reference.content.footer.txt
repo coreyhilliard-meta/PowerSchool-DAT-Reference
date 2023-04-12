@@ -1,0 +1,13 @@
+~[if#AdminOnly.~[directory]=admin]
+  <script type="text/x-custom-template" id="metaPSDATHelpMenu">
+    <div class="comphelppopupLines">
+      <a href="/admin/META/dat_reference/home.html" title="PowerSchool DAT Reference" ,="" accesskey="?" target="_blank">PS DAT Reference</a>
+    </div>
+  </script>
+
+  <script>
+  $j(function() {
+    $j("#btnHelpPlusCompliance").append($j("#metaPSDATHelpMenu").html());
+  });
+  </script>
+[/if#AdminOnly]

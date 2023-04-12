@@ -1,0 +1,78 @@
+[
+  {
+    "section": "Decimal Code Operators",
+    "sample": "~[SetPostValue:ExampleNum=123.46]~[SetPostValue:ExampleNum2=13.62]",
+    "tags": [
+      {
+        "name": "Numeric Field",
+        "disp": "&#126;({fieldname})",
+        "desc": "Sample Decimal Formatting Codes",
+        "code": "&#126;(gpv.ExampleNum)<br>&#126;(gpv.ExampleNum2)",
+        "ex": "~(gpv.ExampleNum)<br>~(gpv.ExampleNum2)"
+      },
+      {
+        "name": "Format",
+        "disp": "&#126;({fieldname};format=###.000)",
+        "desc":"3 digits to the left of the decimal (not mandatory), and 3 digits to the right (mandatory).",
+        "code": "&#126;(gpv.ExampleNum2;format=###.000)",
+        "ex": "~(gpv.ExampleNum2;format=###.000)"
+      },
+      {
+        "name": "Format",
+        "disp": "&#126;({fieldname};format=00000.0000)",
+        "desc":"5 digits to the left and 4 digits to the right of the decimal mandatory.",
+        "code": "&#126;(gpv.ExampleNum;format=00000.0000)",
+        "ex": "~(gpv.ExampleNum;format=00000.0000)"
+      },
+      {
+        "name": "Format",
+        "desc": "4 digits to the left of the decimal & one to the right. Ones place is mandatory.",
+        "disp": "&#126;({fieldname};format=###0.0)",
+        "code": "&#126;(gpv.ExampleNum;format=###0.0)",
+        "ex": "~(gpv.ExampleNum;format=###0.0)"
+      },
+      {
+        "name": "Format Error",
+        "desc": "If the format mask cannot contain the value, you will get <<<<<<",
+        "disp": "&#126;({fieldname};format=00.000)",
+        "code": "&#126;(gpv.ExampleNum;format=00.000)",
+        "ex": "~(gpv.ExampleNum;format=00.000)"
+      },
+      {
+        "name": "Simple Math",
+        "disp": "&#126;({field};+1)",
+        "desc": "Add, subtract, multiply or divide a value from {field}.",
+        "code": "&#126;(grade_level;+1)",
+        "ex": "~(grade_level;+1)"
+      },
+      {
+        "name": "Round to Whole Digit",
+        "disp": "&#126;({fieldname};round)",
+        "desc": "Rounds number to whole digit",
+        "code": "&#126;(gpv.ExampleNum2;round)",
+        "ex": "~(gpv.ExampleNum2;round)"
+      },
+      {
+        "name": "Truncate to Whole Digit",
+        "disp": "&#126;({fieldname};trunc)",
+        "desc": "Rounds number to whole digit",
+        "code": "&#126;(gpv.ExampleNum2;trunc)",
+        "ex": "~(gpv.ExampleNum2;trunc)"
+      },
+      {
+        "name": "Round to Specified Digit",
+        "disp": "&#126;({fieldname};round=1)",
+        "desc": "Rounds number to the specified digit",
+        "code": "&#126;(gpv.ExampleNum;round=1)",
+        "ex": "~(gpv.ExampleNum;round=1)"
+      },
+      {
+        "name": "Truncate to Specified Digit",
+        "disp": "&#126;({fieldname};trunc=1)",
+        "desc": "Rounds number to the specified digit",
+        "code": "&#126;(gpv.ExampleNum;trunc=1)",
+        "ex": "~(gpv.ExampleNum;trunc=1)"
+      }
+    ]
+  }
+]

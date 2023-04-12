@@ -1,0 +1,133 @@
+[
+  {
+    "section": "Server Info Tags",
+    "tags": [
+      {
+        "name": "Server Node",
+        "disp": "&#126;[x:systeminfo:machine.name]",
+        "desc": "Displays name of server node user is on.",
+        "ex": "~[x:systeminfo:machine.name]"
+      },
+      {
+        "name": "Server Host Name",
+        "disp": "&#126;[server_hostname]",
+        "desc": "Display the PowerSchool Server Host Name",
+        "ex": "~[server_hostname]"
+      },
+      {
+        "name": "PowerSchool Version",
+        "disp": "&#126;[version]",
+        "desc": "Displays the version of PowerSchool.",
+        "ex": "~[version]"
+      },
+      {
+        "name": "PowerSchool Version",
+        "disp": "&#126;[x:version]",
+        "desc": "Displays the version of PowerSchool.",
+        "ex": "~[x:version]"
+      },
+      {
+        "name": "PowerSchool Version",
+        "disp": "&#126;[x:version;short]",
+        "desc": "Displays the short version of PowerSchool.",
+        "ex": "~[x:version;short]"
+      },
+      {
+        "name": "PowerSchool Version - Long",
+        "disp": "&#126;[x:version;long]",
+        "desc": "Displays the long version of PowerSchool.",
+        "ex": "~[x:version;long]"
+      },
+      {
+        "name": "PowerSchool Version - Full",
+        "disp": "&#126;[x:version;full]",
+        "desc": "Displays the full version of PowerSchool.",
+        "ex": "~[x:version;full]"
+      },
+      {
+        "name": "PowerSchool Version",
+        "disp": "&#126;[gsv:*versionstr]",
+        "desc": "Displays the full version of PowerSchool.",
+        "ex": "~[gsv:*versionstr]"
+      },
+      {
+        "name": "PowerSchool Version",
+        "disp": "&#126;[sr-version]",
+        "desc": "Displays the version of State Reporting.",
+        "ex": "~[sr-version]"
+      },
+      {
+        "name": "PowerSchool Version",
+        "disp": "&#126;[wc:_powerteacher_version]",
+        "desc": "Displays the version of PowerTeacher."
+      },
+      {
+        "name": "PowerSchool Last Version",
+        "disp": "&#126;[displaypref:lastversionnumber]",
+        "code": "&#126;[if.~[displaypref:lastversionnumber]>=12.0.1.0]You have term suppression![/if]",
+        "desc": "Returns current version from prefs, works more reliably in if statements.",
+        "ex": "~[if.~[displaypref:lastversionnumber]>=12.0.1.0]You have term suppression![/if]"
+      },
+      {
+        "name": "Server Instance ID",
+        "disp": "&#126;[server_instance_id]",
+        "desc": "Display the PowerSchool Server Instance ID",
+        "ex": "~[server_instance_id]"
+      },
+      {
+        "name": "Server IP Address",
+        "disp": "&#126;[server_ip_address]",
+        "desc": "Display the PowerSchool Server IP Address",
+        "ex": "~[server_ip_address]"
+      },
+      {
+        "name": "Server IP Address",
+        "disp": "&#126;[x:WEB_GetServerInfo;name=IPAddress]",
+        "desc": "Display the PowerSchool Server IP Address",
+        "ex": "~[x:WEB_GetServerInfo;name=IPAddress]"
+      },
+      {
+        "name": "Installed Path",
+        "disp": "&#126;[gsv:*ps_root]",
+        "desc": "Display the PowerSchool Installed Path.",
+        "ex": "<noquote>~[gsv:*ps_root]</noquote>"
+      },
+      {
+        "name": "Server Platform",
+        "disp": "&#126;[gsv:*pf_name]",
+        "desc": "Display the PowerSchool Server Platform.",
+        "ex": "~[gsv:*pf_name]"
+      },
+      {
+        "name": "Server OS Version",
+        "disp": "&#126;[gsv:*pf_os_info]",
+        "desc": "Display the PowerSchool Server Operating System Version.",
+        "ex": "~[gsv:*pf_os_info]"
+      },
+      {
+        "name": "Server Location",
+        "disp": "&#126;[serverlocation]",
+        "desc": "Displays Location of server node user is on.",
+        "ex": "~[serverlocation]"
+      },
+      {
+        "name": "Get Server Info: Host Name",
+        "disp": "&#126;[x:WEB_GetServerInfo;name=HostName]",
+        "desc": "Outputs the server Hose Name.",
+        "ex": "~[x:WEB_GetServerInfo;name=HostName]"
+      },
+      {
+        "name": "Report Works Developer URL",
+        "disp": "&#126;[getrwdeveloperurl]",
+        "desc": "Displays the Report Words Developer URL.",
+        "ex": "~[getrwdeveloperurl]"
+      },
+      {
+        "name": "Attendance Code List",
+        "disp": "&#126;[x:att_attcodelist]",
+        "desc": "Displays the Attedance Code Dropdown List.",
+        "ex": "<noquote>~[x:att_attcodelist]</noquote>"
+      }
+    ]
+  }
+]

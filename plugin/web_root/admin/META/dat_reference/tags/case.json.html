@@ -1,0 +1,34 @@
+[
+  {
+    "section": "Case Statement",
+    "tags": [
+      {
+        "name": "Fieldname",
+        "disp": "&#126;[case.{fieldname}]<br />[&#47;case]",
+        "desc": "The name of the field to evaluate. <br /><i>In for following examples, the gender = \"~(gender)\"",
+        "code": "&#126;[case.<strong>&#126;(gender)</strong>][&#47;case] <red>Invalid</red>",
+        "ex": "~[case.~(gender)]
+        [/case]"
+      },
+      {
+        "name": "Of Value 1 <i>(when)</i>",
+        "disp": "&#126;[case.{fieldname}]<br /><strong>[of.{value1}]{result1}[/of]</strong><br />[&#47;case]",
+        "desc": "Evaluate the field against the specified {value1} and return {result1}.<br><i>In this example, the field gender is evaluated against the value M.</i>",
+        "code": "&#126;[case.&#126;(gender)]<br />[of.M]Male[/of]<br />[&#47;case] <red>Incomplete</red>",
+        "ex": "~[case.~(gender)]
+        [of.M]Male[/of]
+        [/case]"
+      },
+      {
+        "name": "Of Value N <i>(when)</i>",
+        "disp": "&#126;[case.{fieldname}]<br />[of.{value1}]{result1}[/of]<br /><strong>[of.{value2}]{result2}[/of]</strong><br />[&#47;case]",
+        "desc": "Next, evaluate the field against the specified {value2} and return {result2}.<br><i>In this example, the field gender is evaluated against the value F.</i>",
+        "code": "&#126;[case.&#126;(gender)]<br />[of.M]Male[/of]<br />[of.F]Female[/of]<br />[&#47;case]",
+        "ex": "~[case.~(gender)]
+        [of.M]Male[/of]
+        [of.F]Female[/of]
+        [/case]"
+      }
+    ]
+  }
+]

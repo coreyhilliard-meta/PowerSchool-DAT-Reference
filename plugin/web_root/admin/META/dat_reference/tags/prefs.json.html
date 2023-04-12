@@ -1,0 +1,78 @@
+[
+  {
+    "section": "Preference Tags",
+    "tags": [
+
+    {
+      "name": "Display Preference Name",
+      "disp": "&#126;[displaypref:{prefname}]",
+      "desc": "Displays the Pref value stored in prefname.",
+      "code": "&#126;[displaypref:superintendent]",
+      "ex": "~[displaypref:superintendent]"
+    },
+    {
+      "name": "Display Preference Name",
+      "disp": "&#126;[displaypref:{prefname};{default}]",
+      "desc": "Displays the Pref value stored in prefname. If the prefname is not found, the default value is displayed.",
+      "code": "&#126;[displaypref:pref_that_doesnt_exist;default value goes here]",
+      "ex": "~[displaypref:pref_that_doesnt_exist;default value goes here]"
+    },
+    {
+      "name": "Display Preference Name",
+      "disp": "&#126;[pref:prefname]",
+      "desc": "Displays the Pref value stored in prefname.",
+      "code": "&#126;[pref:superintendent]",
+      "ex": "~[pref:superintendent]"
+    },
+    
+      {
+        "name": "Pref Name Alternate Syntax",
+        "disp": "&#126;(f.pref;fn=get;name=prefname)",
+        "desc": "Alternate method to display the Pref value stored in prefname.",
+        "code": "&#126;(f.pref;fn=get;name=superintendent)",
+        "ex": "~(f.pref;fn=get;name=superintendent)"
+      },
+      {
+        "name": "School Pref Name",
+        "disp": "&#126;[displayprefschool:{prefname}]",
+        "desc": "Pref value stored in {prefname}-S&#126;(curschoolid)."
+      },
+      {
+        "name": "School Pref ID",
+        "disp": "&#126;[displayprefschoolid:{prefname}]",
+        "desc": "Pref value stored in {prefname} where schoolid = &#126;(curschoolid)."
+      },
+      {
+        "name": "School Pref",
+        "disp": "&#126;[prefschool:{prefname}]",
+        "desc": "Pref value stored in {prefname}-S&#126;(curschoolid)."
+      },
+      {
+        "name": "School Current Grade Display",
+        "disp": "&#126;[prefschool:curfgname]",
+        "desc": "Value of School-Current Grade Display.",
+        "ex": "~[prefschool:curfgname]"
+      },
+      {
+        "name": "Year School Pref",
+        "disp": "&#126;[displayprefyearschool:{prefname}]",
+        "desc": "Get Prefs value where Name = pref_name, schoolID = curschoolID and YearID = curyeardID."
+      },
+      {
+        "name": "Year Pref",
+        "disp": "&#126;[displayprefyear:{prefname}]",
+        "desc": "Get Prefs value where Name = pref_name and YearID = curyeardID."
+      },
+      {
+        "name": "Year School Pref",
+        "disp": "&#126;[prefyearschool:prefname]",
+        "desc": "Get Prefs value where Name = pref_name, schoolID = curschoolID and YearID = curyeardID."
+      },
+      {
+        "name": "User Year Pref",
+        "disp": "&#126;[displayprefyearuser:prefname]",
+        "desc": "Get Prefs value where Name = pref_name and UserID = curUserID."
+      }
+    ]
+  }
+]

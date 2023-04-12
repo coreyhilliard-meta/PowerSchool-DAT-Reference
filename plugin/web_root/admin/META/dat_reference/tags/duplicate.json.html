@@ -1,0 +1,59 @@
+[
+  {
+    "section": "Duplicate Tag",
+    "tags": [
+      {
+        "name": "Duplicate",
+        "disp": "&#126;[duplicate;{n};{placeholdertext};{substitute};counterstart={countstart};alternatecolor;]<br>{template}<br>[/duplicate]",
+        "desc": "Duplicates {template} for {n} times"
+      },
+      {
+        "name": "{n}",
+        "disp": "&#126;[duplicate;<b>{n}</b>;{placeholdertext};{substitute};counterstart={countstart};alternatecolor;]<br>{template}<br>[/duplicate]",
+        "desc": "Required. Number of times to repeat duplicated text template.",
+        "code":"&#126;[duplicate;3]Hello [/duplicate]",
+        "ex":"~[duplicate;3]Hello [/duplicate]"
+      },
+      {
+        "name": "{placeholdertext}",
+        "disp": "&#126;[duplicate;{n};<b>{placeholdertext}</b>;{substitute};counterstart={countstart};alternatecolor;]<br>{template}<br>[/duplicate]",
+        "desc": "Optional. Text that will be replaced with a substitute value in the template.",
+        "code":"&#126;[duplicate;3;Hello NN [/duplicate]",
+        "ex":"~[duplicate;3;NN]Hello NN [/duplicate]"
+      },
+      {
+        "name": "{substitute}",
+        "disp": "&#126;[duplicate;{n};{placeholdertext};<b>{substitute}</b>;counterstart={countstart};alternatecolor;]<br>{template}<br>[/duplicate]",
+        "desc": "Optional. Inserted any location in the template that matches the {placeholdertext} parameter. Possible values: count.",
+        "code":"&#126;[duplicate;3;NN;count;counterstart=7]Hello NN [/duplicate]",
+        "ex":"~[duplicate;3;NN;count;counterstart=7]Hello NN [/duplicate]"
+      },
+      {
+        "name": "counterstart={counterstart}",
+        "disp": "&#126;[duplicate;{n};{placeholdertext};{substitute};<b>counterstart={countstart}</b>;alternatecolor;]<br>{template}<br>[/duplicate]",
+        "desc": "Optional. Default=1. Changes the starting value of the substitute count parameter.",
+        "code":"&#126;[duplicate;3;NN;count]Hello NN [/duplicate]",
+        "ex":"~[duplicate;3;NN;count]Hello NN [/duplicate]"
+      },
+      {
+        "name": "alternatecolor",
+        "disp": "&#126;[duplicate;{n};{placeholdertext};{substitute};counterstart={countstart};<b>alternatecolor</b>;]<br>{template}<br>[/duplicate]",
+        "desc": "Optional. This can be used to have PowerSchool render an alternating color background for the template.",
+        "code":"&lt;table><br>&#126;[duplicate;3;NN;count;alternatecolor]&lt;tr>&lt;td>Hello&lt;/td>&lt;td>NN&lt;/td>&lt;tr>[/duplicate]&lt;/table>",
+        "ex":"<table>~[duplicate;3;NN;count;alternatecolor]<tr><td>Hello</td><td>NN</td></tr>[/duplicate]</table>"
+      },
+      {
+        "name": "{template}",
+        "disp": "&#126;[duplicate;{n};{placeholdertext};{substitute};counterstart={countstart};alternatecolor;]<br><b>{template}</b><br>[/duplicate]",
+        "desc": "Required. Text that will be repeated by the tag."
+      },
+      {
+        "name": "Duplicate Row",
+        "disp": "&#126;[duplicaterow;{n};{placeholdertext};count]",
+        "desc": "Duplicates the current row for {n} times",
+        "code":"&lt;table><br>&lt;tr>&#126;[duplicaterow;3;vv;count]<br>&lt;td>Hello&lt;/td>&lt;td>vv&lt;/td><br>&lt;/tr><br>&lt;/table>",
+        "ex":"<table><tr>~[duplicaterow;3;vv;count]<td>Hello</td><td>vv</td></tr></table>"
+      }
+    ]
+  }
+]

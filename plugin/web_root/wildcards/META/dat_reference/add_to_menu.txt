@@ -1,0 +1,37 @@
+<!-- This HTML template contains the header and table structure for the META Solutions Plugins -->
+<script id="meta_reference_div" type="text/x-custom-template">
+  <h2>META Solutions Plugins</h2>
+  <table id="meta_~[x:distofficeflag]_settings" class="linkDescList">
+    <colgroup>
+      <col><col>
+    </colgroup>
+    <tbody></tbody>
+  </table>
+</script>
+
+<!-- This HTML template defines a table row with a link and description for the PowerSchool DAT Reference. -->
+<script id="meta_reference_tr" type="text/x-custom-template">
+  <tr>
+    <td><a href="/admin/META/dat_reference/home.html">PowerSchool DAT Reference</a></td>
+    <td>PSHTML Tags, Descriptions, and Examples</td>
+  </tr>
+</script>
+
+<!-- This script contains the main functionality for appending the DAT Reference link to the plugins table. -->
+<script>
+  // This function appends the DAT Reference link to the plugins table if the specified element exists.
+  // If the element does not exist, the function will keep checking until the maxCounter value is reached.
+  function metaAppendDATReferenceTo(ifExists, addContent, addContentTo, counter, maxCounter = 25) {
+    if ($j(ifExists).length > 0 || counter >= maxCounter) {
+      if ($j(ifExists).length == 0) $j(addContentTo).after($j(addContent).html());
+      $j("#meta_~[x:distofficeflag]_settings tbody").append($j("#meta_reference_tr").html());
+    } else if ($j(ifExists).length == 0 && counter < maxCounter) {
+      setTimeout(function() {metaAppendDATReferenceTo(ifExists, addContent, addContentTo, ++counter);}, 10);
+    }
+  }
+
+  // This jQuery code runs the metaAppendDATReferenceTo() function after the document is ready.
+  $j(function() { 
+    metaAppendDATReferenceTo("#meta_~[x:distofficeflag]_settings", "#meta_reference_div", "#content-main div.box-round table:last", 1);
+  });
+</script>

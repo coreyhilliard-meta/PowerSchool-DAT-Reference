@@ -1,0 +1,13 @@
+{
+~[tlist_sql;with s as (
+    select dcid, lastfirst
+    from students
+)
+select s.dcid, s.lastfirst
+from s
+OFFSET ~(gpv.nd) ROWS FETCH NEXT 1 ROWS ONLY;
+]
+    "dcid":"~(dcid)",
+    "name":"~(lastfirst)"
+[/tlist_sql]
+}

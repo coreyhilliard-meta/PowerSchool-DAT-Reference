@@ -1,0 +1,108 @@
+[
+  {
+    "section": "Tlist_SQL Tag",
+    "description": "<p>TLIST_SQL is the name of a tag that executes SQL right in the page and returns the results. It is <b>STRONGLY DEPRECATED</b> in new development work for several reasons: if not used carefully it can easily introduce security holes, reflects improper layering, and because there is almost always a better way to do the same operation.</p><p>The following table is a reference of the modifiers that can be applied to variables in the tlist_sql statement.</p>",
+    "tags": [
+      {
+        "name": "Query",
+        "disp": "&#126;[tlist_sql;{query}][/tlist_sql]",
+        "desc": "This command allows you to create your own sql queries and placing the results in a PowerSchool web page.",
+        "code": "&#126;[tlist_sql;select dummy from dual][/tlist_sql]",
+        "ex": "~[tlist_sql;select dummy from dual][/tlist_sql]"
+      },
+      {
+        "name": "Query - Format Get Paremeter Variable (GPV) to SQL Text",
+        "disp": "&#126;(gpv.{name};<b>sqlText</b>)",
+        "desc": "Optional but <b>HIGHLY</b> recommended. Ensures gpv values are properly encoded to SQL strings."
+      },
+      {
+        "name": "Query - Format Get Paremeter Variable (GPV) to SQL Number",
+        "disp": "&#126;(gpv.{name};<b>num</b>)",
+        "desc": "Optional but <b>HIGHLY</b> recommended. Ensures gpv values are properly encoded to SQL numbers."
+      },
+      {
+        "name": "Query - Format Get Paremeter Variable (GPV) to SQL Where",
+        "disp": "&#126;(gpv.{name};<b>tagText</b>)",
+        "desc": "Optional but <b>HIGHLY</b> recommended. Ensures gpv values are properly encoded to SQL Where/And clause."
+      },
+      {
+        "name": "Query - Current Selection Temp Table",
+        "disp": "&#126;[temp.table.current.selection:{table}])",
+        "desc": "Get the Temp Table name for the Current Selection.",
+        "code": "&#126;[temp.table.current.selection:students]",
+        "ex": "~[temp.table.current.selection:students]"
+      },
+      {
+        "name": "Row Template",
+        "disp": "&#126;[tlist_sql;{query}]{row_template}[/tlist_sql]",
+        "desc": "Replicated for each result row from the sql query.<br>This template includes column substitution tags.<br>Note: The number of tags must match the columns<br>Note: The order of the columns defines the display order<br>Note:Tag names do not need to match column names",
+        "code": "&#126;[tlist_sql;select dummy from dual]Value=&#126;(1)[/tlist_sql]",
+        "ex": "~[tlist_sql;select dummy from dual]Value=~(1)[/tlist_sql]"
+      },
+      {
+        "name": "Row Template - Column substitutes",
+        "disp": "&#126;({name};{type};{modifier})",
+        "desc": "Column substitutes will pull data from the result set in the same order that it is declared in the query."
+      },
+      {
+        "name": "Row Template - Column - {name}",
+        "disp": "&#126;(<b>{name}</b>;{type};{modifier})",
+        "desc": "Unique name for the column binding. If this name is used again in the row template, it will pull the column data and not create a new binding.",
+        "code": "&#126;[tlist_sql;select dummy from dual]&#126;(dummy)[/tlist_sql]",
+        "ex": "~[tlist_sql;select dummy from dual]~(dummy)[/tlist_sql]"
+      },
+      {
+        "name": "Row Template - Column - {type}",
+        "disp": "&#126;({name}<b>;{type}</b>;{modifier})",
+        "desc": "Optional formatting of the column binding.<br>
+          Possible Values:
+          <ul>
+            <li><b>t</b> = text (Default)</li>
+            <li><b>l</b> = longint</li>
+            <li><b>l;format=time</b> = Time - Converts a column that's a NUMBER that represents seconds as HH:MM.</li>
+            <li><b>url</b> = URL escapes text to be used as part of a link</li>
+            <li><b>js</b> = JS will escape specific characters so that the returned value in the TList_SQL can be injected into a Javascript String value</li>
+            <li><b>json</b> = Json will escape specific characters so that the returned value in the TList_SQL can be injected into a JSON object</li>
+            <li><b>html</b> = Html will escape specific characters so that the returned value in the TList_SQL can be rendered to the page while preventing html injection</li>
+            <li><b>xml10</b> = Xml10 will escape specific characters so that the returned value in the TList_SQL can be injected into a XML v1.0 object</li>
+            <li><b>xml11</b> = Xml11 will escape specific characters so that the returned value in the TList_SQL can be injected into a XML v1.1 object</li>
+            <li><b>ReplaceCRLFWithBR</b> = ReplaceCRLFWithBR will replace CR, LF, CRLF with &lt;br/></li>
+            <li><b>d</b> = Date - Formats a column that's a DATE or TIMESTAMP type to display in currently logged in users locale format</li>
+            <li><b>r</b> = real(double precision)</li>
+          </ul>",
+        "code": "&#126;[tlist_sql;select dummy from dual]&#126;(dummy;t)[/tlist_sql]",
+        "ex": "~[tlist_sql;select dummy from dual]~(dummy;t)[/tlist_sql]"
+      },
+      {
+        "name": "Row Template - Column - {modifier}",
+        "disp": "&#126;({name};{type}<b>;{modifier}</b>)",
+        "desc": "Optional. Conditional statements can be used here to replace the column's actual value.<br>
+        <ul>
+          <li><b>if blank</b> - ;if.blank.then={display_if_blank};else={display_if_not_blank}</li>
+          <li><b>if test</b> - ;if.test={value};then={display_if_true};else={display_if_false}</li>
+          <li><b>if/else if test</b> - ;if.test={value};then={display_if_value_true};else.if={value2};then={display_if_value2_true};else={display_if_false})</li>
+        </ul>
+        ",
+        "code": "&#126;[tlist_sql;select dummy from dual]&#126;(dummy;t;if.blank.then=Blank;else=Not Blank)[/tlist_sql]",
+        "ex": "~[tlist_sql;select dummy from dual]~(dummy;t;if.blank.then=Blank;else=Not Blank)[/tlist_sql]"
+      },
+      {
+        "name": "Alternate Color",
+        "disp": "&#126;[tlist_sql;{query};<b>alternatecolor</b>]{row_template}[/tlist_sql]",
+        "desc": "Optional. This can be used to have PowerSchool render an alternating color background for the template."
+      },
+      {
+        "name": "None Message",
+        "disp": "&#126;[tlist_sql;{query};<b>nonemessage={none_message}</b>]{row_template}[/tlist_sql]",
+        "desc": "Optional. PowerSchool will render {none_message} instead of the {row_template} when the query does not return any rows, or when the query fails.",
+        "code": "&#126;[tlist_sql;select id from students where id = 0;nonemessage=No Matching Student]ID: &#126;(1)[/tlist_sql]",
+        "ex": "~[tlist_sql;select id from students where id = 0;nonemessage=No Matching Student]ID: ~(1)[/tlist_sql]"
+      },
+      {
+        "name": "Make Student Selection",
+        "disp": "&#126;[tlist_sql;{query}<b>;makestudentselection</b>]{row_template}[/tlist_sql]",
+        "desc": "If this option is used the student id must be passed out as &#126;(ID;l) in the output area, this is so PS can capture the ID's to create the selection."
+      }
+    ]
+  }
+]

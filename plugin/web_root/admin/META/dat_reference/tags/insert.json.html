@@ -1,0 +1,127 @@
+[
+  {
+    "section": "Code Insertion Tags",
+    "tags": [
+      {
+        "name": "Wildcard files",
+        "disp": "&#126;[wc:{filename}]",
+        "desc": "The contents of the text file referenced by the {filename} parameter from the /wildcards folder.",
+        "code": "&#126;[wc:button_delete]",
+        "ex": "<noquote>~[wc:button_delete]</noquote>"
+      },
+      {
+        "name": "Wildcard files",
+        "disp": "&#126;[wildcard:{filename}]",
+        "desc": "The contents of the text file referenced by the {filename} parameter from the /wildcards folder.",
+        "code": "&#126;[wildcard:button_delete]",
+        "ex": "<noquote>~[wildcard:button_delete]</noquote>"
+      },
+      {
+        "name": "Insert File",
+        "disp": "&#126;[x:insertfile;{pageurl}]",
+        "desc": "The insert file command inserts the contents of another file."
+      },
+      {
+        "name": "Insert File Duplicate",
+        "disp": "&#126;[x:insertfileduplicate;{pageurl}]",
+        "desc": "The insert file Duplicate command inserts the contents of another file. This tag ensures that {pageurl} is only inserted into the page once."
+      },
+      {
+        "name": "Submit Button",
+        "disp": "&#126;[submitbutton]",
+        "desc": "Displays a submit button",
+        "ex": "<noquote>~[submitbutton]</noquote>"
+      },
+      {
+        "name": "Submit Button",
+        "disp": "&#126;(updatebutton)",
+        "desc": "Displays a submit button",
+        "ex": "<noquote>~(updatebutton)</noquote>"
+      },
+      {
+        "name": "Delete Button",
+        "disp": "&#126;(deletebutton)",
+        "desc": "Displays a delete button",
+        "ex": "<noquote>~(deletebutton)</noquote>"
+      },
+      {
+        "name": "Select By Grade",
+        "disp": "&#126;[selectbygrade]",
+        "desc": "Displays a list of grades that will set the current student selection.",
+        "ex": "<noquote>~[selectbygrade]</noquote>"
+      },
+      {
+        "name": "Previous Menu Link",
+        "disp": "&#126;[prevmenulink]",
+        "desc": "Displays a link that will navigate to one level higher in the url.",
+        "ex": "<noquote>~[prevmenulink]</noquote>"
+      },
+      {
+        "name": "Custom Popup",
+        "disp": "&#126;[custompopup.{select_name}.lists.{category}]",
+        "desc": "Build Select List with {select_name} from Gen Table where cat = {category}",
+        "code": "&#126;[custompopup.listName.lists.logtype]",
+        "ex": "<noquote>~[custompopup.listName.lists.logtype]</noquote>"
+      },
+      {
+        "name": "Get Validation",
+        "disp": "&#126;[getvalidation:{table}.{field}]",
+        "desc": "Display data-validation property for  {table} {field}<br /><i>Used on INPUT elements</i>",
+        "code": "&#126;[getvalidation:students.street]",
+        "ex": "<noquote>~[getvalidation:students.street]</noquote>"
+      },
+      {
+        "name": "Get JS Script Tag",
+        "disp": "&#126;[get_js_texts:{text_tag}]",
+        "desc": "Display JS Script associated to {text_tag}",
+        "code": "&#126;[get_js_texts:psx.jshtml.admin_fedethnicity.editrace.]",
+        "ex": "<code><notag>~[get_js_texts:psx.jshtml.admin_fedethnicity.editrace.]</notag></code>"
+      },
+      {
+        "name": "Get JS Localized Date",
+        "disp": "&#126;[get_js_localized_date:{date_variable}]",
+        "desc": "Display the PowerSchool Localized Date in JS using the {date_variable}",
+        "code": "&#126;[get_js_localized_date:d]",
+        "ex": "<noquote>~[get_js_localized_date:d]</noquote>"
+      },
+      {
+        "name": "Get Numeric Format",
+        "disp": "&#126;[numericformat]",
+        "desc": "Displays a json object with numeric formatting info",
+        "ex": "~[numericformat]"
+      },
+      {
+        "name": "Get Currency Format",
+        "disp": "&#126;[currencyformat]",
+        "desc": "Displays a json object with currency formating info",
+        "ex": "~[currencyformat]"
+      },
+      {
+        "name": "Single Day Attendance Link",
+        "disp": "&#126;(adminsingledayattendancelink)",
+        "desc": "Displays Single Day Attendance Icon.",
+        "ex": "<noquote>~(adminsingledayattendancelink)</noquote>"
+      },
+      {
+        "name": "Selection Check Box",
+        "disp": "&#126;(selcheckboxes)",
+        "desc": "Displays Selection Check Box.",
+        "ex": "<noquote>~(selcheckboxes)</noquote>"
+      },
+      {
+        "name": "Selection Check Box",
+        "disp": "&#126;(selcheckboxes)",
+        "desc": "Displays Selection Check Box.",
+        "ex": "<noquote>~(selcheckboxes)</noquote>"
+      },
+      {
+        "name": "JS Field Parameter",
+        "disp": "&#126;(JSFieldParam)",
+        "desc": "Return a field to be passed to a JavaScript function as the encoded format of [01]fieldname (returns using the UF- format)",
+        "code": "&#126;(JSFieldParam;[01]LastFirst)",
+        "ex": "~(JSFieldParam;[01]LastFirst)"
+      }
+      
+    ]
+  }
+]

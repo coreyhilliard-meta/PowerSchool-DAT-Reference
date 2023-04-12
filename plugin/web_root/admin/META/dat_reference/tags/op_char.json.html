@@ -1,0 +1,250 @@
+[
+  {
+    "section": "Character Code Operators",
+    "sample":"~[SetPostValue:ExampleName=Franklin, Ben] ~[SetPostValue:ExampleTag=<span>This string is enclosed in tags</span>] ~[SetPostValue:ExampleString=This is a "string"] ~[SetPostValue:ExampleNegative=-123]",
+    "tags": [
+      {
+        "name": "Field",
+        "disp": "&#126;({fieldname})",
+        "desc": "For these examples, we have set ExampleName & ExampleString, but you can use this on ANY field tag.",
+        "code": "&#126;(gpv.ExampleName)<br>&#126;(gpv.ExampleTag)<br>&#126;(gpv.ExampleString)<br>&#126;(gpv.exampleNegative)",
+        "ex": "~(gpv.ExampleName)<br><notag>~(gpv.ExampleTag)</notag><br><noquote>~(gpv.ExampleString)</noquote><br>~(gpv.exampleNegative)"
+      },
+      {
+        "name": "Field True Value",
+        "disp": "&#126;({fieldname};truevalue)",
+        "desc": "Simply return the field value.",
+        "code": "&#126;(gpv.ExampleName;truevalue)",
+        "ex": "~(gpv.ExampleName;truevalue)"
+      },
+      {
+        "name": "Uppercase",
+        "disp": "&#126;({fieldname};uppercase)",
+        "desc": "Display the field in uppercase",
+        "code": "&#126;(gpv.ExampleName;uppercase)",
+        "ex": "~(gpv.ExampleName;uppercase)"
+      },
+      {
+        "name": "Lowercase",
+        "disp": "&#126;({fieldname};lowercase)",
+        "desc": "Display the field in lowercase.",
+        "code": "&#126;(gpv.ExampleName;lowercase)",
+        "ex": "~(gpv.ExampleName;lowercase)"
+      },
+      {
+        "name": "Smartcase",
+        "disp": "&#126;({fieldname};smartcase)",
+        "desc": "Display the field using smartcase.",
+        "code": "&#126;(gpv.ExampleName;smartcase)",
+        "ex": "~(gpv.ExampleName;smartcase)"
+      },
+      {
+        "name": "Absolute",
+        "disp": "&#126;({fieldname};absolute)",
+        "desc": "Display the absolute value of a numeric field.",
+        "code": "&#126;(gpv.ExampleNegative;absolute)",
+        "ex": "~(gpv.ExampleNegative;absolute)"
+      },
+      {
+        "name": "Replace Characters",
+        "disp": "&#126;({fieldname};replace={find_text},{replace_text})",
+        "desc": "Search for {find_text} and replace with {replace_text}",
+        "code": "&#126;(gpv.ExampleName;replace=in,azz)",
+        "ex": "~(gpv.ExampleName;replace=in,azz)"
+      },
+      {
+        "name": "Substring Characters",
+        "disp": "&#126;({fieldname};substring={start_position},{char_length})",
+        "desc": "Display part of the field (start at {start_position} character for {char_length})",
+        "code": "&#126;(gpv.ExampleName;substring=5,3)",
+        "ex": "~(gpv.ExampleName;substring=5,3)"
+      },
+      {
+        "name": "All Characters After X",
+        "disp": "&#126;({fieldname};allafter={string})",
+        "desc": "Display part of the field (after {string})",
+        "code": "&#126;(gpv.ExampleName;allafter=kli)",
+        "ex": "~(gpv.ExampleName;allafter=kli)"
+      },
+      {
+        "name": "All Characters From X",
+        "disp": "&#126;({fieldname};allfrom={string})",
+        "desc": "Display part of the field (from {string} and after)",
+        "code": "&#126;(gpv.ExampleName;allfrom=kli)",
+        "ex": "~(gpv.ExampleName;allfrom=kli)"
+      },
+      {
+        "name": "All Characters Before X",
+        "disp": "&#126;({fieldname};allbefore={string})",
+        "desc": "Display part of the field (any part of the field before {string})",
+        "code": "&#126;(gpv.ExampleName;allbefore=kli)",
+        "ex": "~(gpv.ExampleName;allbefore=kli)"
+      },
+      {
+        "name": "All Characters But X",
+        "disp": "&#126;({fieldname};allbut={chars})",
+        "desc": "Display only {chars} that exist in the field.",
+        "code": "&#126;(gpv.ExampleName;allbut=n f)",
+        "ex": "~(gpv.ExampleName;allbut=n f)"
+      },
+      {
+        "name": "All Characters Through X",
+        "disp": "&#126;({fieldname};allthrough={string})",
+        "desc": "Display part of the field  (and characters before and including {string})",
+        "code": "&#126;(gpv.ExampleName;allthrough=kli)",
+        "ex": "~(gpv.ExampleName;allthrough=kli)"
+      },
+      {
+        "name": "Keep only characters in the specified ASCII range(s)",
+        "disp": "&#126;({fieldname};keep_ascii={start}-{end}{,{start2}-{end2}})",
+        "desc": "Keep only the characters specified in the ASCII ranges {start} to {end}.<br><strong>Notice</strong> the case sensitivity since it uses ASCII codes given as decimal values.",
+        "code": "&#126;(gpv.ExampleName;keep_ascii=65-70,97-102)",
+        "ex": "~(gpv.ExampleName;keep_ascii=65-70,97-102)"
+      },
+      {
+        "name": "Only Alphabetical Characters",
+        "disp": "&#126;({fieldname};onlyalpha)",
+        "desc": "Only display alphabetical characters from the field.",
+        "code": "&#126;(street;onlyalpha)",
+        "ex": "~(street;onlyalpha)"
+      },
+      {
+        "name": "Only Alphabetical & Numeric Characters",
+        "disp": "&#126;({fieldname};onlyalphanumeric)",
+        "desc": "Only display alphabetical and numeric characters from the field.",
+        "code": "&#126;(street;onlyalphanumeric)",
+        "ex": "~(street;onlyalphanumeric)"
+      },
+      {
+        "name": "Only Date Characters",
+        "disp": "&#126;({fieldname};onlydatecharacters)",
+        "desc": "Only display date characters from the field.",
+        "code": "&#126;(street;onlydatecharacters)",
+        "ex": "~(street;onlydatecharacters)"
+      },
+      {
+        "name": "Only Digits",
+        "disp": "&#126;({fieldname};onlydigits)",
+        "desc": "Only display numeric characters from the field.",
+        "code": "&#126;(street;onlydigits)",
+        "ex": "~(street;onlydigits)"
+      },
+      {
+        "name": "Digits Only",
+        "disp": "&#126;({fieldname};digitsonly)",
+        "desc": "Only display numeric characters from the field.",
+        "code": "&#126;(street;digitsonly)",
+        "ex": "~(street;digitsonly)"
+      },
+      {
+        "name": "Numbers Only",
+        "disp": "&#126;({fieldname};num)",
+        "desc": "Only display numeric characters from the field.",
+        "code": "&#126;(street;num)",
+        "ex": "~(street;num)"
+      },
+      {
+        "name": "Only Numeric",
+        "disp": "&#126;({fieldname};onlynumeric)",
+        "desc": "Only display numeric characters from the field.",
+        "code": "&#126;(street;onlynumeric)",
+        "ex": "~(street;onlynumeric)"
+      },
+      {
+        "name": "Null if 0",
+        "disp": "&#126;({numeric_field};null)",
+        "desc": "Display numeric field, but if 0 (not set), display NULL.",
+        "code": "&#126;(lunch_id;null)",
+        "ex": "~(lunch_id;null)"
+      },
+      {
+        "name": "Permitted Values",
+        "disp": "&#126;({fieldname};permitted.values={list_of_values})",
+        "desc": "Display field value if value is in {list_of_values}, display NULL if not matched.",
+        "code": "&#126;(track;permitted.values=A,C,E)<br>Track=~(track;if.blank.then=No Track Set)",
+        "ex": "~(track;permitted.values=A,C,E)"
+      },
+            {
+        "name": "Number Format",
+        "disp": "&#126;({number_field};numberformat={format_mask})",
+        "desc": "Format a numeric field with a specified format mask.",
+        "code": "&#126;(student_number;numberformat=000000000.000)",
+        "ex": "~(student_number;numberformat=000000000.000)"
+      },
+      {
+        "name": "Fixed Length",
+        "disp": "&#126;({fieldname};fixedlen={length})",
+        "desc": "Displays the first {length} characters of a field.",
+        "code": "&#126;(gpv.ExampleName;fixedlen=7)",
+        "ex": "~(gpv.ExampleName;fixedlen=7)"
+      },
+      {
+        "name": "Fixed Left",
+        "disp": "&#126;({fieldname};fixedleft={length})",
+        "desc": "Displays the first {length} characters of a field.",
+        "code": "&#126;(gpv.ExampleName;fixedleft=7)",
+        "ex": "~(gpv.ExampleName;fixedleft=7)"
+      },
+      {
+        "name": "FX",
+        "disp": "&#126;({fieldname};fx={length})",
+        "desc": "Displays the first {length} characters of a field.",
+        "code": "&#126;(gpv.ExampleName;fx=7)",
+        "ex": "~(gpv.ExampleName;fx=7)"
+      },
+      {
+        "name": "FXL",
+        "disp": "&#126;({fieldname};fxl={length})",
+        "desc": "Displays the first {length} characters of a field.",
+        "code": "&#126;(gpv.ExampleName;fxl=7)",
+        "ex": "~(gpv.ExampleName;fxl=7)"
+      },
+      {
+        "name": "URL Encode",
+        "disp": "&#126;({fieldname};urlencode)",
+        "desc": "Encode the field as a URL.",
+        "code": "&#126;(gpv.ExampleString;urlencode)",
+        "ex": "~(gpv.ExampleString;urlencode)"
+      },
+      {
+        "name": "Encode HTML",
+        "disp": "&#126;({fieldname};encodehtml)",
+        "desc": "Encode the field as HTML.",
+        "code": "&#126;(gpv.ExampleTag;encodehtml)",
+        "ex": "~(gpv.ExampleTag;encodehtml)"
+      },
+      {
+        "name": "Decode HTML String",
+        "disp": "&#126;({fieldname};decodehtmlstring)",
+        "desc": "Decode the field from an Encoded HTML String."
+      },
+      
+      {
+        "name": "Encode Angle Brackets",
+        "disp": "&#126;({fieldname};encodeanglebrackets)",
+        "desc": "Encode less than & greater than signs to HTML safe entities.",
+        "code": "&#126;(gpv.ExampleTag;encodeanglebrackets)",
+        "ex": "~(gpv.ExampleTag;encodeanglebrackets)"
+      },
+      {
+        "name": "Encode JS String",
+        "disp": "&#126;({fieldname};encodejsstring)",
+        "desc": "Encode as JavaScript String."
+      },
+      {
+        "name": "Strip HTML code",
+        "disp": "&#126;({fieldname};nohtml)",
+        "desc": "Remove the HTML code from the text",
+        "code": "&#126;(gpv.ExampleName;nohtml)",
+        "ex": "~(gpv.ExampleName;nohtml)"
+      },
+      {
+        "name": "Strip HTML code",
+        "disp": "&#126;({fieldname};striphtml)",
+        "desc": "Remove the HTML code from the text (alternative name)",
+        "code": "&#126;(gpv.ExampleName;striphtml)",
+        "ex": "~(gpv.ExampleName;striphtml)"
+      }
+    ]
+  }
+]

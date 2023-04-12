@@ -1,0 +1,306 @@
+[
+  {
+    "section": "School Information",
+    "tags": [
+      {
+        "name": "Current School ID",
+        "disp": "&#126;(curschoolid)",
+        "desc": "Displays the Current school id.",
+        "ex": "~(curschoolid)"
+      },
+      {
+        "name": "Current School ID",
+        "disp": "&#126;(v.schoolID)",
+        "desc": "This is the ID of the current school when For Current School Only is TRUE. This is the content of the field ID in the [schools] table.",
+        "ex": "~(v.schoolID)"
+      },
+      {
+        "name": "Current/Student School ID",
+        "disp": "&#126;(schoolid)",
+        "desc": "Displays the Current school id <em>If there is a selected student, then displays the student's current school</em>.",
+        "ex": "~(schoolid)"
+      },
+      {
+        "name": "School DCID",
+        "disp": "&#126;(curschooldcid)",
+        "desc": "Displays the current school dcid.",
+        "ex": "~(curschooldcid)"
+      },
+      {
+        "name": "School Abbreviation",
+        "disp": "&#126;(schoolabbr)",
+        "desc": "Displays the school name abbreviation.",
+        "ex": "~(schoolabbr)"
+      },
+      {
+        "name": "School Abbreviation",
+        "disp": "&#126;[schoolabbr]",
+        "desc": "Displays the abbreviated name of the school.",
+        "ex": "~[schoolabbr]"
+      },
+      {
+        "name": "School Name",
+        "disp": "&#126;(schoolname)",
+        "desc": "Displays the full school name.",
+        "ex": "~(schoolname)"
+      },
+      {
+        "name": "School Name",
+        "disp": "&#126;[schoolname]",
+        "desc": "Displays the full name of the school.",
+        "ex": "~[schoolname]"
+      },
+      {
+        "name": "School Name",
+        "disp": "&#126;[x:schoolname]",
+        "desc": "Outputs the name of the currently selected school.",
+        "ex": "~[x:schoolname]"
+      },
+      {
+        "name": "School Info",
+        "disp": "&#126;(school.info;{field})",
+        "desc": "Displays the {field} for the currently selected school.",
+        "code": "&#126;(school.info;schooladdress)",
+        "ex": "~(school.info;schooladdress)"
+      },
+      {
+        "name": "School Address",
+        "disp": "&#126;(schooladdress)",
+        "desc": "Displays the full address for the currently selected school.",
+        "ex": "~(schooladdress)"
+      },
+      {
+        "name": "School Year/Term Abbreviation",
+        "disp": "&#126;(abbryearterm)",
+        "desc": "Displays the year and term in the format YYTT.",
+        "ex": "~(abbryearterm)"
+      },
+      {
+        "name": "School Year Abbreviation",
+        "disp": "&#126;(yearabbr)",
+        "desc": "Displays the school year abbreviation in the format YY.",
+        "ex": "~(yearabbr)"
+      },
+      {
+        "name": "Current Year ID",
+        "disp": "&#126;(curyearid)",
+        "desc": "Displays the school year id.",
+        "ex": "~(curyearid)"
+      },
+      {
+        "name": "Current Year ID",
+        "disp": "&#126;(yearid)",
+        "desc": "Displays the school year id.",
+        "ex": "~(yearid)"
+      },
+      {
+        "name": "Current Year ID",
+        "disp": "&#126;[yearid]",
+        "desc": "Displays the school year id.",
+        "ex": "~[yearid]"
+      },
+      {
+        "name": "4-digit Current year id",
+        "disp": "&#126;(schedule.yearidcurrent)",
+        "desc": "Displays the 4-digit current year id.",
+        "ex": "~(schedule.yearidcurrent)"
+      },
+      {
+        "name": "School Year Name",
+        "disp": "&#126;(yearname)",
+        "desc": "Displays the full school year name.",
+        "ex": "~(yearname)"
+      },
+      {
+        "name": "School Year Name",
+        "disp": "&#126;[yearname]",
+        "desc": "Displays the full school year name.",
+        "ex": "~[yearname]"
+      },
+      {
+        "name": "Term Abbreviation",
+        "disp": "&#126;(termabbr)",
+        "desc": "Displays the term abbreviation.",
+        "ex": "~(termabbr)"
+      },
+      {
+        "name": "Term Abbreviation",
+        "disp": "&#126;[termabbr]",
+        "desc": "Displays the term abbreviation.",
+        "ex": "~[termabbr]"
+      },
+      {
+        "name": "Term Name",
+        "disp": "&#126;(termname)",
+        "desc": "Displays the full name of the term.",
+        "ex": "~(termname)"
+      },
+      {
+        "name": "Term Name",
+        "disp": "&#126;[termname]",
+        "desc": "This is the name of the current term.",
+        "ex": "~[termname]"
+      },
+      {
+        "name": "Term Name",
+        "disp": "&#126;[x:termname]",
+        "desc": "This is the name of the current term.",
+        "ex": "~[x:termname]"
+      },
+      {
+        "name": "District Office",
+        "disp": "&#126;[x:distofficeflag]",
+        "desc": "District office flag (do).",
+        "ex": "~[x:distofficeflag]"
+      },
+      {
+        "name": "Term Begin Date",
+        "disp": "&#126;[x:termbegdate]",
+        "desc": "This is the start date of the current term.",
+        "ex": "~[x:termbegdate]"
+      },
+      {
+        "name": "Term Begin Date YYYYMMDD",
+        "disp": "&#126;[x:termbegdateYYYYMMDD]",
+        "desc": "This is the start date of the current term, Alternate format.",
+        "ex": "~[x:termbegdateYYYYMMDD]"
+      },
+      {
+        "name": "Term End Date",
+        "disp": "&#126;[x:termenddate]",
+        "desc": "This is the end date of the current term.",
+        "ex": "~[x:termenddate]"
+      },
+      {
+        "name": "Term End Date YYYYMMDD",
+        "disp": "&#126;[x:termenddateYYYYMMDD]",
+        "desc": "This is the end date of the current term, Alternate format.",
+        "ex": "~[x:termenddateYYYYMMDD]"
+      },
+      {
+        "name": "Term ID",
+        "disp": "&#126;[x:termid]",
+        "desc": "This is the ID of the current term.",
+        "ex": "~[x:termid]"
+      },
+      {
+        "name": "Term ID",
+        "disp": "&#126;(v.curtermid)",
+        "desc": "This is the ID of the current term.",
+        "ex": "~(v.curtermid)"
+      },
+      {
+        "name": "District Name",
+        "disp": "&#126;(v.districtname)",
+        "desc": "Display the name of the district.",
+        "ex": "~(v.districtname)"
+      },
+      {
+        "name": "School or District Name",
+        "disp": "&#126;(schoolordistrictname)",
+        "desc": "Display the name of the district.",
+        "ex": "~(schoolordistrictname)"
+      },
+      {
+        "name": "School or District Name",
+        "disp": "&#126;[schoolordistrictname]",
+        "desc": "Display the name of the district.",
+        "ex": "~[schoolordistrictname]"
+      },
+      {
+        "name": "District Number",
+        "disp": "&#126;(districtnumber)",
+        "desc": "The districtnumber is the identifier for the district.",
+        "ex": "~(districtnumber)"
+      },
+      {
+        "name": "District Number",
+        "disp": "&#126;(v.districtnumber)",
+        "desc": "The districtnumber is the identifier for the district.",
+        "ex": "~(v.districtnumber)"
+      },
+      {
+        "name": "District State",
+        "disp": "&#126;(v.districtstate)",
+        "desc": "Abbreviation of the state the district is in, such as CA or TX.",
+        "ex": "~(v.districtstate)"
+      },
+      {
+        "name": "State ID",
+        "disp": "&#126;[x:state_id]",
+        "desc": "Displays the state reporting that the district uses.",
+        "ex": "~[x:state_id]"
+      },
+      {
+        "name": "District Customer Number",
+        "disp": "&#126;(districtcustomernumber)",
+        "desc": "Displays the District Customer Number.",
+        "ex": "~(districtcustomernumber)"
+      },
+      {
+        "name": "Attendance This Week Start Date",
+        "disp": "&#126;[x.att_thisStartWeek]",
+        "desc": "This week's beginning date for attendance.",
+        "ex": "~[x:att_thisStartWeek]"
+      },
+      {
+        "name": "Attendance This Week End Date",
+        "disp": "&#126;[x.att_thisEndWeek]",
+        "desc": "This week's end date for attendance.",
+        "ex": "~[x:att_thisEndWeek]"
+      },
+      {
+        "name": "Get Base Term ID",
+        "disp": "&#126;[x:getbase_termid]",
+        "desc": "Displays the base termid of the current school.",
+        "ex": "~[x:getbase_termid]"
+      },
+      {
+        "name": "Get Base Term ID for a Specified School",
+        "disp": "&#126;[x:getbase_termid;{schoolid}]",
+        "desc": "Displays the base termid of the selected school.",
+        "code": "&#126;[x:getbase_termid;100]",
+        "ex": "~[x:getbase_termid;100]"
+      },
+      {
+        "name": "Get Base Term Name",
+        "disp": "&#126;[x:getbase_termname]",
+        "desc": "Displays the base term name of the current school.",
+        "ex": "~[x:getbase_termname]"
+      },
+      {
+        "name": "Get Base Term Name for a Specified School",
+        "disp": "&#126;[x:getbase_termname;{schoolid}]",
+        "desc": "Displays the base term name of the selected school.",
+        "code": "&#126;[x:getbase_termname;100]",
+        "ex": "~[x:getbase_termname;100]"
+      },
+      {
+        "name": "Get Base Term ID in the Public Portal ",
+        "disp": "&#126;[x:getbase_termid_public]",
+        "desc": "Displays the base term id of the current school in the public portal.",
+        "ex": "~[x:getbase_termid_public]"
+      },
+      {
+        "name": "Get Base Term ID in the Public Portal for a Specified School",
+        "disp": "&#126;[x:getbase_termid_public;{schoolid}]",
+        "desc": "Displays the base term id of the selected school in the public portal.",
+        "code": "&#126;[x:getbase_termid_public;100]",
+        "ex": "~[x:getbase_termid_public;100]"
+      },
+      {
+        "name": "Get Base Term Name in the Public Portal ",
+        "disp": "&#126;[x:getbase_termname_public]",
+        "desc": "Displays the base term name of the current school in the public portal.",
+        "ex": "~[x:getbase_termname_public]"
+      },
+      {
+        "name": "Get Base Term Name in the Public Portal for a Specified School",
+        "disp": "&#126;[x:getbase_termname_public;{schoolid}]",
+        "desc": "Displays the base term name of the selected school in the public portal.",
+        "code": "&#126;[x:getbase_termname_public;100]",
+        "ex": "~[x:getbase_termname_public;100]"
+      }
+    ]
+  }
+]

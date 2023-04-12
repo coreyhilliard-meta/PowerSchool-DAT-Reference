@@ -1,0 +1,338 @@
+[
+  {
+    "section": "Miscellaneous Tags",
+    "tags": [
+      {
+        "name": "Directory",
+        "disp": "&#126;[directory]",
+        "desc": "Identify Portal of the user.",
+        "ex": "~[directory]"
+      },
+      {
+        "name": "Self",
+        "disp": "&#126;[self]",
+        "desc": "Returns url of the page this tag is on, but excludes http://{servername}/..",
+        "ex": "~[self]"
+      },
+      {
+        "name": "Current URL",
+        "disp": "&#126;[gsv:url2]",
+        "desc": "Returns url of the page this tag is on, but excludes http://{servername}/..",
+        "ex": "~[gsv:url2]"
+      },
+      {
+        "name": "Self Page",
+        "disp": "&#126;[self.page]",
+        "desc": "Returns url of the page this tag is on, but excludes http://{servername}/.. and URL parameters",
+        "ex": "~[self.page]"
+      },
+      {
+        "name": "URL Post Values",
+        "disp": "&#126;[urlpostvalues]",
+        "desc": "Returns the URL parameters",
+        "ex": "~[urlpostvalues]"
+      },
+      {
+        "name": "Referer",
+        "disp": "&#126;[referer]",
+        "desc": "Returns the full url of the referring web page. If the page containing this tag is browsed directly, it will default to http://{servername}/admin/changesrecorded.white.html.",
+        "ex": "~[referer]"
+      },
+      {
+        "name": "Referer Short",
+        "disp": "&#126;[referer.short]",
+        "desc": "Returns the url of the referring web page, but excludes http://{servername}/..",
+        "ex": "~[referer.short]"
+      },
+      {
+        "name": "Referer Page",
+        "disp": "&#126;[referer.page]",
+        "desc": "Returns the url of the referring web page<br /><i>Defaults to changesrecorded.white.html when not set</i>",
+        "ex": "~[referer.page]"
+      },
+      {
+        "name": "PSAID",
+        "disp": "&#126;[htmlv:psaid]",
+        "desc": "Returns a portion of the PSAID for internal page calls",
+        "ex": "~[htmlv:psaid]"
+      },
+      {
+        "name": "Teacher Home Page",
+        "disp": "&#126;[teacherhomepage]",
+        "desc": "Returns the url of the Teacher's Home Page.",
+        "ex": "<noquote>~[teacherhomepage]</noquote>"
+      },
+      {
+        "name": "Scripts URL",
+        "disp": "&#126;[scripts_url]",
+        "desc": "Returns the url of the server scripts.",
+        "ex": "<noquote>~[scripts_url]</noquote>"
+      },
+      {
+        "name" : "Last Promotion Date",
+        "disp": "&#126;[pref:lastpromotiondate]",
+        "desc": "Year ID of most recent school year. Incremented during EOY Process.",
+        "ex": "~[pref:lastpromotiondate]"
+      },
+      {
+        "name": "Course Archive Year",
+        "disp": "&#126;[pref:coursearchiveyear]",
+        "desc": "Safer way to display the server YearID.",
+        "ex": "~[pref:coursearchiveyear]"
+      },
+      {
+        "name" : "Course Archive Time",
+        "disp": "&#126;[pref:coursearchivetime]",
+        "desc": "Time of the last time the EOY Process was run.",
+        "ex": "~[pref:coursearchivetime]"
+      },
+      {
+        "name": "Current Server Year ID",
+        "disp": "<strike>&#126;[curserveryearid]</strike><br><b>Do not use!</b>",
+        "desc": "Displays server YearID.<br><span class='red'>Please use the safer DAT &#126;[pref:coursearchiveyear]</span>",
+        "code": "<strike>&#126;[curserveryearid]</strike>",
+        "ex": "~[curserveryearid]"
+      },
+      {
+        "name": "Current Server Term ID",
+        "disp": "<strike>&#126;[curservertermid]</strike><br><b>Do not use!</b>",
+        "desc": "Displays server TermID.<br><span class='error'>Could interfer with the selected year & term</span>",
+        "code": "<strike>&#126;[curservertermid]</strike>",
+        "ex": "~[curservertermid]"
+      },
+      {
+        "name": "Schedule Year",
+        "disp": "&#126;[schedule.yearidfuture]",
+        "desc": "Displays Schedule Year defined in PowerScheduler.",
+        "ex": "~[schedule.yearidfuture]"
+      },
+      {
+        "name": "Current Teacher ID",
+        "disp": "&#126;(teacherid)",
+        "desc": "This is the ID of the current teacher.",
+        "ex": "~(teacherid)"
+      },
+      {
+        "name": "Current Teacher Number",
+        "disp": "&#126;(teachernumber)",
+        "desc": "This is the Number of the current teacher.",
+        "ex": "~(teachernumber)"
+      },
+      {
+        "name": "Current Staff/Teacher Name",
+        "disp": "&#126;(teachername2)",
+        "desc": "This is the Name of the current staff/teacher.",
+        "ex": "~(teachername2)"
+      },
+      {
+        "name": "Current Teacher Name",
+        "disp": "&#126;(teachername)",
+        "desc": "This is the Name of the current teacher.",
+        "ex": "~(teachername)"
+      },
+      {
+        "name": "Current User ID",
+        "disp": "&#126;(v.userid)",
+        "desc": "This is the ID of the current user.",
+        "ex": "~(v.userid)"
+      },
+      {
+        "name": "Current User ID",
+        "disp": "&#126;[x:userid]",
+        "desc": "This is the ID of the current user.",
+        "ex": "~[x:userid]"
+      },
+      {
+        "name": "Current User ID",
+        "disp": "&#126;(curtchrid)",
+        "desc": "This is the ID of the current teacher.",
+        "ex": "~(curtchrid)"
+      },
+      {
+        "name": "Teacher Photo",
+        "disp": "&#126;(teacherphoto)",
+        "desc": "Display the photo for current teacher.",
+        "ex": "<noquote>~(teacherphoto)</noquote>"
+      },
+      {
+        "name": "Guardian ID",
+        "disp": "&#126;[x:userid;guardianid]",
+        "desc": "This is the ID of the current guardian user.",
+        "ex": "~[x:userid;guardianid]"
+      },
+      {
+        "name": "Current User Type Name",
+        "disp": "&#126;[x:usertypename]",
+        "desc": "This is the Type of the current user.",
+        "ex": "~[x:usertypename]"
+      },
+      {
+        "name": "Current User Name",
+        "disp": "&#126;[x:username]",
+        "desc": "Outputs the current user's Username in Last, First Middle format.",
+        "ex": "~[x:username]"
+      },
+      {
+        "name": "Current User Name",
+        "disp": "&#126;[x:username;firstlast]",
+        "desc": "Outputs the current user's first and last name.",
+        "ex": "~[x:username;firstlast]"
+      },
+      {
+        "name": "Current User Email",
+        "disp": "&#126;[x:useremail]",
+        "desc": "Outputs the current user's Email.",
+        "ex": "~[x:useremail]"
+      },
+      {
+        "name": "Current User Login",
+        "disp": "&#126;[x:loginusername]",
+        "desc": "Displays the current user's login username.",
+        "ex": "~[x:loginusername]"
+      },
+      {
+        "name": "Current User's DCID",
+        "disp": "&#126;[x:users_dcid]",
+        "desc": "Outputs the current user's DCID from the Users table.",
+        "ex": "~[x:users_dcid]"
+      },
+      {
+        "name": "Students In Set",
+        "disp": "&#126;[x:studsinset]",
+        "desc": "Outputs the number of currently selected students.",
+        "ex": "~[x:studsinset]"
+      },
+      {
+        "name": "Do This For Selected",
+        "disp": "&#126;[x:dothisfor;selected]",
+        "desc": "Displays how many students are selected, or displays the name of a single selection."
+      },
+      {
+        "name": "Do This For (Student/Group)",
+        "disp": "&#126;[dothisforgeneric]",
+        "desc": "Generate set of radio buttons to select the student or group of students.<br /><i>Reference the Select list using the name <b>DOTHISFOR</b>. Value for the student = Students.ID & Group = \"selected\"</i>",
+        "ex": "<noquote>~[dothisforgeneric]</noquote>"
+      },
+      {
+        "name": "Number Selected Records",
+        "disp": "&#126;[x:usmnumrecs]",
+        "desc": "Outputs the number of selected records.",
+        "ex": "~[x:usmnumrecs]"
+      },
+      {
+        "name": "User's Roles",
+        "disp": "&#126;[x:usersroles]",
+        "desc": "Outputs the users associated groups/roles numbers as a comma delimited string.",
+        "ex": "~[x:usersroles]"
+      },
+      {
+        "name": "User's Group Names",
+        "disp": "&#126;[usergroupname]",
+        "desc": "Outputs the users associated groups/roles Names as a comma delimited string.",
+        "ex": "~[usergroupname]"
+      },
+      {
+        "name": "PowerScheduler Access",
+        "disp": "&#126;[powerscheduleraccess]",
+        "desc": "Outputs the True or False if the user has access to PowerScheduler.",
+        "ex": "~[powerscheduleraccess]"
+      },
+      {
+        "name": "Current Final Grade Name",
+        "disp": "&#126;(current.final.grade.name)",
+        "desc": "Current school's Current Final Grade.",
+        "ex": "~(current.final.grade.name)"
+      },
+      {
+        "name": "Teacher Comments",
+        "disp": "&#126;(teachercomments)",
+        "desc": "Inserts each teacher's comments preceded by the label Per (number).",
+        "ex": "~(teachercomments)"
+      },
+      {
+        "name": "Even/Odd Row",
+        "disp": "&#126;[evenoddrow]",
+        "desc": "Toggles between oddRow & evenRow.<br /><i>Use in class for tr to indicate odd and even rows</i>",
+        "code": "&#126;[evenoddrow]<br />&#126;[evenoddrow]",
+        "ex": "~[evenoddrow]<br>~[evenoddrow]"
+      },
+      {
+        "name": "Random Number",
+        "disp": "&#126;[randomnumber]",
+        "desc": "Returns a 10 digit random number.",
+        "ex": "~[randomnumber]"
+      },
+
+      {
+        "name": "Random String",
+        "disp": "&#126;(random16)",
+        "desc": "Returns a 16 character string.",
+        "ex": "~(random16)"
+      },
+      {
+        "name": "Random String",
+        "disp": "&#126;(random32)",
+        "desc": "Returns a 32 character string.",
+        "ex": "~(random32)"
+      },
+      {
+        "name": "Random String",
+        "disp": "&#126;(random64)",
+        "desc": "Returns a 64 character string.",
+        "ex": "~(random64)"
+      },
+      {
+        "name": "Random String",
+        "disp": "&#126;(random128)",
+        "desc": "Returns a 128 character string.",
+        "ex": "~(random128)"
+      },
+      {
+        "name": "Random String",
+        "disp": "&#126;(random256)",
+        "desc": "Returns a 256 character string.",
+        "ex": "~(random256)"
+      },
+      {
+        "name": "Gradebook Type",
+        "disp": "&#126;(gradebooktype)",
+        "desc": "Returns the Gradebook type. If anyone know what the valid values are, please let me know.",
+        "ex": "~(gradebooktype)"
+      },
+      {
+        "name": "Student Screen Access",
+        "disp": "&#126;(studentscreenaccess;{screen})",
+        "desc": "Checks to see if the admin user has access to the student {screen}.",
+        "code": "&#126;(studentscreenaccess;transferinfo.html)",
+        "ex": "~(studentscreenaccess;transferinfo.html)"
+      },
+      {
+        "name": "Course Name",
+        "disp": "&#126;(coursename)",
+        "desc": "Returns the Course Name of the selected FRN.",
+        "ex": "~(coursename)"
+      },
+      {
+        "name": "Session Timeout in Minutes",
+        "disp": "&#126;(sessiontimeoutminutes)",
+        "desc": "Display the Session Timeout in Minutes.",
+        "ex": "~(sessiontimeoutminutes)"
+      },
+      {
+        "name": "New Look Enabled",
+        "disp": "&#126;[displaynewlookenabled]",
+        "desc": "Display 1 if the New Look is enabled.",
+        "ex": "~[displaynewlookenabled]"
+      },
+      {
+        "name": "Display Page Permission",
+        "disp": "&#126;[displaypagepermission:{page_url}]",
+        "desc": "Display 0 if no access, 1 if view only, or 2 if the user has write access to the {page_url}.",
+        "code": "&#126;[displaypagepermission:/admin/home.html]",
+        "ex": "~[displaypagepermission:/admin/home.html]"
+      }
+      
+      
+    ]
+  }
+]

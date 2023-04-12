@@ -1,0 +1,64 @@
+[
+  {
+    "section": "Standards",
+    "description": "<p>The standard (std) DAT extracts standard data from the Standard table, and standard grade data from the StandardGradeSection and StandardGradeRollup tables (and their companion tables StandardCourseAssociation, StandardGradeSectionComment, and StandardGradeRollupComment).</p><p>When retrieving standard definition information, the DAT returns data from the Standard record.</p><p>When retrieving standard grade information, if the standard has only been assessed in one section for the same reporting term, the grade information will be returned from StandardGradeSection. If the standard has been assessed for more than one section for the same reporting term, the grade information will be returned from StandardGradeRollup.</p>",
+    "tags": [
+      {
+        "name": "Standards Information",
+        "disp": "&#126;(*std.info.{field};{identifier})",
+        "desc": "Displays the {identifier} standard {field}.<br>Where {field} = <ul><li>desc = Description</li><li>name = Name</li><li>type = Type</li><li>course = Comma separated list of associated course numbers</li><li>subj = SubjectArea</li><li>listparent = Identifier of the parent standard</li><li>conv = Standard grade conversion scale</li></ul>",
+        "code": "&#126;(*std.info.name;G2.OA.1)",
+        "ex": "~(*std.info.name;G2.OA.1)"
+      },
+      {
+        "name": "Average",
+        "disp": "&#126;(*std.avg;{identifier})",
+        "desc": "Extrapolates standards scores for a student",
+        "code": "&#126;(*std.avg;G2.OA.1)",
+        "ex": "~(*std.avg;G2.OA.1)"
+      },
+      {
+        "name": "Average",
+        "disp": "&#126;(*std.avg;{identifier};{term})",
+        "desc": "Extrapolates standards scores for a student for a specified {term}",
+        "code": "&#126;(*std.avg;G2.OA.1;Q1)",
+        "ex": "~(*std.avg;G2.OA.1;Q1)"
+      },
+      {
+        "name": "Current Stored Average",
+        "disp": "&#126;(*std.stored.avg;{identifier})",
+        "desc": "Extrapolates stored standards scores for a student. You must identify which standard code you want and the identifier.",
+        "code": "&#126;(*std.stored.avg;G2.OA.1)",
+        "ex": "~(*std.stored.avg;G2.OA.1)"
+      },
+      {
+        "name": "Stored Average by Term",
+        "disp": "&#126;(*std.stored.avg;{identifier};{term})",
+        "desc": "Extrapolates stored standards scores for a student. You must identify which standard code you want and the identifier.",
+        "code": "&#126;(*std.stored.avg;G2.OA.1;Q1)",
+        "ex": "~(*std.stored.avg;G2.OA.1;Q1)"
+      },
+      {
+        "name": "Term Stored High Score",
+        "disp": "&#126;(*std.stored.high;{identifier};{term})",
+        "desc": "Extrapolates stored standards scores for a student. You must identify which standard code you want and the identifier.",
+        "code": "&#126;(*std.stored.high;G2.OA.1;Q1)",
+        "ex": "~(*std.stored.high;G2.OA.1;Q1)"
+      },
+      {
+        "name": "Term Stored Number Score",
+        "disp": "&#126;(*std.stored.num;{identifier};{term})",
+        "desc": "Extrapolates stored standards scores for a student. You must identify which standard code you want and the identifier.",
+        "code": "&#126;(*std.stored.num;G2.OA.1;Q1)",
+        "ex": "~(*std.stored.num;G2.OA.1;Q1)"
+      },
+      {
+        "name": "Term Stored Number Score",
+        "disp": "&#126;(*std.stored.num;{identifier};{term})",
+        "desc": "Extrapolates stored standards scores for a student. You must identify which standard code you want and the identifier.",
+        "code": "&#126;(*std.stored.num;G2.OA.1;Q1)",
+        "ex": "~(*std.stored.num;G2.OA.1;Q1)"
+      }
+    ]
+  }
+]

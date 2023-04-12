@@ -1,0 +1,58 @@
+[
+  {
+    "section": "Page Variables",
+    "tags": [
+      {
+        "name": "Get Post Value",
+        "disp": "&#126;(gpv.{posted_value_name})",
+        "desc": "This tag will extract the value of a posted parameter that has been passed to the page through a GET or POST request."
+      },
+      {
+        "name": "Get Post Value",
+        "disp": "&#126;(f.gpv;{posted_value_name})",
+        "desc": "This tag will extract the value of a posted parameter that has been passed to the page through a GET or POST request."
+      },
+      {
+        "name": "Get Post Value",
+        "disp": "&#126;[gpv:{posted_value_name}]",
+        "desc": "<b>DO NOT USE!</b> This tag will extract the value of a posted parameter that has been passed to the page through a GET or POST request."
+       },
+      {
+        "name": "Set Post Value",
+        "disp": "&#126;[SetPostValue:Name=Value]",
+        "desc": "The &#126;[SetPostValue] tag provides the ability to set values which can be accessed using the &#126;(gpv) tag."
+      },
+      {
+        "name": "Set Post Value",
+        "disp": "&#126;(SetPostValue;{name}={value})",
+        "desc": "The &#126;(SetPostValue) tag provides the ability to set values which can be accessed using the &#126;(gpv) tag."
+      },
+      {
+        "name": "Set User Variable",
+        "disp": "&#126;(f.suv;name={varname};value={value})",
+        "desc": "This will set a user variable to the value which can later be retrieved using &#126;(f.guv)<br /><i>This variable is removed after the user logs off.</i>"
+      },
+      {
+        "name": "Get User Variable",
+        "disp": "&#126;(f.guv;name={varname})",
+        "desc": "This will get the value that was set using &#126;(f.suv)."
+      },
+      {
+        "name": "Create Variable",
+        "disp": "&#126;(f.variable_create;name={varname};type={type};when=NEVER;)",
+        "desc": "Creates a variable (also works in object reports). Known {type} values: TEXT, INT, DATE"
+      },
+      {
+        "name": "Set Variable Value",
+        "disp": "&#126;(f.variable_set;name={varname};value={value})",
+        "desc": "Set a variable to a specified value."
+      },
+      {
+        "name": "Get Variable Value",
+        "disp": "&#126;(v.{varname})",
+        "desc": "Retrieve the value from a variable."
+      }
+      
+    ]
+  }
+]

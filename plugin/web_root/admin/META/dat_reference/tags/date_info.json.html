@@ -1,0 +1,98 @@
+[
+  {
+    "section": "Date Information",
+    "tags": [
+      {
+        "name": "Date Information - Type - Today's Date",
+        "disp": "&#126;(date.information;type=today)",
+        "desc": "Display Today's Date",
+        "code": "&#126;(date.information;type=today)",
+        "ex": "~(date.information;type=today)"
+      },
+      {
+        "name": "Date Information - Type - Current Term Start Date",
+        "disp": "&#126;(date.information;type=current_term_start)",
+        "desc": "Display the cached current term start date from the Terms table",
+        "code": "&#126;(date.information;type=current_term_start)",
+        "ex": "~(date.information;type=current_term_start)"
+      },
+      {
+        "name": "Date Information - Type - Current Term End Date",
+        "disp": "&#126;(date.information;type=current_term_end)",
+        "desc": "Display the cached current term end date from the Terms table",
+        "code": "&#126;(date.information;type=current_term_end)",
+        "ex": "~(date.information;type=current_term_end)"
+      },
+      {
+        "name": "Date Information - Type - Current Year Start Date",
+        "disp": "&#126;(date.information;type=current_year_start)",
+        "desc": "Display the cached current year start date from the Terms table",
+        "code": "&#126;(date.information;type=current_year_start)",
+        "ex": "~(date.information;type=current_year_start)"
+      },
+      {
+        "name": "Date Information - Type - Current Year End Date",
+        "disp": "&#126;(date.information;type=current_year_end)",
+        "desc": "Display the cached current year end date from the Terms table",
+        "code": "&#126;(date.information;type=current_year_end)",
+        "ex": "~(date.information;type=current_year_end)"
+      },
+      {
+        "name": "Date Information - Type - Term Start Date",
+        "disp": "&#126;(date.information;type=term_start)",
+        "desc": "Display the cached term start date from the Terms table<br /><b>Requires termabbr parameter</b>",
+        "code": "&#126;(date.information;type=term_start)",
+        "ex": "~(date.information;type=term_start)"
+      },
+      {
+        "name": "Date Information - Type - Term End Date",
+        "disp": "&#126;(date.information;type=term_end)",
+        "desc": "Display the cached term end date from the Terms table<br /><b>Requires termabbr parameter</b>",
+        "code": "&#126;(date.information;type=term_end)",
+        "ex": "~(date.information;type=term_end)"
+      },
+      {
+        "name": "Date Information - School ID",
+        "disp": "&#126;(date.information;type={type};schoolid={schoolid})",
+        "desc": "Display the cached date from the Terms table for the specified {schoolid}<br><i>Default: the currently selected school</i>",
+        "code": "&#126;(date.information;type=current_year_start;schoolid=100)",
+        "ex": "~(date.information;type=current_year_start;schoolid=100)"
+      },
+      {
+        "name": "Date Information - Year ID",
+        "disp": "&#126;(date.information;type={type};yearid={yearid})",
+        "desc": "Display the cached date from the Terms table for the specified {yearid}<br><i>Default: the currently selected year</i>",
+        "code": "&#126;(date.information;type=current_year_start;yearid=29)",
+        "ex": "~(date.information;type=current_year_start;yearid=29)"
+      },
+      {
+        "name": "Date Information - Term Abbreviation",
+        "disp": "&#126;(date.information;type={type};termabbr={termabbr})",
+        "desc": "Display the cached date from the Terms table for the specified {termabbr}<br><b>Required when Type is term_start or term_end</b>",
+        "code": "&#126;(date.information;type=term_start;termabbr=S1)",
+        "ex": "~(date.information;type=term_start;termabbr=S1)"
+      },
+      {
+        "name": "Date Information - Positive Offset",
+        "disp": "&#126;(date.information;type={type};offset={offset})",
+        "desc": "Display the cached date from the Terms table<br>Determines the offset to apply to the date returned.",
+        "code": "&#126;(date.information;type=current_year_start;offset=1)",
+        "ex": "~(date.information;type=current_year_start;offset=1)"
+      },
+      {
+        "name": "Date Information - Negative Offset",
+        "disp": "&#126;(date.information;type={type};offset={offset})",
+        "desc": "Display the cached date from the Terms table<br>Determines the offset to apply to the date returned.",
+        "code": "&#126;(date.information;type=current_year_start;offset=-7)",
+        "ex": "~(date.information;type=current_year_start;offset=-7)"
+      },
+      {
+        "name": "Date Information - Date Format",
+        "disp": "&#126;(date.information;type={type};dateformat={dateformat})",
+        "desc": "Display the cached date from the Terms table using the {dateformat}<br><i>Defaults to the current users Locale date format.</i>",
+        "code": "&#126;(date.information;type=current_year_start;dateformat=EEEE, MMMM dd, YYYY)",
+        "ex": "~(date.information;type=current_year_start;dateformat=EEEE, MMMM dd, YYYY)"
+      }
+    ]
+  }
+]

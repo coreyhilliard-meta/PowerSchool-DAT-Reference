@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PowerSchool DAT Reference</title>
+    ~[wc:commonscripts]
+    <link href="/images/css/screen.css" rel="stylesheet" media="screen">
+    <link href="/images/css/print.css" rel="stylesheet" media="print">
+    <link href="/images/META/dat_reference/style.css" rel="stylesheet">
+    <!-- Link to the external dat_reference.js file. -->
+    <script src="/admin/META/dat_reference/dat_reference.javascript?_v=~[randomnumber]"></script>
+</head>
+
+<body data-require-path="components/shared/index" data-module-name="METAReferenceApp">
+    ~[wc:admin_header_css]
+
+    <!-- Breadcrumb navigation -->
+    <a href="/admin/home.html" target="_top">Start Page</a> &gt;
+    ~[if#school.is.a.school]
+    <a href="/admin/schoolsetup/" target="_top">School Setup</a> &gt;
+    [else#school]
+    <a href="/admin/district/" target="_top">District Setup</a> &gt;
+    [/if#school]
+    PowerSchool DAT Reference
+    <!-- End of breadcrumb navigation -->
+
+    ~[wc:admin_navigation_css]
+    <div ng-controller="METAReferenceCtrl" ng-cloak>
+        <h1>
+            PowerSchool DAT Reference <em>[{{tagCount}}<i data-ng-if="loading">+</i> tags]</em>
+            ~[if#metaCatalog.plugin.isEnabled.META Customizations]
+            <script src="/admin/META/meta.javascript?name=meta_reference"></script>
+            [else#metaCatalog]
+            <span id="metaCustCatalog">
+                <a href="https://customizations.metasolutions.net/" target="_blank" title="View the META Customizations Catalog">
+                    <img src="https://apps2.metasolutions.net/images/meta_catalog.png">
+                </a>
+            </span>
+            [/if#metaCatalog]
+        </h1>
+
+        <!-- Alert for new version -->
+        <div data-ng-if="newVersion && !loading" class="feedback-alert">
+            There's a new version waiting for you on the <a href="https://support.powerschool.com/exchange/view.action?download.id=1133" target="_blank">PowerSource Exchange</a> with {{newTagCount.count-tagCount}} new tags!
+        </div>
+
+        <div class="box-round">
+            <div id="copiedText" ng-show="data.copiedText">Copied Tag to Clipboard</div>
+            
+            <!-- Filter and Quick Links section -->
+            <fieldset>
+                <legend>Filter</legend>
+                <div class="hide"></div>
+                <div class="filterItems">
+                    <div>
+                        <input ng-model="filter" type="search" placeholder="Filter Tags" />
+                    </div>
+                </div>
+                <label>Quick Links:</label>
+                <div style="border: solid 1px gray;">
+                    <ul class="no_bullet">
+                        <li data-ng-repeat="section in data | orderBy : ['section'] track by $index"
+                            data-ng-click="setSection(section)" data-ng-if="section.section"
+                            ng-bind-html="highlight(section.section, filter)"></li>
+                    </ul>
+                </div>
+                <div class="button-row">
+                    <div class="inputbutton">
+                        <button ng-hide="loading" type="button" ng-click="randStudent()">Random Student</button>
+                        <button ng-show="loading" disabled class="disabled" type="button">{{loadingMsg}}</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Main content section -->
+            <fieldset ng-repeat="section in data | filter : filter track by $index">
+                <legend ng-bind-html="highlight(section.section, filter)"></legend>
+                <div class="feedback-info" data-ng-if="section.description" data-ng-bind-html="section.description">
+                </div>
+                <table class="grid">
+                    <colgroup>
+                        <col style="width:15%" />
+                        <col style="width:15%" />
+                        <col style="width:30%" />
+                        <col style="width:25%" />
+                        <col style="width:15%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td class="bold">Name</td>
+                            <td class="bold">Tag</td>
+                            <td class="bold">Description</td>
+                            <td class="bold">Example</td>
+                            <td class="bold">Output</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="tag in section.tags | filter : filter">
+                            <td ng-bind-html="highlight(tag.name, filter)"></td>
+                            <td ng-click="copyTag(tag)" class="copyTag" title="Copy Tag" ng-bind-html="highlight(tag.disp, filter)"></td>
+                            <td ng-bind-html="highlight(tag.desc, filter)"></td>
+                            <td ng-bind-html="highlight(tag.code, filter)"></td>
+                            <td ng-bind-html="highlight(tag.ex, filter)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+    ~[wc:admin_footer_css]
+</body>
+
+</html>

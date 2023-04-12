@@ -1,0 +1,70 @@
+[
+  {
+    "section": "Decode Statement",
+    "tags": [
+      {
+        "name": "Fieldname",
+        "disp": "&#126;(decode;{fieldname})",
+        "desc": "The name of the field to evaluate",
+        "code": "&#126;(decode;<strong>&#126;(gender)</strong>) <red>Invalid, returns blank!</red>",
+        "ex": "~(decode;~(gender))"
+      },
+      {
+        "name": "Value",
+        "disp": "&#126;(decode;{fieldname};{value})",
+        "desc": "Evaluate the field against the specified {value}.<br><span class=\"bold\">In this example, the field gender is evaluated against the value M.</span>",
+        "code": "&#126;(decode;&#126;(gender);<strong>M</strong>) <red>Incomplete, returns {value}!</red>",
+        "ex": "~(decode;~(gender);M)"
+      },
+      {
+        "name": "Return",
+        "disp": "&#126;(decode;{fieldname};{value};{return})",
+        "desc": "Value to return if the field matches the preceding {value}.<br><span class=\"bold\">In this example, the value Male is returned if the gender field equals M.</span>",
+        "code": "&#126;(decode;&#126;(gender);M;<strong>Male</strong>) <red>Incomplete, returns {return}!</red>",
+        "ex": "~(decode;~(gender);M;Male)"
+      },
+      {
+        "name": "Value (optional)",
+        "disp": "&#126;(decode;{fieldname};{value1};{return1};{value2})",
+        "desc": "Evaluate the field against the specified values.<br><span class=\"bold\">In this example, the field gender is evaluated against the value F.</span>",
+        "code": "&#126;(decode;&#126;(gender);M;Male;<strong>F</strong>) <red>Incomplete!</red>",
+        "ex": "~(decode;~(gender);M;Male;F)"
+      },
+      {
+        "name": "Return (optional)",
+        "disp": "&#126;(decode;{fieldname};{value1};{return1};{value2};{return2})",
+        "desc": "Value to return if the field matches the preceding value.<br><span class=\"bold\">In this example, the value Female is returned if the gender field equals F.</span>",
+        "code": "&#126;(decode;&#126;(gender);M;Male;F;<strong>Female</strong>)",
+        "ex": "~(decode;~(gender);M;Male;F;Female)"
+      },
+      {
+        "name": "Else",
+        "disp": "&#126;(decode;{fieldname};{value1};{return1};{value2};{return2};{else})",
+        "desc": "Default value to return if the current field value did not match any of the evaluated values.<br><span class=\"bold\">The value Not Specified is returned if the gender field does not equal M or F.</span>",
+        "code": "&#126;(decode;&#126;(gender);M;Male;F;Female;<strong>Not Specified</strong>)</code>",
+        "ex": "~(decode;~(gender);M;Male;F;Female;Not Specified)"
+      },
+      {
+        "name": "Else Fieldname",
+        "disp": "&#126;(decode;{fieldname};{value1};{return1};{value2};{return2};{fieldname2})",
+        "desc": "Return current field value if the current field {value} did not match any of the evaluated values.",
+        "code": "&#126;(decode;&#126;(grade_level);-1;PS;0;KG;99;Graduate;<strong>&#126;(grade_level)</strong>)",
+        "ex": "~(decode;~(grade_level);-1;PS;0;KG;99;Graduate;~(grade_level))"
+      },
+      {
+        "name": "Decode Alternative",
+        "disp": "&#126;[decode;{fieldname};{value1};{return1};{value2};{return};{fieldname2}]",
+        "desc": "Return current field value if the current field value did not match any of the evaluated values.",
+        "code": "&#126;[decode;&#126;(grade_level);-1;PS;0;KG;99;Graduate;&#126;(grade_level)]",
+        "ex": "~[decode;~(grade_level);-1;PS;0;KG;99;Graduate;~(grade_level)]"
+      },
+      {
+        "name": "Decode List",
+        "disp": "&#126;(decodelist;list.{listname};{lookup_value};{display_if_not_found})",
+        "desc": "Return current value from a Gen table {listname} using {lookup_value}. <br>If the {lookup_value} did not match any values in the list, return {display_if_not_found}.",
+        "code": "&#126;(decodelist;list.federalrace;&#126;(ethnicity);Unknown: &#126;(ethnicity))",
+        "ex": "~(decodelist;list.federalrace;~(ethnicity);Unknown: ~(ethnicity))"
+      }
+    ]
+  }
+]

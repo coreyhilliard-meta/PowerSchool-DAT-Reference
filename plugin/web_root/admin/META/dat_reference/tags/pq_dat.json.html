@@ -1,0 +1,56 @@
+[
+  {
+    "section": "PowerQuery DATs",
+    "description": "The PowerQuery DAT leverage specially crafted PowerQueries that allow for Core, State Reporting, and Customer created PowerQueries to be used in Reports and some Export functions. Access to PowerQueries, and their data, are linked to Page Permissions. Users must have at least Read Only access to the Page listed under the Portal - Page section of the table below for the PowerQuery DAT to return results.",
+    "tags": [
+      {
+        "name": "Student Email",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.students.student_email)",
+        "desc": "",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.students.student_email)"
+      },
+      {
+        "name": "Student Global ID",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.students.globalid)",
+        "desc": "",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.students.globalid)"
+      },
+      {
+        "name": "Student Race Codes",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.students.racecodes)",
+        "desc": "Optional Parameter: listaggdelim",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.students.racecodes)"
+      },
+      {
+        "name": "Late assignments for the currently selected year",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.students.late_assignment_counts_year)",
+        "desc": "Student Course Number, Name, and Count of all late assignments for the currently selected year.<br>Optional Parameter: value-delim",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.students.late_assignment_counts_year)"
+      },
+      {
+        "name": "Missing assignments for the currently selected year",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.students.missing_assignment_counts_year)",
+        "desc": "Student Course Number, Name, and Count of all missing assignments for the currently selected year.<br>Optional Parameter: value-delim",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.students.missing_assignment_counts_year)"
+      },
+      {
+        "name": "Administrator Global ID",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.teachers.adminglobalid)",
+        "desc": "",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.teachers.adminglobalid)"
+      },
+      {
+        "name": "Teacher Global ID",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.teachers.teacherglobalid)",
+        "desc": "",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.teachers.teacherglobalid)"
+      },
+      {
+        "name": "Teacher Race Codes",
+        "disp": "&#126;(*powerquery;query=com.powerschool.core.dats.teachers.racecodes)",
+        "desc": "Optional Parameter: listaggdelim",
+        "ex": "~(*powerquery;query=com.powerschool.core.dats.teachers.racecodes)"
+      }
+    ]
+  }
+]

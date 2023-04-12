@@ -1,0 +1,63 @@
+[
+  {
+    "section": "Logic DATs - If/Then Statements",
+    "tags": [
+      {
+        "name": "Conditional If",
+        "disp": "&#126;(field;if.fieldvalue.{find}.then={replace_with})",
+        "desc": "A conditional argument that displays aspecified result if the condition is met.",
+        "code": "&#126;(gender; if.fieldvalue.f.then=Female; if.fieldvalue.m.then=Male)",
+        "ex": "~(gender;if.fieldvalue.f.then=Female;if.fieldvalue.m.then=Male)"
+      },
+      {
+        "name": "Conditional If Matched, change Result",
+        "disp": "&#126;(field;if.fieldvalue.XX.then={replace_with})",
+        "desc": "Display field value, if {find} then changes to {replace_with}.",
+        "code": "&#126;(gender;if.fieldvalue.f.then=Female)<br>Gender=~(gender)",
+        "ex": "~(gender;if.fieldvalue.f.then=Female)"
+      },
+      {
+        "name": "Conditional If Matched, change Result, stacked",
+        "disp": "&#126;(field;if.fieldvalue.XX.then={replace_with})",
+        "desc": "Display field value, if {find} then changes to {replace_with}, with multiple replacements.",
+        "code": "&#126;(gender;if.fieldvalue.f.then=Female;if.fieldvalue.m.then=Male)<br>Gender=~(gender)",
+        "ex": "~(gender;if.fieldvalue.f.then=Female;if.fieldvalue.m.then=Male)"
+      },
+      {
+        "name": "Conditional If Not Matched, change Result",
+        "disp": "&#126;(field;if.fieldvalue#{find}.then={replace_with})",
+        "desc": "A conditional argument that displays no result if the value of the field does not meets the condition.",
+        "code": "&#126;(gender;if.fieldvalue#f.then=Not Female)",
+        "ex": "~(gender;if.fieldvalue#f.then=Not Female)"
+      },
+      {
+        "name": "If Blank",
+        "disp": "&#126;(field;if.blank.then={replace_with})",
+        "desc": "A conditional argument that displays {replace_with} if the field is blank.",
+        "code": "&#126;(middle_name;if.blank.then=Does not have Middle Name)",
+        "ex": "~(middle_name;if.blank.then=Does not have Middle Name)"
+      },
+      {
+        "name": "If FieldValue is Blank",
+        "disp": "&#126;(field;if.fieldvalue.blank={replace_with})",
+        "desc": "A conditional argument that displays {replace_with} if the field is blank.",
+        "code": "&#126;(middle_name;if.fieldvalue.blank.then=Does not have Middle Name)",
+        "ex": "~(middle_name;if.fieldvalue.blank.then=Does not have Middle Name)"
+      },
+      {
+        "name": "If Not Blank",
+        "disp": "&#126;(field;if.not.blank.then=)",
+        "desc": "A conditional argument that displays {replace_with} if the field is not blank.",
+        "code": "&#126;(first_name;if.not.blank.then=First Name: &#126;(first_name))",
+        "ex": "~(first_name;if.not.blank.then=First Name: ~(first_name))"
+      },
+      {
+        "name": "If FieldVlaue is Not Blank",
+        "disp": "&#126;(field;if.fieldvalue.#.blank.then={replace_with})",
+        "desc": "A conditional argument that displays {replace_with} if the field is not blank.",
+        "code": "&#126;(first_name;if.fieldvalue.#.blank.then=Has First Name)",
+        "ex": "~(first_name;if.fieldvalue.#.blank.then=Has First Name)"
+      }
+    ]
+  }
+]

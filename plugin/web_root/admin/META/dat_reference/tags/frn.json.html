@@ -1,0 +1,162 @@
+[
+  {
+    "section": "File Record Number (FRN)",
+    "tags": [
+      {
+        "name": "FRN",
+        "disp": "&#126;(frn)",
+        "desc": "This is the FRN of the current file + record.",
+        "ex": "~(frn)"
+      },
+      {
+        "name": "URL FRN",
+        "disp": "&#126;(urlfrn)",
+        "desc": "This is a URL FRN of the current file + record.",
+        "ex": "~(urlfrn)"
+      },
+      {
+        "name": "File FRN",
+        "disp": "&#126;(filefrn;{table_number})",
+        "desc": "This is a FRN of the {table_number} file + record.",
+        "code": "&#126;(filefrn;1)",
+        "ex": "~(filefrn;1)"
+      },
+      {
+        "name": "LRN",
+        "disp": "&#126;(lrn)",
+        "desc": "This is the Last FRN. <em>Must be set using &lrn= in the URL</em>",
+        "ex": "~(lrn)"
+      },
+      {
+        "name": "Student FRN",
+        "disp": "&#126;(studentfrn)",
+        "desc": "This is the FRN of the current student.",
+        "ex": "~(studentfrn)"
+      },
+      {
+        "name": "Student FRN",
+        "disp": "&#126;[x:studentfrn]",
+        "desc": "This is the FRN of the current student.",
+        "ex": "~[x:studentfrn]"
+      },
+      
+      {
+        "name": "Current Staff/Teacher FRN",
+        "disp": "&#126;(teacherfrn)",
+        "desc": "This is the FRN of the current staff/teacher.",
+        "ex": "~(teacherfrn)"
+      },
+      {
+        "name": "Current Teacher FRN",
+        "disp": "&#126;[x:teacherfrn]",
+        "desc": "This is the FRN of the current teacher.",
+        "ex": "~[x:teacherfrn]"
+      },
+      {
+        "name": "Current Staff/Teacher Record Number",
+        "disp": "&#126;(teacherrn)",
+        "desc": "This is the RN of the current staff/teacher.",
+        "ex": "~(teacherrn)"
+      },
+      {
+        "name": "Current User's FRN",
+        "disp": "&#126;(userfrn)",
+        "desc": "Outputs the current user's table + DCID ",
+        "ex": "~(userfrn)"
+      },
+      {
+        "name": "Display FRN",
+        "disp": "&#126;(f.frn;table={table})",
+        "desc": "To display the File Record Number (FRN) for a specific table.",
+        "code": "&#126;(f.frn;table=students)",
+        "ex": "~(f.frn;table=students)"
+      },
+      {
+        "name": "File Number of the current FRN",
+        "disp": "&#126;(filenum))",
+        "desc": "Display file number (the initial piece from FRN) of the current record",
+        "ex": "~(filenum)"
+      },
+      {
+        "name": "Student Record Number",
+        "disp": "&#126;(studentrn)",
+        "desc": "This is the RN of the current student.",
+        "ex": "~(studentrn)"
+      },
+      {
+        "name": "Record Number",
+        "disp": "&#126;(rn)",
+        "desc": "This is the RN (2nd 2nd peice from FRN) of the current record.",
+        "ex": "~(rn)"
+      },
+      {
+        "name": "Record Number",
+        "disp": "&#126;(rndisplay)",
+        "desc": "This is the RN of the current record, or displays New Record if creating a new record frn.",
+        "ex": "~(rndisplay)"
+      },
+      {
+        "name": "Student FRN URL",
+        "disp": "&#126;(studentfrnNVP)",
+        "desc": "Creates the student FRN to be appended to the URL.",
+        "ex": "~(studentfrnNVP)"
+      },
+      
+      {
+        "name": "File Number",
+        "disp": "&#126;[f.struct_info; fn=table_nbr; table={table}]",
+        "desc": "Display file number (the initial piece from FRN) from core table name",
+        "code": "&#126;[f.struct_info; fn=table_nbr; table=fee]",
+        "ex": "~[f.struct_info;fn=table_nbr;table=fee]"
+      },
+      {
+        "name": "Field Number",
+        "disp": "&#126;[f.struct_info; fn=field_nbr; table={table}; field_name={field}]",
+        "desc": "Display internal field number from a core table name. This is used to manually build input names.",
+        "code": "&#126;[f.struct_info; fn=field_nbr; table=STUDENTS; field_name=LASTFIRST]",
+        "ex": "~[f.struct_info;fn=field_nbr;table=STUDENTS;field_name=LASTFIRST]"
+      },
+      {
+        "name": "Table Name",
+        "disp": "&#126;[f.struct_info; table={table_number}; fn=table_name]",
+        "desc": "Display the core table name from an internal field number.",
+        "code": "&#126;[f.struct_info; table=41; fn=table_name]",
+        "ex": "~[f.struct_info;table=41;fn=table_name]"
+      },
+      {
+        "name": "Table Fields",
+        "disp": "&#126;[f.struct_info; fn=field_names; table=test; delim=[comma {or br}];]",
+        "desc": "Display the table fields from a core table.",
+        "code": "&#126;[f.struct_info; fn=field_names; table=test; delim=[comma];]",
+        "ex": "~[f.struct_info;fn=field_names;table=test;delim=[comma];]"
+      },
+      {
+        "name": "Records In File",
+        "disp": "&#126;[rif;{tablename_or_number}]",
+        "desc": "Display the count of records from a core table by {tablename_or_number}.",
+        "code": "&#126;[rif:Students]",
+        "ex": "~[rif:Students]"
+      },
+      {
+        "name": "Records In Search",
+        "disp": "&#126;[ris;{tablename_or_number}{;searchColumn=columnValue}{;searchColumn2=columnValue2}]",
+        "desc": "Display Count of Records in Search<br>{tablename_or_number} can be a table name or a table number",
+        "code": "&#126;[ris;Students;enroll_status=0;last_name=Smith]",
+        "ex": "~[ris;Students;enroll_status=0;last_name=Smith]"
+      },
+      {
+        "name": "Selected Records",
+        "disp": "&#126;[selectedrecords;{tablenumber}]",
+        "desc": "Display the count of selected records from a core table by {tablenumber}.",
+        "code": "&#126;[selectedrecords;1]",
+        "ex": "~[selectedrecords;1]"
+      },
+      {
+        "name": "Table Dropdown List",
+        "disp": "&#126;[filepopup]",
+        "desc": "Creates a Dropdown List of table<br>Note: The select list contains the table number<br>e.g. $j('select[name=filenum]').val()",
+        "ex": "<noquote>~[filepopup]</noquote>"
+      }
+    ]
+  }
+]

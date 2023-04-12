@@ -1,0 +1,121 @@
+[
+  {
+    "section": "Contact Information",
+    "description": "<p>Using the *contact_info data access tag (DAT) you can add certain contact information to Object Reports, Report Cards, Mailing Labels, and Form Letters by formatting various expressions. DATs can also be used on your own custom pages, and to export data through traditional export tools such as Quick Export and AutoSend.</p><ul><li>The *contact_info DAT is always run from the student's perspective.</li><li>The DAT starts with a list of contacts for each student, ordered based on the priority order than can be seen on the Students Contact page.</li><li>Each contact can have a number of addresses, emails, or phone numbers that are sorted in ascending priority order for each category. These contact items have attributes such as \"Type\" than can be used to filter the list.</li><li>The items in the remaining filtered list are assigned a temporary index for reference within the DAT. For example, when a contact has 2 phones with type \"Home\" and 2 phones with type \"Work\", if the DAT has filtered to only Home phones then then index 2 will reference the second \"Home\" phone even if it started out as the 3rd phone number in the unfiltered list.</li><li>If an expression resolves to nothing, an empty string is returned. For example, a request to display the 3rd Home phone in a list of 2.</li><li>If an expression is not allowed to return a field due to the user's Field Level Security role restrictions, a string of five asterisks is returned (*****).</li><li>It is possible for historical and future relationship detail records to exist between a single contact and student. Only one relationship detail record can be active on any given day. The *contact_info DAT only considers the relationship detail record that is active on the day the DAT is used.</li><li>If an argument resolves to nothing, such as asking for the (non-existent) step-god father relationship, or an index 10 of a list of 3, nothing (an empty string) is returned.</li></ul>",
+    "tags": [
+      {
+        "name": "First Contact Name",
+        "disp": "&#126;(*contact_info)",
+        "desc": "The name of the student's first contact by priority.<br>This DAT will return the contact even if they are inactive.",
+        "code": "&#126;(*contact_info)",
+        "ex": "~(*contact_info)"
+      },
+      {
+        "name": "[Who] Contact Info by Relationship",
+        "disp": "&#126;(*contact_info;rel={relationship})",
+        "desc": "The name, gender, employer, [status], ContactID, email, & username of the student's first <u>active</u> contact by priority that matches the {relationship} code.<br>Multiple relationhship codes can be specified by separating them with a comma.<br><b>rel=all</b> will return the first contact.",
+        "code": "&#126;(*contact_info;rel=all)",
+        "ex": "~(*contact_info;rel=all)"
+      },
+      {
+        "name": "[Who] Contact Info using Relationship Flags",
+        "disp": "&#126;(*contact_info;flags={relationship_flags})",
+        "desc": "Filter contacts by relationship to the student.<br>Comma-separated list of:<ul><li>include-inactive</li><li>only-inactive</li><li>custodial</li><li>non-custodial</li><li>emergency</li><li>non-emergency</li><li>lives-with</li><li>not-lives-with</li><li>school-pickup</li><li>not-school-pickup</li><li>receives-mail</li><li>not-receives-mail</li><li>dataaccess</li><li>not-dataaccess</li><li>webaccount</li><li>not-webaccount</li></ul>",
+        "code": "&#126;(*contact_info;flags=include-inactive)",
+        "ex": "~(*contact_info;flags=include-inactive)"
+      },
+      {
+        "name": "[Who] Contact Info As Of Person",
+        "disp": "&#126;(*contact_info;asof-pers={when})",
+        "desc": "Filter the list of contacts associated with the student to those valid at a particular time.<br><ul><li>A date is specified as date:MM/dd/yyyy.</li><li>A value of current includes todays active contacts where today falls between (inclusive).</li><li>A value of past includes yesterday's active contacts only; cannot have a start or end date after today.</li><li>A value of future includes tomorrows active contacts only, cannot have a start or end date before today.</li><li>A value of active includes contact with contact details closest to today's date. There can only be one active contact. Active contacts should not be confused with activating a contact.</li></ul>",
+        "code": "&#126;(*contact_info;asof-pers=01/01/2020)",
+        "ex": "~(*contact_info;asof-pers=01/01/2020)"
+      },
+      {
+        "name": "[Who] Contact Info Max Persons",
+        "disp": "&#126;(*contact_info;max-pers={max})",
+        "desc": "Limit the number of contacts in the report. <br>Default: 1.<br>Values: all, or number indicating how many people to include",
+        "code": "&#126;(*contact_info;max-pers=2)",
+        "ex": "~(*contact_info;max-pers=2)"
+      },
+      {
+        "name": "[Who] Contact Info Which Person",
+        "disp": "&#126;(*contact_info;which-person={max})",
+        "desc": "Extract a contact from the list of contacts associated with a student.<br>Default: all.<br>Values: all, or number indicating which index in the list",
+        "code": "&#126;(*contact_info;which-person=2)",
+        "ex": "~(*contact_info;which-person=2)"
+      },
+      {
+        "name": "[What] Contact Info Category",
+        "disp": "&#126;(*contact_info;cat={categories})",
+        "desc": "Determines which {categories} of contact data to include.<br>Values: all, or comma-separated list of rel, demo, phone, email, addr.",
+        "code": "&#126;(*contact_info;cat=rel)",
+        "ex": "~(*contact_info;cat=rel)"
+      },
+      {
+        "name": "[What] Contact Info Which Value",
+        "disp": "&#126;(*contact_info;which-val={item})",
+        "desc": "Extract an {item} from the list of items.<br>Values: all, or number indicating which index in the list",
+        "code": "&#126;(*contact_info;which-val=1)",
+        "ex": "~(*contact_info;which-val=1)"
+      },
+      {
+        "name": "[What] Contact Info Type",
+        "disp": "&#126;(*contact_info;type={types})",
+        "desc": "Filter output to include only the specified {types} of data.<br>Values: all, or comma-separated list of any valid type code for the selected categories",
+        "code": "&#126;(*contact_info;type=all)",
+        "ex": "~(*contact_info;type=all)"
+      },
+      {
+        "name": "[What] Contact Info As Of Value)",
+        "disp": "&#126;(*contact_info;as-of={time})",
+        "desc": "Filter output to items valid at a particular time.<br>Values: date, or comma-separated list of past, current, future, all",
+        "code": "&#126;(*contact_info;as-of=date:01/01/2020)",
+        "ex": "~(*contact_info;as-of=date:01/01/2020)"
+      },
+      {
+        "name": "[What] Contact Info Value)",
+        "disp": "&#126;(*contact_info;val={values})",
+        "desc": "Values from a category to report.<br>Values: all (default), or comma-separated list of object fields:<div style='columns: 2;'>Demographics:<ul><li>acctemail</li><li>acctid</li><li>active</li><li>employer</li><li>firstname</li><li>gender</li><li>lastfirst</li><li>lastname</li><li>middlename</li><li>personid</li><li>prefix</li><li>stateid</li><li>statenum</li><li>suffix</li></ul>Relationship:<ul style='break-inside: avoid;'><li>active</li><li>custody</li><li>dataaccess</li><li>emergency</li><li>enddate</li><li>liveswith</li><li>receivesmail</li><li>relationship</li><li>schoolpickup</li><li>srexcluded</li><li>startdate</li></ul>Address:<ul><li>city</li><li>country</li><li>enddate</li><li>line2</li><li>startdate</li><li>stateprovince</li><li>street</li><li>type</li><li>unit</li><li>postalcode</li></ul>Phone:<ul><li>phone</li><li>preferred</li><li>sms</li><li>type</li></ul>Email:<ul><li>email</li><li>primary</li><li>type</li></ul></div>",
+        "code": "&#126;(*contact_info;val=lastfirst,employer)",
+        "ex": "~(*contact_info;val=lastfirst,employer)"
+      },
+      {
+        "name": "[Format] Contact Delimiter)",
+        "disp": "&#126;(*contact_info;contact-delim={values})",
+        "desc": "Specifies the delimiter to use between multiple contacts. <br>Values: <ul><li>dlf (double line-feed)</li><li>lf (line-feed)</li><li>p (HTML paragraph: &lt;p>)</li><li>br (HTML break: &lt;br>)</li><li>comma (, )</li><li>barecomma (,)</li><li>semicolon (;)</li><li>space ( )</li><li>pipe (|)</li></ul>",
+        "code": "&#126;(*contact_info;max-pers=2;contact-delim=br)",
+        "ex": "~(*contact_info;max-pers=2;contact-delim=br)"
+      },
+      {
+        "name": "[Format] Contact Item Delimiter)",
+        "disp": "&#126;(*contact_info;item-delim={values})",
+        "desc": "Specifies the delimiter to use between multiples of the same item, such as multiple phones, multiple addresses, etc.<br>Values: <ul><li>dlf (double line-feed)</li><li>lf (line-feed)</li><li>p (HTML paragraph: &lt;p>)</li><li>br (HTML break: &lt;br>)</li><li>comma (, )</li><li>barecomma (,)</li><li>semicolon (;)</li><li>space ( )</li><li>pipe (|)</li></ul>",
+        "code": "&#126;(*contact_info;val=all;item-delim=comma)",
+        "ex": "~(*contact_info;val=all;item-delim=comma)"
+      },
+      {
+        "name": "[Format] Contact Value Delimiter)",
+        "disp": "&#126;(*contact_info;value-delim={values})",
+        "desc": "Specifies the delimiter to use between multiple values specified by the value parameter.<br>Values: <ul><li>dlf (double line-feed)</li><li>lf (line-feed)</li><li>p (HTML paragraph: &lt;p>)</li><li>br (HTML break: &lt;br>)</li><li>comma (, )</li><li>barecomma (,)</li><li>semicolon (;)</li><li>space ( )</li><li>pipe (|)</li></ul>",
+        "code": "&#126;(*contact_info;value-delim=semicolon)",
+        "ex": "~(*contact_info;value-delim=semicolon)"
+      },
+      {
+        "name": "[Format] Contact Category Delimiter)",
+        "disp": "&#126;(*contact_info;cat-delim={values})",
+        "desc": "Specifies the delimiter to use between multiple categories, such as demographics, email, etc.<br>Values: <ul><li>dlf (double line-feed)</li><li>lf (line-feed)</li><li>p (HTML paragraph: &lt;p>)</li><li>br (HTML break: &lt;br>)</li><li>comma (, )</li><li>barecomma (,)</li><li>semicolon (;)</li><li>space ( )</li><li>pipe (|)</li></ul>",
+        "code": "&#126;(*contact_info;cat=all;cat-delim=pipe)",
+        "ex": "~(*contact_info;cat=all;cat-delim=pipe)"
+      },
+      {
+        "name": "[Localization] Contact Locale)",
+        "disp": "&#126;(*contact_info;locale={locale})",
+        "desc": "Specifies the locale to use when decoding dates.<br>Values: Valid locale code, such as en_US (default), el_GR, etc...",
+        "code": "&#126;(*contact_info;locale=en_ES)",
+        "ex": "~(*contact_info;locale==en_ES)"
+      }
+
+    ]
+  }
+]

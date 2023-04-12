@@ -1,0 +1,29 @@
+[
+  {
+    "section": "Stored Grades Tags",
+    "description": "Stored grades data is extracted from the [StoredGrades] table using the <b>stored.by.course.number</b> DAT with the course name, store code and field name, or with the <b>stored.by.course.period.cached</b> DAT, using the expression, store code and field name. The <b>stored.by.course.numberlist</b> allows users to return data for multiple courses using one DAT.",
+      "tags": [
+      {
+        "name": "Stored Field by Course Number",
+        "disp": "&#126;(stored.by.course.number;{course_number};{term};{field})",
+        "desc": "Inserts stored {field} for {course_number} for the specified term.<br>Where {fields} = <ul style='column-count:2'><li>Absences</li><li>Behavior</li><li>Comment</li><li>Course_Name</li><li>Course_Number</li><li>Credit_Type</li><li>DateStored</li><li>EarnedCrHrs</li><li>GPA_Points</li><li>grade</li><li>Percent</li><li>PotentialCrHrs</li><li>SchoolName</li><li>Tardies</li><li>Teacher_Name</li><li>Section_Number</li><li>School_Phone</li><li>Email_Addr</li></ul>",
+        "code": "&#126;(stored.by.course.number;101;Q1;grade)",
+        "ex": "~(stored.by.course.number;101;Q1;grade)"
+      },
+      {
+        "name": "Stored Field by Multiple Course Numbers",
+        "disp": "&#126;(stored.by.course.numberlist;{course_number1},{course_number2,{course_numberN};{term};{field})",
+        "desc": "Inserts stored {field} for {course_number1}, {course_number2}, {course_numberN} for the specified term.<br>Where {fields} = <ul style='column-count:2'><li>Absences</li><li>Behavior</li><li>Comment</li><li>Course_Name</li><li>Course_Number</li><li>Credit_Type</li><li>DateStored</li><li>EarnedCrHrs</li><li>GPA_Points</li><li>grade</li><li>Percent</li><li>PotentialCrHrs</li><li>SchoolName</li><li>Tardies</li><li>Teacher_Name</li><li>Section_Number</li><li>School_Phone</li><li>Email_Addr</li></ul>",
+        "code": "&#126;(stored.by.course.numberlist;101,102,103;Q1;grade)",
+        "ex": "~(stored.by.course.numberlist;101,102,103;Q1;grade)"
+      },
+      {
+        "name": "Stored Field by Expression",
+        "disp": "&#126;(stored.by.course.period.cached;{course_number};{storecode};{field})",
+        "desc": "Inserts stored {field} for {course_number} for the specified {term}.<br>Where {fields} = <ul style='column-count:2'><li>Absences</li><li>Behavior</li><li>Comment</li><li>Course_Name</li><li>Course_Number</li><li>Credit_Type</li><li>DateStored</li><li>EarnedCrHrs</li><li>GPA_Points</li><li>grade</li><li>Percent</li><li>PotentialCrHrs</li><li>SchoolName</li><li>Tardies</li><li>Teacher_Name</li><li>Section_Number</li><li>School_Phone</li><li>Email_Addr</li></ul>",
+        "code": "&#126;(stored.by.course.period.cached;1(A);Q1;grade)",
+        "ex": "~(stored.by.course.period.cached;1(A);Q1;grade)"
+      }
+    ]
+  }
+]

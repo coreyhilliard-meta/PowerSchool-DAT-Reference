@@ -1,0 +1,50 @@
+[
+  {
+    "section": "Test Scores",
+    "description": "The Tests DAT extracts information from the [Test], [TestScore], [StudentTest] and [StudentTestScore] tables. Tests are setup at Start Page > District Setup > Tests. When using the Tests DAT, ensure that the test name and test score name are entered exactly as setup at the district.",
+    "tags": [
+      {
+        "name": "Test Name",
+        "disp": "&#126;(tests;name={test_name})",
+        "desc": "Displays test score for the {test_name}.",
+        "code": "&#126;(tests;name=ACT)",
+        "ex": "~(tests;name=ACT)"
+      },
+      {
+        "name": "Score Name",
+        "disp": "&#126;(tests;name={test_name};<b>score={score_name}</b>)",
+        "desc": "Displays test score for the {test_name} and {score_name}.",
+        "code": "&#126;(tests;name=ACT;score=Math)",
+        "ex": "~(tests;name=ACT;score=Math)"
+      },
+      {
+        "name": "Which Test Score",
+        "disp": "&#126;(tests;name={test_name};score={score_name};<b>which={which_value}</b>)",
+        "desc": "The Which value determines which test scores; a student might have several.<br>{which_value} = FIRST, LAST <i>(default)</i>, CURRENT term, TERMID, GRADE, or BEST",
+        "code": "&#126;(tests;name=ACT;score=Math;which=BEST)",
+        "ex": "~(tests;name=ACT;score=Math;which=BEST)"
+      },
+      {
+        "name": "Test Score Type",
+        "disp": "&#126;(tests;name={test_name};score={score_name};which={which_value};<b>type={type_value}</b>)",
+        "desc": "The Type value is the type of score you want to display.<br>{type_value} = NUM <i>(default)</i>, PERCENT, ALPHA",
+        "code": "&#126;(tests;name=ACT;score=Math;which=BEST;type=NUM)",
+        "ex": "~(tests;name=ACT;score=Math;which=BEST;type=NUM)"
+      },
+      {
+        "name": "Test Score Result",
+        "disp": "&#126;(tests;name={test_name};score={score_name};which={which_value};type={type_value};<b>result={result_value}</b>)",
+        "desc": "The Result value is the type of result you want to include.<br>{result_value} = VALUE, SUM <i>(default)</i>, AVG, COUNT, MIN, MAX, or DATE",
+        "code": "&#126;(tests;name=ACT;score=Math;which=BEST;type=NUM;result=MAX)",
+        "ex": "~(tests;name=ACT;score=Math;which=BEST;type=NUM;result=MAX)"
+      },
+      {
+        "name": "Test Score Format",
+        "disp": "&#126;(tests;name={test_name};score={score_name};which={which_value};type={type_value};result={result_value};<b>format={format_string}</b>)",
+        "desc": "The Format value indicates the format of the test score information you include.",
+        "code": "&#126;(tests;name=ACT;score=Math;which=BEST;type=NUM;result=MAX;format=###)",
+        "ex": "~(tests;name=ACT;score=Math;which=BEST;type=NUM;result=MAX;format=###)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "section": "Functions",
+    "tags": [
+      {
+        "name": "Field",
+        "disp": "&#126;([tablenumber]fieldname)<br>&#126;([tablename]fieldname)",
+        "desc": "Example Fields",
+        "code": "&#126;([01]first_name)<br>&#126;([Students]grade_level)",
+        "ex": "~([01]first_name)<br>~([Students]grade_level)"
+      },
+      {
+        "name": "Length (field)",
+        "disp": "&#126;(f.length;string=Field)",
+        "desc": "Returns the number of characters in the field.",
+        "code": "&#126;(f.length;string=&#126;(first_name))",
+        "ex": "~(f.length;string=~(first_name))"
+      },
+      {
+        "name": "Length (text)",
+        "disp": "&#126;(f.length;string=Text String)",
+        "desc": "Returns the number of characters in the string parameter.",
+        "code": "&#126;(f.length;string=This is the text)",
+        "ex": "~(f.length;string=This is the text)"
+      },
+      {
+        "name": "Addition",
+        "disp": "&#126;(f.add;#;#{;#})",
+        "desc": "Adds all numbers",
+        "code": "&#126;(f.add;6;2)",
+        "ex": "~(f.add;6;2)"
+      },
+      {
+        "name": "Subtraction",
+        "disp": "&#126;(f.sub;#;#)",
+        "desc": "Subtracts 2 numbers",
+        "code": "&#126;(f.sub;6;2)",
+        "ex": "~(f.sub;6;2)"
+      },
+      {
+        "name": "Multiplication",
+        "disp": "&#126;(f.mult;#;#)",
+        "desc": "Multiplies 2 numbers",
+        "code": "&#126;(f.mult;6;2)",
+        "ex": "~(f.mult;6;2)"
+      },
+      {
+        "name": "Division",
+        "disp": "&#126;(f.div;#;#{;error_msg=MSG})",
+        "desc": "Divides 2 numbers",
+        "code": "&#126;(f.div;6;2)<br>&#126;(f.div;6;0;error_msg=Cannot divide by 0)",
+        "ex": "~(f.div;6;2;error_msg=0)<br>~(f.div;6;0;error_msg=Cannot divide by 0)"
+      },
+      {
+        "name": "Square Root",
+        "disp": "&#126;(f.sqrt;#{;error_msg=MSG})",
+        "desc": "Returns the square root of the value passed as the first parameter",
+        "code": "&#126;(f.sqrt;9;error_msg=Error)",
+        "ex": "~(f.sqrt;9;error_msg=Error)"
+      },
+      {
+        "name": "Exponent",
+        "disp": "&#126;(f.exp;#;#{;error_msg=0})",
+        "desc": "Returns the exponent",
+        "code": "&#126;(f.exp;6;2;error_msg=0)",
+        "ex": "~(f.exp;6;2;error_msg=0)"
+      },
+      {
+        "name": "Math (Field)",
+        "disp": "&#126;(f.add;Field;#{;#})",
+        "desc": "Adds all numbers to the Field",
+        "code": "&#126;(f.add;&#126;(grade_level);1)",
+        "ex": "~(f.add;~(grade_level);1)"
+      },
+      {
+        "name": "Pack",
+        "disp": "&#126;(f.pack; nbchars=#;val_align=#; p1=Field/String; p2=Field/String; {pX=Field/String})",
+        "desc": "Returns a string containing the values from different fields concatenated together. <br>Actually, this is a small, fixed field-length record.<br> All values have the same length but adjust accordingly.<br>val_align: 1=left, 2=center, 3=right",
+        "code": "&#126;(f.pack;nbchars=3;val_align=1;p1=&#126;(first_name);p2=&#126;(middle_name);p3=&#126;(last_name))",
+        "ex": "~(f.pack;nbchars=3;val_align=1;p1=~(first_name);p2=~(middle_name);p3=~(last_name))"
+      },
+      {
+        "name": "Pack (Delimiter)",
+        "disp": "&#126;(f.pack; nbchars=#;val_align=#; p1=Field/String; p2=Field/String; {pX=Field/String};delim=CMA)",
+        "desc": "Returns a comma seperated string containing the values from different fields concatenated together.",
+        "code": "&#126;(f.pack;nbchars=5;val_align=1;p1=&#126;(first_name);p2=&#126;(middle_name);p3=&#126;(last_name);delim=CMA)",
+        "ex": "~(f.pack;nbchars=5;val_align=1;p1=~(first_name);p2=~(middle_name);p3=~(last_name);delim=CMA)"
+      },
+      {
+        "name": "Number Generator",
+        "disp": "&#126;(f.numbers_gen;startnumber=#{;lastnumber=#}{;nbnumbers=#};step=#;delim=CMA)",
+        "desc": "The Numbers Generator function generates a series of numbers and requires many mandatory parameters.<br>delim = , or CMA or ASCII(13), or Text, or &lt;HTML>",
+        "code": "&#126;(f.numbers_gen; startnumber=10; lastnumber=14; step=1; delim=&lt;br>)",
+        "ex": "~(f.numbers_gen;startnumber=10;lastnumber=14;step=1;delim=<br>)"
+      },
+      {
+        "name": "in",
+        "disp": "&#126;(f.in;value=text/dat;in=value1{,value2}{,...})",
+        "desc": "The in function returns \"1\" if the value is found in the list of values, \"0\" if not",
+        "code": "ES: &#126;(f.in;value=&#126;(grade_level); in=0,1,2,3,4,5)<br>MS: &#126;(f.in;value=&#126;(grade_level);in=6,7,8)<br>HS: &#126;(f.in;value=&#126;(grade_level);in=9,10,11,12)",
+        "ex": "ES: ~(f.in;value=~(grade_level);in=0,1,2,3,4,5)<br>MS: ~(f.in;value=~(grade_level);in=6,7,8)<br>HS: ~(f.in;value=~(grade_level);in=9,10,11,12)"
+      }
+    ]
+  }
+]

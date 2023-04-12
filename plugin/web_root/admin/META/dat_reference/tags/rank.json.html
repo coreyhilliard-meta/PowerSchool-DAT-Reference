@@ -1,0 +1,77 @@
+[
+  {
+    "section": "Class Rank Tags",
+    "description": "<p>The Class Rank DAT extracts data from the [ClassRank] table. Class Rank is setup at Start Page > School Setup > Class Rank > Class Rank Methods. For more information on Class Rank, click on the help icon in the upper right hand corner of the page to access the PowerSchool Help Files.</p><p>When creating a class rank method, it is necessary to choose a GPA Calculation Method. For more information on GPAs, navigate to Start Page > District Setup > GPA Calculations > Calculation Methods > select a calculation and then access the PowerSchool Help Files. You may also refer to Knowledgebase article 11148 on PowerSource.</p>",
+    "tags": [
+      {
+        "name": "Class rank (Based on cumulative weighted GPA)",
+        "disp": "&#126;(*class_rank_out_of;gpa)",
+        "desc": "Inserts the student's class rank. You can use any valid GPA type as the GPA parameter, such as gpa.simple or gpa.percent.",
+        "ex": "~(*class_rank_out_of;gpa)"
+      },
+      {
+        "name": "Class Rank Result=Rank Of",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"rankof\")",
+        "desc": "The Class Rank DAT extracts Rank Of data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"rankof\")",
+        "ex": "~(*classrank method="weighted" result="rankof")"
+      },
+      {
+        "name": "Class Rank Result=Rank Out Of",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"rankoutof\")",
+        "desc": "The Class Rank DAT extracts Rank Out Of data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"rankoutof\")",
+        "ex": "~(*classrank method="weighted" result="rankoutof")"
+      },
+      {
+        "name": "Class Rank Method",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\")",
+        "desc": "The Class Rank DAT extracts data from the [ClassRank] table. If the {gpa_method} parameter is omitted, the default “weighted”",
+        "code": "&#126;(*classrank method=\"weighted\")",
+        "ex": "~(*classrank method="weighted")"
+      },
+      {
+        "name": "Class Rank Result=rank",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"rank\")",
+        "desc": "The Class Rank DAT extracts RANK data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"rank\")",
+        "ex": "~(*classrank method="weighted" result="rank")"
+      },
+      {
+        "name": "Class Rank Result=Out Of",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"outof\")",
+        "desc": "The Class Rank DAT extracts OUTOF data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"outof\")",
+        "ex": "~(*classrank method="weighted" result="outof")"
+      },
+      {
+        "name": "Class Rank Result=GPA",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"gpa\")",
+        "desc": "The Class Rank DAT extracts GPA data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"gpa\")",
+        "ex": "~(*classrank method="weighted" result="gpa")"
+      },
+      {
+        "name": "Class Rank Result=School Name",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"schoolname\")",
+        "desc": "The Class Rank DAT extracts School Name data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"schoolname\")",
+        "ex": "~(*classrank method="weighted" result="schoolname")"
+      },
+      {
+        "name": "Class Rank Result=Percentile",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"percentile\")",
+        "desc": "The Class Rank DAT extracts Percentile data from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"percentile\")",
+        "ex": "~(*classrank method="weighted" result="percentile")"
+      },
+      {
+        "name": "Class Rank Percentile Digits",
+        "disp": "&#126;(*classrank method=\"{gpa_method}\" result=\"percentile\" percentiledigits=\"{decimal_places\"})",
+        "desc": "The Class Rank DAT extracts Percentile data with number of decimal places from the [ClassRank] table.",
+        "code": "&#126;(*classrank method=\"weighted\" result=\"percentile\" percentiledigits=\"3\")",
+        "ex": "~(*classrank method="weighted" result="percentile" percentiledigits="3")"
+      }
+    ]
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "section": "Daily Attendance Tags",
+    "description": "This section includes DATs used to return daily attendance information.",
+    "tags": [
+      {
+        "name": "Daily Attendance Points - School",
+        "disp": "&#126;(daily.att.points;{school_number})",
+        "desc": "Returns the total number of attendance points for daily attendance for the specified School.<br><i>School number may be omitted.</i>",
+        "code": "&#126;(daily.att.points;100)",
+        "ex": "~(daily.att.points;100)"
+      },
+      {
+        "name": "Daily Attendance Points - Attendance Code",
+        "disp": "&#126;(daily.att.points;{school_number};{att_code})",
+        "desc": "Returns the total number of attendance points for daily attendance for the specified attendance codes.",
+        "code": "&#126;(daily.att.points;;A)",
+        "ex": "~(daily.att.points;;A)"
+      },
+      {
+        "name": "Daily Attendance Points - Attendance Category",
+        "disp": "&#126;(daily.att.points;{school_number};{att_cat})",
+        "desc": "Returns the total number of attendance points for daily attendance for the specified attendance categories.",
+        "code": "&#126;(daily.att.points;;Excused)",
+        "ex": "~(daily.att.points;;Excused)"
+      },
+      {
+        "name": "Daily Attendance Points - Term",
+        "disp": "&#126;(daily.att.points;{school_number};{att_code_or_cat};{term})",
+        "desc": "Returns the total number of attendance points for daily attendance for the specified term.",
+        "code": "&#126;(daily.att.points;;all;Q1)",
+        "ex": "~(daily.att.points;;all;Q1)"
+      },
+      {
+        "name": "Daily Attendance Points - Term or Date Range",
+        "disp": "&#126;(daily.att.points;{school_number};{att_code_or_cat};{start_date};{end_date})",
+        "desc": "Returns the total number of attendance points for daily attendance for the specified date range.",
+        "code": "&#126;(daily.att.points;;all;8/1/20;6/1/21)",
+        "ex": "~(daily.att.points;;all;8/1/20;6/1/21)"
+      },
+      {
+        "name": "Daily Attendance Dates - School",
+        "disp": "&#126;(daily.att.dates;{school_number})",
+        "desc": "Returns a list of dates for which a student received daily attendance.<br><i>School number may be omitted.</i>",
+        "code": "&#126;(daily.att.dates;100)",
+        "ex": "~(daily.att.dates;100)"
+      },
+      {
+        "name": "Daily Attendance Dates - Format String",
+        "disp": "&#126;(daily.att.dates;{school_number};{format_string})",
+        "desc": "Returns a list of dates separated with the {format_string}.<br><i>Default is a comma + space</i>",
+        "code": "&#126;(daily.att.dates;;|)",
+        "ex": "~(daily.att.dates;;|)"
+      },
+      {
+        "name": "Daily Attendance Dates - Attendance Codes",
+        "disp": "&#126;(daily.att.dates;{school_number};{format_string};{att_codes})",
+        "desc": "Returns a list of dates for the specified {att_code} or using a comma separated list of {att_codes}.",
+        "code": "&#126;(daily.att.dates;;;A)",
+        "ex": "~(daily.att.dates;;;A)"
+      },
+      {
+        "name": "Daily Attendance Dates - Attendance Category",
+        "disp": "&#126;(daily.att.dates;{school_number};{format_string};{att_category})",
+        "desc": "Returns a list of dates for the specified {att_code} or using a comma separated list of {att_codes}.",
+        "code": "&#126;(daily.att.dates;;;Excused)",
+        "ex": "~(daily.att.dates;;;Excused)"
+      },
+      {
+        "name": "Daily Attendance Dates - Term",
+        "disp": "&#126;(daily.att.dates;{school_number};{format_string};{att_code_or_cat};{term})",
+        "desc": "Returns a list of dates for the specified {term}.",
+        "code": "&#126;(daily.att.dates;;;;Q1)",
+        "ex": "~(daily.att.dates;;;;Q1)"
+      },
+      {
+        "name": "Daily Attendance Dates - Date Range",
+        "disp": "&#126;(daily.att.dates;{school_number};{format_string};{att_codes};{start_date};{end_date})",
+        "desc": "Returns a list of dates for the specified date range.",
+        "code": "&#126;(daily.att.dates;;;;3/1/21;6/1/21)",
+        "ex": "~(daily.att.dates;;;;3/1/21;6/1/21)"
+      },
+      {
+        "name": "Daily Attendance Count - School",
+        "disp": "&#126;(daily.att.count;{school_number})",
+        "desc": "Returns a list of dates for which a student received daily attendance.<br><i>School number may be omitted.</i>",
+        "code": "&#126;(daily.att.count;100)",
+        "ex": "~(daily.att.count;100)"
+      },
+      {
+        "name": "Daily Attendance Count - Attendance Codes",
+        "disp": "&#126;(daily.att.count;{school_number};{format_string};{att_codes})",
+        "desc": "Returns a list of dates for the specified {att_code} or using a comma separated list of {att_codes}.",
+        "code": "&#126;(daily.att.count;;A)",
+        "ex": "~(daily.att.count;;A)"
+      },
+      {
+        "name": "Daily Attendance Count - Attendance Category",
+        "disp": "&#126;(daily.att.count;{school_number};{format_string};{att_category})",
+        "desc": "Returns a list of dates for the specified {att_code} or using a comma separated list of {att_codes}.",
+        "code": "&#126;(daily.att.count;;Excused)",
+        "ex": "~(daily.att.count;;Excused)"
+      },
+      {
+        "name": "Daily Attendance Count - Term",
+        "disp": "&#126;(daily.att.count;{school_number};{format_string};{att_code_or_cat};{term})",
+        "desc": "Returns a list of dates for the specified {term}.",
+        "code": "&#126;(daily.att.count;;;Q1)",
+        "ex": "~(daily.att.count;;;Q1)"
+      },
+      {
+        "name": "Daily Attendance Count - Date Range",
+        "disp": "&#126;(daily.att.count;{school_number};{format_string};{att_codes};{start_date};{end_date})",
+        "desc": "Returns a list of dates for the specified date range.",
+        "code": "&#126;(daily.att.count;;;3/1/21;6/1/21)",
+        "ex": "~(daily.att.count;;;3/1/21;6/1/21)"
+      }
+    ]
+  }
+]

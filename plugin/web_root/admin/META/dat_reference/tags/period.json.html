@@ -1,0 +1,134 @@
+[
+  {
+    "section": "Period Information",
+    "description": "The period_info DAT is used to section and current grade information based on a student’s course enrollment in the specified period.",
+    "tags": [
+      {
+        "name": "Letter Grade by Expression",
+        "disp": "&#126;(*period_info;{expression};current_grade;{term})",
+        "desc": "The student's letter grade in their Expression {expression} class in the specified {term}.",
+        "code": "&#126;(*period_info;2(A);current_grade;Q1)",
+        "ex": "~(*period_info;2(A);current_grade;Q1)"
+      },
+      {
+        "name": "Letter Grade by Period",
+        "disp": "&#126;(*period_info;{period};current_grade;{term})",
+        "desc": "The student's letter grade in their Period {period} class in the specified {term}.",
+        "code": "&#126;(*period_info;2;current_grade;Q1)",
+        "ex": "~(*period_info;2;current_grade;Q1)"
+      },
+      {
+        "name": "Percent Grade",
+        "disp": "&#126;(*period_info;{expression_or_period};current_percent;{term})",
+        "desc": "The student's percent grade in their {expression_or_period} class in the specified {term}.",
+        "code": "&#126;(*period_info;2(A);current_percent;Q1)",
+        "ex": "~(*period_info;2(A);current_percent;Q1)"
+      },
+      {
+        "name": "Citizenship Grade",
+        "disp": "&#126;(*period_info;{expression_or_period};current_citizenship)",
+        "desc": "The student's citizenship grade in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);current_citizenship)",
+        "ex": "~(*period_info;2(A);current_citizenship)"
+      },
+      {
+        "name": "Teacher Name",
+        "disp": "&#126;(*period_info;{expression_or_period};teacher_name)",
+        "desc": "The student's teacher name in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);teacher_name)",
+        "ex": "~(*period_info;2(A);teacher_name)"
+      },
+      {
+        "name": "Teacher Preferred Name",
+        "disp": "&#126;(*period_info;{expression_or_period};teacher_preferred_name)",
+        "desc": "The student's teacher preferred name in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);teacher_preferred_name)",
+        "ex": "~(*period_info;2(A);teacher_preferred_name)"
+      },
+      {
+        "name": "Teacher First Name",
+        "disp": "&#126;(*period_info;{expression_or_period};teacher_i_first_name)",
+        "desc": "The student's teacher first name in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);teacher_i_first_name)",
+        "ex": "~(*period_info;2(A);teacher_i_first_name)"
+      },
+      {
+        "name": "Teacher Last Name",
+        "disp": "&#126;(*period_info;{expression_or_period};teacher_i_last_name)",
+        "desc": "The student's teacher last name in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);teacher_i_last_name)",
+        "ex": "~(*period_info;2(A);teacher_i_last_name)"
+      },
+      {
+        "name": "Teacher Title",
+        "disp": "&#126;(*period_info;{expression_or_period};teacher_i_title)",
+        "desc": "The student's teacher title in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);teacher_i_title)",
+        "ex": "~(*period_info;2(A);teacher_i_title)"
+      },
+      {
+        "name": "Teacher Email Address",
+        "disp": "&#126;(*period_info;{expression_or_period};teacher_i_email_addr)",
+        "desc": "The student's teacher email address in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);teacher_i_email_addr)",
+        "ex": "~(*period_info;2(A);teacher_i_email_addr)"
+      },
+      {
+        "name": "Section Info",
+        "disp": "&#126;(*period_info;{expression_or_period};section_i_{field})",
+        "desc": "The student's section {field} in their {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);section_i_section_number)",
+        "ex": "~(*period_info;2(A);section_i_section_number)"
+      },
+      {
+        "name": "Teacher Comment",
+        "disp": "&#126;(*period_info;{expreexpression_or_periodssion};teacher_comment)",
+        "desc": "The student's teacher comment in their {expression_or_period} class",
+        "code": "&#126;(*period_info;2(A);teacher_comment)",
+        "ex": "~(*period_info;2(A);teacher_comment)"
+      },
+      {
+        "name": "Class Course Name",
+        "disp": "&#126;(*period_info;{expression_or_period};course_name)",
+        "desc": "The name of the student's {expression_or_period} course.",
+        "code": "&#126;(*period_info;2(A);course_name)",
+        "ex": "~(*period_info;2(A);course_name)"
+      },
+      {
+        "name": "Class Course Number",
+        "disp": "&#126;(*period_info;{expression_or_period};course_number)",
+        "desc": "The name of the student's {expression_or_period} course.",
+        "code": "&#126;(*period_info;2(A);course_number)",
+        "ex": "~(*period_info;2(A);course_number)"
+      },
+      {
+        "name": "Class Room",
+        "disp": "&#126;(*period_info;{expression_or_period};room)",
+        "desc": "The room in which the student's {expression_or_period} class meets.",
+        "code": "&#126;(*period_info;2(A);room)",
+        "ex": "~(*period_info;2(A);room)"
+      },
+      {
+        "name": "Class Section Number",
+        "disp": "&#126;(*period_info;{expression_or_period};section_number)",
+        "desc": "The section number of the student's {expression_or_period} class.",
+        "code": "&#126;(*period_info;2(A);section_number)",
+        "ex": "~(*period_info;2(A);section_number)"
+      },
+      {
+        "name": "All teachers ever associated to a section",
+        "disp": "&#126;(*period_info;{expression_or_period};all_section_teachers)",
+        "desc": "Note: Name format is 'last, first'. Only teachers with roles flagged for display on reports will be listed. Teachers are listed according to the sort order defined in the role module.",
+        "code": "&#126;(*period_info;2(A);all_section_teachers)",
+        "ex": "~(*period_info;2(A);all_section_teachers)"
+      },
+      {
+        "name": "All teachers currently associated to a section",
+        "disp": "&#126;(*period_info;{expression_or_period};current_section_teachers)",
+        "desc": "Note: Name format is 'last, first'. Only teachers with roles flagged for display on reports will be listed. Teachers are listed according to the sort order defined in the role module.",
+        "code": "&#126;(*period_info;2(A);current_section_teachers)",
+        "ex": "~(*period_info;2(A);current_section_teachers)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,220 @@
+[
+  {
+    "section": "Date Format Operators",
+    "tags": [
+      {
+        "name": "Current Date",
+        "disp": "&#126;[date]",
+        "desc": "Displays today's date.",
+        "ex": "~[date]"
+      },
+      {
+        "name": "Public Date",
+        "disp": "&#126;[publicdate]",
+        "desc": "Displays today's date.",
+        "ex": "~[publicdate]"
+      },
+      {
+        "name": "Date in Short Format",
+        "disp": "&#126;[short.date]",
+        "desc": "Today's Date",
+        "ex": "~[short.date]"
+      },
+      {
+        "name": "Date in Long Format",
+        "disp": "&#126;[long.date]",
+        "desc": "Today's Date",
+        "ex": "~[long.date]"
+      },
+      {
+        "name": "Current Date",
+        "disp": "&#126;(f.currentdate)",
+        "desc": "Today's date (no leading zeros)",
+        "ex": "~(f.currentdate)"
+      },
+      {
+        "name": "Format Current Date",
+        "disp": "&#126;(f.currentdate;format={date_format})",
+        "desc": "Today's date in custom format",
+        "code": "&#126;(f.currentdate;format=DDD MMMM[comma] D[comma] YYYY)",
+        "ex": "~(f.currentdate;format=DDD MMMM[comma] D[comma] YYYY)"
+      },
+      {
+        "name": "Format Current Date",
+        "disp": "&#126;[datefmt:{date_format}]",
+        "desc": "Today's date in custom format",
+        "code": "&#126;[datefmt:MM/dd/yyyy]",
+        "ex": "~[datefmt:MM/dd/yyyy]"
+      },
+      {
+        "name": "Enrolled As Of Date",
+        "disp": "&#126;[eaodate]",
+        "desc": "Today's date: Enrolled As Of Date",
+        "ex": "~[eaodate]"
+      },
+      {
+        "name": "Letter Date",
+        "disp": "&#126;[letter.date]",
+        "desc": "Today's date: Month Day, Year.",
+        "ex": "~[letter.date]"
+      },
+      {
+        "name": "Bulletin Date",
+        "disp": "&#126;[bulletindate]",
+        "desc": "Today's date: Weekday, Month Day, Year.",
+        "ex": "~[bulletindate]"
+      },
+      {
+        "name": "Month + Day",
+        "disp": "&#126;[month.day]",
+        "desc": "Today's date: MMDD.",
+        "ex": "~[month.day]"
+      },
+      {
+        "name": "System Date Format",
+        "disp": "&#126;[dateformat]",
+        "desc": "Identify the system locale date format (can use in TLIST_SQL TO_CHAR() function).",
+        "ex": "~[dateformat]"
+      },
+      {
+        "name": "System Locale Date Format",
+        "disp": "&#126;[datetext:mmddyyyy]",
+        "desc": "Returns system locale date format (uppercase).",
+        "ex": "~[datetext:mmddyyyy]"
+      },
+      {
+        "name": "Date Field",
+        "disp": "&#126;({date_field})",
+        "desc": "Sample Date Formatting Codes",
+        "code": "&#126;(entrydate)",
+        "ex": "~(entrydate)"
+      },
+      {
+        "name": "M",
+        "disp": "&#126;({date_field};dateformat=M)",
+        "desc": "Month, number, no leading 0",
+        "code": "&#126;(entrydate;dateformat=M)",
+        "ex": "~(entrydate;dateformat=M)"
+      },
+      {
+        "name": "MM",
+        "disp": "&#126;({date_field};dateformat=MM)",
+        "desc": "Month, number, with leading 0",
+        "code": "&#126;(entrydate;dateformat=MM)",
+        "ex": "~(entrydate;dateformat=MM)"
+      },
+      {
+        "name": "MMM",
+        "disp": "&#126;({date_field};dateformat=MMM)",
+        "desc": "Month, abbreviation",
+        "code": "&#126;(entrydate;dateformat=MMM)",
+        "ex": "~(entrydate;dateformat=MMM)"
+      },
+      {
+        "name": "MMMM",
+        "disp": "&#126;({date_field};dateformat=MMMM)",
+        "desc": "Month, full name",
+        "code": "&#126;(entrydate;dateformat=MMMM)",
+        "ex": "~(entrydate;dateformat=MMMM)"
+      },
+      {
+        "name": "D",
+        "disp": "&#126;({date_field};dateformat=D)",
+        "desc": "Day, number, no leading 0",
+        "code": "&#126;(entrydate;dateformat=D)",
+        "ex": "~(entrydate;dateformat=D)"
+      },
+      {
+        "name": "DD",
+        "disp": "&#126;(entrydate;dateformat=DD)",
+        "desc": "Day, number, with leading 0",
+        "code": "&#126;(entrydate;dateformat=DD)",
+        "ex": "~(entrydate;dateformat=DD)"
+      },
+      {
+        "name": "DDD",
+        "disp": "&#126;({date_field};dateformat=DDD)",
+        "desc": "Day, abbreviation",
+        "code": "&#126;(entrydate;dateformat=DDD)",
+        "ex": "~(entrydate;dateformat=DDD)"
+      },
+      {
+        "name": "DDDD",
+        "disp": "&#126;({date_field};dateformat=DDDD)",
+        "desc": "Day, full name",
+        "code": "&#126;(entrydate;dateformat=DDDD)",
+        "ex": "~(entrydate;dateformat=DDDD)"
+      },
+      {
+        "name": "YY",
+        "disp": "&#126;({date_field};dateformat=YY)",
+        "desc": "Year, 2 digit",
+        "code": "&#126;(entrydate;dateformat=YY)",
+        "ex": "~(entrydate;dateformat=YY)"
+      },
+      {
+        "name": "YYYY",
+        "disp": "&#126;({date_field};dateformat=YYYY)",
+        "desc": "Year, 4 digit",
+        "code": "&#126;(entrydate;dateformat=YYYY)",
+        "ex": "~(entrydate;dateformat=YYYY)"
+      },
+      {
+        "name": "Additional Formats",
+        "disp": "&#126;({date_field};dateformat=MMMM DD)",
+        "desc": "Long Month and Date",
+        "code": "&#126;(entrydate;dateformat=MMMM DD)",
+        "ex": "~(entrydate;dateformat=MMMM DD)"
+      },
+      {
+        "name": "Additional Formats",
+        "disp": "&#126;({date_field};dateformat=MMMM YYYY)",
+        "desc": "Long Month and Year",
+        "code": "&#126;(entrydate;dateformat=MMMM YYYY)",
+        "ex": "~(entrydate;dateformat=MMMM YYYY)"
+      },
+      {
+        "name": "Additional Formats",
+        "disp": "&#126;({date_field};dateformat=DDDD, MMMM D, YYYY))",
+        "desc": "Long Day of Week, Long Month, Date, and Year",
+        "code": "&#126;(entrydate;dateformat=DDDD, MMMM D, YYYY)",
+        "ex": "~(entrydate;dateformat=DDDD, MMMM D, YYYY)"
+      },
+      {
+        "name": "Additional Formats",
+        "disp": "&#126;({date_field};dateformat=DDD MMM DD YY)))",
+        "desc": "Short Day of Week, Short Month, Date, and Year",
+        "code": "&#126;(entrydate;dateformat=DDD MMM DD YY)",
+        "ex": "~(entrydate;dateformat=DDD MMM DD YY)"
+      },
+      {
+        "name": "To Internationalization Date",
+        "disp": "&#126;[i18date:{date}]",
+        "desc": "Displays the i18n date from {date}",
+        "code": "&#126;[i18date:4/5/20]",
+        "ex": "~[i18date:4/5/20]"
+      },
+      {
+        "name": "From Internationalization Date",
+        "disp": "&#126;[from_i18date:{date}]",
+        "desc": "Displays the i18n date from {date}",
+        "code": "&#126;[from_i18date:4/5/20]",
+        "ex": "~[from_i18date:4/5/20]"
+      },
+      {
+        "name": "To Internationalization Short Date",
+        "disp": "&#126;[i18shortdate:{date}]",
+        "desc": "Displays the i18n short date from {date}",
+        "code": "&#126;[i18shortdate:4/5/20]",
+        "ex": "~[i18shortdate:4/5/20]"
+      },
+      {
+        "name": "To Internationalization Short Date",
+        "disp": "&#126;[from_i18datetoshortdate:{date}]",
+        "desc": "Displays the i18n short date from {date}",
+        "code": "&#126;[from_i18datetoshortdate:4/5/20]",
+        "ex": "~[from_i18datetoshortdate:4/5/20]"
+      }
+    ]
+  }
+]
