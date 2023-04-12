@@ -31,7 +31,7 @@ require(['angular', 'components/shared/index'], (angular) => {
       $scope.addSection = (section, idx) => {
           $http({
               method: 'GET'
-              ,url: `tags/${section}.json.html?frn=001${$scope.student.dcid}`
+              ,url: `tags/${section}.json?frn=001${$scope.student.dcid}`
               ,transformResponse: [(data) => {
                   data = data.replace(/\&#126;/g,"~").replace(/\r?\n|\r/g, '');
 
