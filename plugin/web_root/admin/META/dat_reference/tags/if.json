@@ -10,6 +10,34 @@
         "ex": "~[if.1=1] It Works [/if]"
       },
       {
+        "name": "If Value In List",
+        "disp": "&#126;[if.{value} in ({testvalue1}{,testvalueN})][/if]",
+        "desc": "Tests if {value} is in the list of {testvalues}.<br>Optionally, you can wrap {value} and {testvalues} in double quotes.",
+        "code": "&#126;[if.hello in (hello,world)] true [else] false [/if]<br>&#126;[if.\"goodbye\" in (\"hello\",\"world\")] true [else] false [/if]<br>",
+        "ex": "~[if.hello in (hello,world)] true [else] false [/if]<br>~[if."goodbye" in ("hello","world")] true [else] false [/if]"
+      },
+      {
+        "name": "If Value Not In List",
+        "disp": "&#126;[if.{value} not in ({testvalue1}{,testvalueN})][/if]",
+        "desc": "Tests if {value} is not in the list of {testvalues}.<br>Optionally, you can wrap {value} and {testvalues} in double quotes.",
+        "code": "&#126;[if.hello not in (hello,world)] true [else] false [/if]<br>&#126;[if.goodbye not in (hello,world)] true [else] false [/if]<br>",
+        "ex": "~[if.hello not in (hello,world)] true [else] false [/if]<br>~[if.goodbye not in (hello,world)] true [else] false [/if]"
+      },
+      {
+        "name": "If String contains Value",
+        "disp": "&#126;[if.{string} contains {value}][/if]",
+        "desc": "Tests if {value} is in the {string}.<br>Optionally, you can wrap {value} and {string} in double quotes.",
+        "code": "&#126;[if.\"hello world\" contains \"bye\"] true [else] false [/if]<br>&#126;[if.hello world contains hello] true [else] false [/if]<br>",
+        "ex": "~[if."hello world" contains "bye"] true [else] false [/if]<br>~[if.hello world contains hello] true [else] false [/if]"
+      },
+      {
+        "name": "If String does not contain Value",
+        "disp": "&#126;[if.{string} does not contain {value}][/if]",
+        "desc": "Tests if {value} is in the {string}.<br>Optionally, you can wrap {value} and {string} in double quotes.",
+        "code": "&#126;[if.\"hello world\" does not contain \"bye\"] true [else] false [/if]<br>&#126;[if.hello world does not contain hello] true [else] false [/if]<br>",
+        "ex": "~[if."hello world" does not contain "bye"] true [else] false [/if]<br>~[if.hello world does not contain hello] true [else] false [/if]"
+      },
+      {
         "name": "If is a School",
         "disp": "&#126;[if.is.a.school][/if]",
         "desc": "Renders content if the currently selected school is not the District Office.",
