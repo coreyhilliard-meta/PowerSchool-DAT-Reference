@@ -4,7 +4,7 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation='http://plugin.powerschool.pearson.com plugin.xsd'
 		name="META PS DAT Reference"
-		version="23.04.2.1"
+		version="23.04.4.0"
 		description="PSHTML Tags, Descriptions, and Examples">
 		<publisher name="META Solutions">
 	    <contact email="ITDevelopmentHelp@metasolutions.net"/>
