@@ -66,11 +66,57 @@
                 </div>
                 <div class="button-row">
                     <div class="inputbutton">
+                        <button ng-hide="loading || data.showEmailForm" type="button" ng-click="emailDATForm()">Suggest DAT</button>
                         <button ng-hide="loading" type="button" ng-click="randStudent()">Random Student</button>
                         <button ng-show="loading" disabled class="disabled" type="button">{{loadingMsg}}</button>
                     </div>
                 </div>
             </fieldset>
+
+            <div data-ng-if="data.showEmailFormThanks" class="feedback-confirm">
+                <p>Thank you for your suggestion! We will review your entry and add it to a future version of the DAT Reference.</p>
+            </div>
+
+            <div data-ng-if="data.showEmailForm" id="suggestDATForm">
+                <fieldset>
+                    <legend>Suggest DAT Form</legend>
+
+                    <div class="feedback-info">
+                        <p>Thank you for your suggestion! Please fill out the form below and we will review your suggestion.</p>
+                    </div>
+
+                    <table class="grid">
+                        <colgroup>
+                            <col style="width:15%">
+                            <col style="width:15%">
+                            <col style="width:30%">
+                            <col style="width:25%">
+                            <col style="width:15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td class="bold">Name</td>
+                                <td class="bold">Tag</td>
+                                <td class="bold">Description</td>
+                                <td class="bold">Example</td>
+                                <td class="bold"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" data-ng-model="suggest.name" value=""></td>
+                                <td><input type="text" data-ng-model="suggest.code" value=""></td>
+                                <td><textarea data-ng-model="suggest.description"></textarea></td>
+                                <td><textarea data-ng-model="suggest.example"></textarea></td>
+                                <td class="center">
+                                    <button type="button" data-ng-click="sendDATForm()">Send Email</button><br><br>
+                                    <button type="button" data-ng-click="data.showEmailForm = false;">Cancel</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </div>
 
             <!-- Main content section -->
             <fieldset ng-repeat="section in data | filter : filter track by $index">

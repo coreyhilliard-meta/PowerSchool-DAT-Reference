@@ -37,6 +37,16 @@ input[type=search] { margin-bottom: 10px; }
     background-position: inherit;
     box-shadow: 3px 3px 3px #ddd;
 }
+#suggestDATForm input, #suggestDATForm textarea {
+    width: calc(100% - 15px);
+    padding: 5px;
+}
+#suggestDATForm textarea {
+    height: 100px;
+}
+#suggestDATForm td {
+    vertical-align: middle;
+}
 #studentSearch { display: none; }
 .grad { color: green; }
 .wd { color: darkgray; }

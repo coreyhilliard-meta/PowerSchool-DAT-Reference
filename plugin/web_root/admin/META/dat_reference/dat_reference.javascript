@@ -7,7 +7,7 @@ require(['angular', 'components/shared/index'], (angular) => {
   app.controller("METAReferenceCtrl", ($scope, $http, $sce, $timeout) => {
       // Define sections of data to be loaded.
       $scope.sections = ['student_info', 'school_info', 'other', 'contacts', 'prefs', 'pq_dat', 'if', 'misc', 'eval', 'eval_text', 'eval_logic', 'insert', 'giv', 'server', 'op_char', 'op_date', 'date_info', 'op_time', 'op_decimal', 'page', 'frn', 'gpa', 'rank', 'honorroll', 'att', 'daily_att', 'period', 'grades', 'std', 'tests', 'logic_if', 'decode', 'case', 'functions', 'tlist_sql', 'duplicate', 'counselors'];
-
+      $scope.suggest = {};
       // Initialize the local variables.
       $scope.student = {};
       $scope.newVersion = false;
@@ -144,11 +144,36 @@ require(['angular', 'components/shared/index'], (angular) => {
           return $sce.trustAsHtml(unescape(escape(text)).replace(new RegExp(search, 'gi'), '<span class="highlightedText">$&</span>'));
       };
 
+      $scope.sendDATForm = () => {
+        jsonBody = {
+          "form": "ps_dat_request",
+          "district": "~(v.districtname)",
+          "user": "~[x:username]",
+          "useremail": "~[x:useremail]",
+          "tagName": $scope.suggest.name,
+          "tagCode": $scope.suggest.code,
+          "tagDescription": $scope.suggest.description,
+          "tagExample": $scope.suggest.example
+        }
+      
+        $http.post("https://api2.metasolutions.net/send_email", JSON.stringify(jsonBody)).then((json) => {
+            $scope.suggest = {};
+            $scope.data.showEmailForm = false;
+            $scope.data.showEmailFormThanks = true;
+            $timeout(() => {$scope.data.showEmailFormThanks = false}, 5000);
+        });
+      }
+
       // Refresh student data or load a random student when the page loads.
       if ($scope.student.dcid) {
           $scope.refreshStudent();
       } else {
           $scope.randStudent();
       }
+
+      $scope.emailDATForm = () => {
+        $scope.data.showEmailForm = true;
+      }
+
   });
 });
