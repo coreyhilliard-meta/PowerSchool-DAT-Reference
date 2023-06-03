@@ -1,63 +1,63 @@
 [
-  {
-    "section": "Evaluate Logical Tags",
-    "tags": [
-      {
-        "name": "Logical And",
-        "disp": "&#126;(*evaluate and(1=1{,2=2,...})",
-        "desc": "Output 1 if all are true, 0 if any are false.",
-        "code": "&#126;(*evaluate and(\"A\"=\"A\"))<br>&#126;(*evaluate and(1=1,2=2))<br>&#126;(*evaluate and(1=1,2=2,3<3))",
-        "ex": "~(*evaluate and("A"="A"))<br>~(*evaluate and(1=1,2=2))<br>~(*evaluate and(1=1,2=2,3<3))"
-      },      
-      {
-        "name": "Logical Or",
-        "disp": "&#126;(*evaluate or(1=2{,2=3,...})",
-        "desc": "Output 1 if any are true, 0 if all are false.",
-        "code": "&#126;(*evaluate or(\"A\"=\"B\"))<br>&#126;(*evaluate or(1=1,2=3))<br>&#126;(*evaluate or(1=2,2=3,3<3))",
-        "ex": "~(*evaluate or("A"="B"))<br>~(*evaluate or(1=1,2=3))<br>~(*evaluate or(1=2,2=3,3<3))"
-      },
-      {
-        "name": "If",
-        "disp": "&#126;(*evaluate if(1=1,\"Match\",\"No Match\"))",
-        "desc": "Outpus param 2 if logical true.",
-        "ex": "~(*evaluate if(1=1,"Match","No Match"))"
-      },
-      {
-        "name": "If",
-        "disp": "&#126;(*evaluate if(1=2,\"Match\",\"No Match\"))",
-        "desc": "Outpus param 3 if logical false.",
-        "ex": "~(*evaluate if(1=2,"Match","No Match"))"
-      },
-      {
-        "name": "Is Blank",
-        "disp": "&#126;(*evaluate isblank(\"\"))",
-        "desc": "Outpus 1 if true, 0 if false.",
-        "ex": "~(*evaluate isblank(""))"
-      },
-      {
-        "name": "Boolean Equals",
-        "disp": "&#126;(*evaluate 4=3)",
-        "desc": "Outpus 1 if true, 0 if false.",
-        "ex": "~(*evaluate 4=3)"
-      },
-      {
-        "name": "Boolean Not Equals",
-        "disp": "&#126;(*evaluate 4<>3)",
-        "desc": "Outpus 1 if true, 0 if false.",
-        "ex": "~(*evaluate 4<>3)"
-      },
-      {
-        "name": "Boolean Greater Than",
-        "disp": "&#126;(*evaluate 6>5)",
-        "desc": "Outpus 1 if true, 0 if false.",
-        "ex": "~(*evaluate 6>5)"
-      },
-      {
-        "name": "Boolean Less Than",
-        "disp": "&#126;(*evaluate 6<5)",
-        "desc": "Outpus 1 if true, 0 if false.",
-        "ex": "~(*evaluate 6<5)"
-      }
-    ]
-  }
+    {
+        "section": "Evaluate Logical Tags",
+        "tags": [
+            {
+                "name": "Logical And",
+                "disp": "&#126;(*evaluate and(1=1{,2=2,...})",
+                "desc": "Output 1 if all are true, 0 if any are false.",
+                "code": "&#126;(*evaluate and(\"A\"=\"A\"))<br>&#126;(*evaluate and(1=1,2=2))<br>&#126;(*evaluate and(1=1,2=2,3<3))",
+                "ex": "~(*evaluate and(\"A\"=\"A\"))<br>~(*evaluate and(1=1,2=2))<br>~(*evaluate and(1=1,2=2,3<3))"
+            },
+            {
+                "name": "Logical Or",
+                "disp": "&#126;(*evaluate or(1=2{,2=3,...})",
+                "desc": "Output 1 if any are true, 0 if all are false.",
+                "code": "&#126;(*evaluate or(\"A\"=\"B\"))<br>&#126;(*evaluate or(1=1,2=3))<br>&#126;(*evaluate or(1=2,2=3,3<3))",
+                "ex": "~(*evaluate or(\"A\"=\"B\"))<br>~(*evaluate or(1=1,2=3))<br>~(*evaluate or(1=2,2=3,3<3))"
+            },
+            {
+                "name": "If",
+                "disp": "&#126;(*evaluate if(1=1,\"Match\",\"No Match\"))",
+                "desc": "Outpus param 2 if logical true.",
+                "ex": "~(*evaluate if(1=1,\"Match\",\"No Match\"))"
+            },
+            {
+                "name": "If",
+                "disp": "&#126;(*evaluate if(1=2,\"Match\",\"No Match\"))",
+                "desc": "Outpus param 3 if logical false.",
+                "ex": "~(*evaluate if(1=2,\"Match\",\"No Match\"))"
+            },
+            {
+                "name": "Is Blank",
+                "disp": "&#126;(*evaluate isblank(\"\"))",
+                "desc": "Outpus 1 if true, 0 if false.",
+                "ex": "~(*evaluate isblank(\"\"))"
+            },
+            {
+                "name": "Boolean Equals",
+                "disp": "&#126;(*evaluate 4=3)",
+                "desc": "Outpus 1 if true, 0 if false.",
+                "ex": "~(*evaluate 4=3)"
+            },
+            {
+                "name": "Boolean Not Equals",
+                "disp": "&#126;(*evaluate 4<>3)",
+                "desc": "Outpus 1 if true, 0 if false.",
+                "ex": "~(*evaluate 4<>3)"
+            },
+            {
+                "name": "Boolean Greater Than",
+                "disp": "&#126;(*evaluate 6>5)",
+                "desc": "Outpus 1 if true, 0 if false.",
+                "ex": "~(*evaluate 6>5)"
+            },
+            {
+                "name": "Boolean Less Than",
+                "disp": "&#126;(*evaluate 6<5)",
+                "desc": "Outpus 1 if true, 0 if false.",
+                "ex": "~(*evaluate 6<5)"
+            }
+        ]
+    }
 ]
