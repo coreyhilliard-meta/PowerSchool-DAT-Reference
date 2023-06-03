@@ -1,105 +1,105 @@
 [
-  {
-    "section": "Evaluate Text Tags",
-    "tags": [
-      {
-        "name": "Character",
-        "disp": "&#126;(*evaluate char(N))",
-        "desc": "Outputs the character specified by ASCII code.",
-        "code": "&#126;(*evaluate char(65))",
-        "ex": "~(*evaluate char(65))"
-      },
-      {
-        "name": "ASCII Code",
-        "disp": "&#126;(*evaluate code(\"X\"))",
-        "desc": "Outputs the ASCII code from the specified X character.",
-        "code": "&#126;(*evaluate code(\"A\"))",
-        "ex": "~(*evaluate code("A"))"
-      },
-      {
-        "name": "Concatenate",
-        "disp": "&#126;(*evaluate concat(X,Y{,Z,...}))",
-        "desc": "Concatenate multiple fields/strings together.",
-        "code": "&#126;(*evaluate concat(3,3))",
-        "ex": "~(*evaluate concatenate(3,3))"
-      },
-      {
-        "name": "Concatenate",
-        "disp": "&#126;(*evaluate concatenate(X,Y{,Z,...}))",
-        "desc": "Concatenate multiple fields/strings together.",
-        "code": "&#126;(*evaluate concatenate(3,3))",
-        "ex": "~(*evaluate concatenate(3,3))"
-      },
-      {
-        "name": "Exact",
-        "disp": "&#126;(*evaluate exact(\"X\",\"Y\"))",
-        "desc": "Outputs 1 if exact, 0 if not exact.",
-        "code": "&#126;(*evaluate exact(\"ABC\",\"ABc\"))",
-        "ex": "~(*evaluate exact("ABC","ABc"))"
-      },
-      {
-        "name": "Left",
-        "disp": "&#126;(*evaluate left(\"X\",N))",
-        "desc": "Outputs the number of characters of the value, starting from the left.",
-        "code": "&#126;(*evaluate left(\"Hello\",2))",
-        "ex": "~(*evaluate left("Hello",2))"
-      },
-      {
-        "name": "Right",
-        "disp": "&#126;(*evaluate right(\"X\",N))",
-        "desc": "Outputs the number of characters of the value, starting from the right.",
-        "code": "&#126;(*evaluate right(\"Hello\",4))",
-        "ex": "~(*evaluate right("Hello",4))"
-      },
-      {
-        "name": "Length",
-        "disp": "&#126;(*evaluate len(\"X\"))",
-        "desc": "Outputs the number of characters in the value.",
-        "code": "&#126;(*evaluate len(\"Hello World\"))",
-        "ex": "~(*evaluate len("Hello World"))"
-      },
-      {
-        "name": "Lower Case",
-        "disp": "&#126;(*evaluate lower(\"X\"))",
-        "desc": "Outputs the characters in the lower case.",
-        "code": "&#126;(*evaluate lower(\"Hello World\"))",
-        "ex": "~(*evaluate lower("Hello World"))"
-      },
-      {
-        "name": "Upper Case",
-        "disp": "&#126;(*evaluate upper(\"X\"))",
-        "desc": "Outputs the characters in the upper case.",
-        "code": "&#126;(*evaluate upper(\"Hello World\"))",
-        "ex": "~(*evaluate upper("Hello World"))"
-      },
-      {
-        "name": "Proper Case",
-        "disp": "&#126;(*evaluate proper(\"X\"))",
-        "desc": "Outputs the characters in the proper case.",
-        "code": "&#126;(*evaluate proper(\"hello world\"))",
-        "ex": "~(*evaluate proper("hello world"))"
-      },
-      {
-        "name": "Middle Characters",
-        "disp": "&#126;(*evaluate mid(\"X\",N,N))",
-        "desc": "Outputs the characters starting from position to length.",
-        "code": "&#126;(*evaluate mid(\"Hello World\",3,5))",
-        "ex": "~(*evaluate mid("Hello World",3,5))"
-      },
-      {
-        "name": "Replace",
-        "disp": "&#126;(*evaluate replace(\"X\",N,N,\"Y\"))",
-        "desc": "Replace the characters starting from position to length with new string.",
-        "code": "&#126;(*evaluate replace(\"Hello  World\",6,5,\"&#126;[x:username;firstlast]\"))",
-        "ex": "~(*evaluate replace("Hello World",6,5,"~[x:username;firstlast]"))"
-      },
-      {
-        "name": "Repeat",
-        "disp": "&#126;(*evaluate rept(\"X\",N))",
-        "desc": "Outputs the string repeated N number of times.",
-        "code": "&#126;(*evaluate rept(\"Hello\",3))",
-        "ex": "~(*evaluate rept("Hello",3))"
-      }
-    ]
-  }
+    {
+        "section": "Evaluate Text Tags",
+        "tags": [
+            {
+                "name": "Character",
+                "disp": "&#126;(*evaluate char(N))",
+                "desc": "Outputs the character specified by ASCII code.",
+                "code": "&#126;(*evaluate char(65))",
+                "ex": "~(*evaluate char(65))"
+            },
+            {
+                "name": "ASCII Code",
+                "disp": "&#126;(*evaluate code(\"X\"))",
+                "desc": "Outputs the ASCII code from the specified X character.",
+                "code": "&#126;(*evaluate code(\"A\"))",
+                "ex": "~(*evaluate code(\"A\"))"
+            },
+            {
+                "name": "Concatenate",
+                "disp": "&#126;(*evaluate concat(X,Y{,Z,...}))",
+                "desc": "Concatenate multiple fields/strings together.",
+                "code": "&#126;(*evaluate concat(3,3))",
+                "ex": "~(*evaluate concatenate(3,3))"
+            },
+            {
+                "name": "Concatenate",
+                "disp": "&#126;(*evaluate concatenate(X,Y{,Z,...}))",
+                "desc": "Concatenate multiple fields/strings together.",
+                "code": "&#126;(*evaluate concatenate(3,3))",
+                "ex": "~(*evaluate concatenate(3,3))"
+            },
+            {
+                "name": "Exact",
+                "disp": "&#126;(*evaluate exact(\"X\",\"Y\"))",
+                "desc": "Outputs 1 if exact, 0 if not exact.",
+                "code": "&#126;(*evaluate exact(\"ABC\",\"ABc\"))",
+                "ex": "~(*evaluate exact(\"ABC\",\"ABc\"))"
+            },
+            {
+                "name": "Left",
+                "disp": "&#126;(*evaluate left(\"X\",N))",
+                "desc": "Outputs the number of characters of the value, starting from the left.",
+                "code": "&#126;(*evaluate left(\"Hello\",2))",
+                "ex": "~(*evaluate left(\"Hello\",2))"
+            },
+            {
+                "name": "Right",
+                "disp": "&#126;(*evaluate right(\"X\",N))",
+                "desc": "Outputs the number of characters of the value, starting from the right.",
+                "code": "&#126;(*evaluate right(\"Hello\",4))",
+                "ex": "~(*evaluate right(\"Hello\",4))"
+            },
+            {
+                "name": "Length",
+                "disp": "&#126;(*evaluate len(\"X\"))",
+                "desc": "Outputs the number of characters in the value.",
+                "code": "&#126;(*evaluate len(\"Hello World\"))",
+                "ex": "~(*evaluate len(\"Hello World\"))"
+            },
+            {
+                "name": "Lower Case",
+                "disp": "&#126;(*evaluate lower(\"X\"))",
+                "desc": "Outputs the characters in the lower case.",
+                "code": "&#126;(*evaluate lower(\"Hello World\"))",
+                "ex": "~(*evaluate lower(\"Hello World\"))"
+            },
+            {
+                "name": "Upper Case",
+                "disp": "&#126;(*evaluate upper(\"X\"))",
+                "desc": "Outputs the characters in the upper case.",
+                "code": "&#126;(*evaluate upper(\"Hello World\"))",
+                "ex": "~(*evaluate upper(\"Hello World\"))"
+            },
+            {
+                "name": "Proper Case",
+                "disp": "&#126;(*evaluate proper(\"X\"))",
+                "desc": "Outputs the characters in the proper case.",
+                "code": "&#126;(*evaluate proper(\"hello world\"))",
+                "ex": "~(*evaluate proper(\"hello world\"))"
+            },
+            {
+                "name": "Middle Characters",
+                "disp": "&#126;(*evaluate mid(\"X\",N,N))",
+                "desc": "Outputs the characters starting from position to length.",
+                "code": "&#126;(*evaluate mid(\"Hello World\",3,5))",
+                "ex": "~(*evaluate mid(\"Hello World\",3,5))"
+            },
+            {
+                "name": "Replace",
+                "disp": "&#126;(*evaluate replace(\"X\",N,N,\"Y\"))",
+                "desc": "Replace the characters starting from position to length with new string.",
+                "code": "&#126;(*evaluate replace(\"Hello  World\",6,5,\"&#126;[x:username;firstlast]\"))",
+                "ex": "~(*evaluate replace(\"Hello World\",6,5,\"~[x:username;firstlast]\"))"
+            },
+            {
+                "name": "Repeat",
+                "disp": "&#126;(*evaluate rept(\"X\",N))",
+                "desc": "Outputs the string repeated N number of times.",
+                "code": "&#126;(*evaluate rept(\"Hello\",3))",
+                "ex": "~(*evaluate rept(\"Hello\",3))"
+            }
+        ]
+    }
 ]

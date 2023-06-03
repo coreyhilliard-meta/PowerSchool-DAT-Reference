@@ -1,315 +1,311 @@
 [
-  {
-    "section": "If Tags",
-    "tags": [
-      {
-        "name": "If Value",
-        "disp": "&#126;[if.{value}={testvalue}][/if]",
-        "desc": "Tests if {value} equals {testvalue}.<br>Available Operators: <b><>=, #, >, >=, <, <=, $ <i>(Contains)</i>, !$ <i>(Does not contain)</i></b>",
-        "code": "&#126;[if.1=1] It Works [/if]",
-        "ex": "~[if.1=1] It Works [/if]"
-      },
-      {
-        "name": "If Value In List",
-        "disp": "&#126;[if.{value} in ({testvalue1}{,testvalueN})][/if]",
-        "desc": "Tests if {value} is in the list of {testvalues}.<br>Optionally, you can wrap {value} and {testvalues} in double quotes.",
-        "code": "&#126;[if.hello in (hello,world)] true [else] false [/if]<br>&#126;[if.\"goodbye\" in (\"hello\",\"world\")] true [else] false [/if]<br>",
-        "ex": "~[if.hello in (hello,world)] true [else] false [/if]<br>~[if."goodbye" in ("hello","world")] true [else] false [/if]"
-      },
-      {
-        "name": "If Value Not In List",
-        "disp": "&#126;[if.{value} not in ({testvalue1}{,testvalueN})][/if]",
-        "desc": "Tests if {value} is not in the list of {testvalues}.<br>Optionally, you can wrap {value} and {testvalues} in double quotes.",
-        "code": "&#126;[if.hello not in (hello,world)] true [else] false [/if]<br>&#126;[if.goodbye not in (hello,world)] true [else] false [/if]<br>",
-        "ex": "~[if.hello not in (hello,world)] true [else] false [/if]<br>~[if.goodbye not in (hello,world)] true [else] false [/if]"
-      },
-      {
-        "name": "If String contains Value",
-        "disp": "&#126;[if.{string} contains {value}][/if]",
-        "desc": "Tests if {value} is in the {string}.<br>Optionally, you can wrap {value} and {string} in double quotes.",
-        "code": "&#126;[if.\"hello world\" contains \"bye\"] true [else] false [/if]<br>&#126;[if.hello world contains hello] true [else] false [/if]<br>",
-        "ex": "~[if."hello world" contains "bye"] true [else] false [/if]<br>~[if.hello world contains hello] true [else] false [/if]"
-      },
-      {
-        "name": "If String does not contain Value",
-        "disp": "&#126;[if.{string} does not contain {value}][/if]",
-        "desc": "Tests if {value} is in the {string}.<br>Optionally, you can wrap {value} and {string} in double quotes.",
-        "code": "&#126;[if.\"hello world\" does not contain \"bye\"] true [else] false [/if]<br>&#126;[if.hello world does not contain hello] true [else] false [/if]<br>",
-        "ex": "~[if."hello world" does not contain "bye"] true [else] false [/if]<br>~[if.hello world does not contain hello] true [else] false [/if]"
-      },
-      {
-        "name": "If is a School",
-        "disp": "&#126;[if.is.a.school][/if]",
-        "desc": "Renders content if the currently selected school is not the District Office.",
-        "code": "&#126;[if.is.a.school]School[else]Not School[/if]",
-        "ex": "~[if.is.a.school]School[else]Not School[/if]"
-      },
-      {
-        "name": "If District Office",
-        "disp": "&#126;[if.district.office][/if]",
-        "desc": "Renders content if the District Office is currently selected.",
-        "code": "&#126;[if.district.office]District Office[else]Not District Office[/if]",
-        "ex": "~[if.district.office]District Office[else]Not District Office[/if]"
-      },
-      {
-        "name": "If District Office or Graduated Students",
-        "disp": "&#126;[if.dist.office.or.grad.students][/if]",
-        "desc": "Renders content if at the District Office or Graduated Students.",
-        "code": "&#126;[if.dist.office.or.grad.students]District Office or Grad Students[else]Not District Office or Grad Students[/if]",
-        "ex": "~[if.dist.office.or.grad.students]District Office or Grad Students[else]Not District Office or Grad Students[/if]"
-      },
-      {
-        "name": "If GPV",
-        "disp": "&#126;[if.gpv.{parameter}={expression}][/if]",
-        "desc": "Renders contents of if statement if the {parameter} value matches the {expression}."
-      },
-      {
-        "name": "If GUV",
-        "disp": "&#126;[if.guv.{user_variable}={expression}][/if]",
-        "desc": "Renders contents of if statement if the {user_variable} value matches the {expression}."
-      },
-      {
-        "name": "If Preference",
-        "disp": "&#126;[if.pref.{prefname}={expression}][/if]",
-        "desc": "Renders contents of if statement if the {prefname} value matches the {expression}."
-      },
-      {
-        "name": "If Preference Year",
-        "disp": "&#126;[if.prefyear.{prefname}={expression}][/if]",
-        "desc": "Renders contents of if statement if the {prefname} value matches the {expression} & year."
-      },
-      {
-        "name": "If User Preference",
-        "disp": "&#126;[if.prefuser.{prefname}={expression}][/if]",
-        "desc": "Renders contents of if statement if the {prefname} value matches the {expression} & user."
-      },
-      {
-        "name": "If School Preference",
-        "disp": "&#126;[if.prefschool.{prefname}={expression}][/if]",
-        "desc": "Renders content if the {prefname} value matches the {expression} for the selected school."
-      },
-      {
-        "name": "If SchoolID Preference",
-        "disp": "&#126;[if.prefschoolid.{prefname}={expression}][/if]",
-        "desc": "Renders content if the {prefname} value matches the {expression} for the selected school ID."
-      },
-      {
-        "name": "If Year School Preference",
-        "disp": "&#126;[if.prefyearschool.{prefname}={expression}][/if]",
-        "desc": "Renders content if the {prefname} value matches the {expression} for the selected school & year."
-      },
-      {
-        "name": "Check Dupe CC Failed",
-        "disp": "&#126;[if.CheckDupCC_Failed][/if]",
-        "desc": "Used in the /admin/students/allenrollments.html page to detect overlapping enrollments.",
-        "code": "&#126;[if.CheckDupCC_Failed]Check Dupe CC Failed[else]Check Dupe CC Success[/if]",
-        "ex": "~[if.CheckDupCC_Failed]Check Dupe CC Failed[else]Check Dupe CC Success[/if]"
-      },
-      {
-        "name": "If Enhanced Menu Enabled",
-        "disp": "&#126;[if.admin_pds_uptake_access][/if]",
-        "desc": "Renders content if the user has the Enhanced Menu enabled.",
-        "code": "&#126;[if.admin_pds_uptake_access]Enhanced Menu Enabled[else]Enhanced Menu Not Enabled[/if]",
-        "ex": "~[if.admin_pds_uptake_access]Enhanced Menu Enabled[else]Enhanced Menu Not Enabled[/if]"
-      },
-      {
-        "name": "If New Look Enabled",
-        "disp": "&#126;[if.is.new.look.enabled][/if]",
-        "desc": "Renders content if the client's operating system is Mac OS.",
-        "code": "&#126;[if.is.new.look.enabled]New Look Enabled[else]Not Look Not Enabled[/if]",
-        "ex": "~[if.is.new.look.enabled]New Look Enabled[else]Not Look Not Enabled[/if]"
-      },
-      {
-        "name": "Client OS - If Mac",
-        "disp": "&#126;[if.mac][/if]",
-        "desc": "Renders content if the client's operating system is Mac OS.",
-        "code": "&#126;[if.mac]Mac OS[else]Not MacOS[/if]",
-        "ex": "~[if.mac]Mac OS[else]Not MacOS[/if]"
-      },
-      {
-        "name": "Client OS - If Windows",
-        "disp": "&#126;[if.win][/if]",
-        "desc": "Renders content if the client's operating system is Windows.",
-        "code": "&#126;[if.win]Windows[else]Not Windows[/if]",
-        "ex": "~[if.win]Windows[else]Not Windows[/if]"
-      },
-      {
-        "name": "Server State Abbreviation",
-        "disp": "&#126;[if.stateAbbr.{abbr}][/if]",
-        "desc": "Renders content if the server's state abbreviation  = {abbr}.",
-        "code": "&#126;[if.stateAbbr.OH]Ohio[else]Not Ohio[/if]",
-        "ex": "~[if.stateAbbr.OH]Ohio[else]Not Ohio[/if]"
-      },
-      {
-        "name": "Server OS - If Mac",
-        "disp": "&#126;[if.server.mac][/if]",
-        "desc": "Renders content if the server's operating system is Mac OS.",
-        "code": "&#126;[if.server.mac]Mac OS[else]Not Mac OS[/if]",
-        "ex": "~[if.server.mac]Mac OS[else]Not Mac OS[/if]"
-      },
-      {
-        "name": "Server OS - If MacX",
-        "disp": "&#126;[if.server.macx][/if]",
-        "desc": "Renders content if the server's operating system is Mac OSX.",
-        "code": "&#126;[if.server.macx]MacOS X[else]Not MacOS X[/if]",
-        "ex": "~[if.server.mac]MacOS X[else]Not MacOS X[/if]"
-      },
-      {
-        "name": "Server OS - If Windows",
-        "disp": "&#126;[if.server.win][/if]",
-        "desc": "Renders content if the server's operating system is Windows.",
-        "code": "&#126;[if.server.win]Windows[else]Not Windows[/if]",
-        "ex": "~[if.server.win]Windows[else]Not Windows[/if]"
-      },
-      {
-        "name": "If is Teacher or Admin",
-        "disp": "&#126;[if.isteacheroradmin][/if]",
-        "desc": "Renders content if the user logged in is a teacher or admin.",
-        "code": "&#126;[if.isteacheroradmin]Teacher or Admin[else]Not Teacher or Admin[/if]",
-        "ex": "~[if.isteacheroradmin]Teacher or Admin[else]Not Teacher or Admin[/if]"
-      },
-      {
-        "name": "If is Student",
-        "disp": "&#126;[if.isstudent][/if]",
-        "desc": "Renders content if the user logged in to the parent portal is a student.",
-        "code": "&#126;[if.isstudent]Student[else]Not Student[/if]",
-        "ex": "~[if.isstudent]Student[else]Not Student[/if]"
-      },
-      {
-        "name": "If is Guardian",
-        "disp": "&#126;[if.isguardian][/if]",
-        "desc": "Renders content if the user logged in to the parent portal is a parent/guardian.",
-        "code": "&#126;[if.isguardian]Guardian[else]Not Guardian[/if]",
-        "ex": "~[if.isguardian]Guardian[else]Not Guardian[/if]"
-      },
-      {
-        "name": "If is Student or Guardian",
-        "disp": "&#126;[if.isstudentorguardian][/if]",
-        "desc": "Renders content if the user logged in to the parent portal is a student, parent, or guardian.",
-        "code": "&#126;[if.isstudentorguardian]Student or Guardian[else]Not Student or Guardian[/if]",
-        "ex": "~[if.isstudentorguardian]Student or Guardian[else]Not Student or Guardian[/if]"
-      },
-      {
-        "name": "If is Guardian and SSO is Enabled",
-        "disp": "&#126;[if.isguardianAndSSOEnabled][/if]",
-        "desc": "Check if student, guardian, and guardian w SSO turned on is logged into the parent portal in PowerSchool.",
-        "code": "&#126;[if.isguardianAndSSOEnabled]Guardian and SSO[else]Not Guradian SSO[/if]",
-        "ex": "~[if.isguardianAndSSOEnabled]Guardian and SSO[else]Not Guradian SSO[/if]"
-      },
-      {
-        "name": "If Plugin is Enabled",
-        "disp": "&#126;[if.plugin.isEnabled.XXX][/if]",
-        "desc": "Renders content if the plugin with Plugin Title is enabled.",
-        "code": "&#126;[if.plugin.isEnabled.META Customizations]META Customizations = Enabled[else]META Customizations Not Enabled[/if]",
-        "ex": "~[if.plugin.isEnabled.META Customizations]META Customizations = Enabled[else]META Customizations Not Enabled[/if]"
-      },
-      {
-        "name": "If Security in Role",
-        "disp": "&#126;[if.security.inrole={comma separted list of groups/roles}][/if]",
-        "desc": "Renders content if the current user is part of one of groups/roles specified in the comma separated list.",
-        "code": "&#126;[if.security.inrole=9]In role = 9[else]Not In roll = 9[/if]",
-        "ex": "~[if.security.inrole=9]In role = 9[else]Not In roll = 9[/if]"
-      },
-      {
-        "name": "If Current Page Write Access",
-        "disp": "&#126;[if.modaccess][/if]",
-        "desc": "Tests if the currently logged in user has modify access to the current page.",
-        "code": "&#126;[if.modaccess]Current page = Write access[else]Not Write access[/if]",
-        "ex": "~[if.modaccess]Current page = Write access[else]Not Write access[/if]"
-      },
-      {
-        "name": "If Current Page View Access",
-        "disp": "&#126;[if.viewaccess][/if]",
-        "desc": "Tests if the currently logged in user has view access to the current page.",
-        "code": "&#126;[if.viewaccess]Current page = View access[else]Not View access[/if]",
-        "ex": "~[if.viewaccess]Current page = View access[else]Not View access[/if]"
-      },
-      {
-        "name": "If Security Page Modification",
-        "disp": "&#126;[if.security.pagemod={pageurl}][/if]",
-        "desc": "Renders content if the current user only has modify access to pageurl.",
-        "code": "&#126;[if.security.pagemod=/admin/home.html]/admin/home.html = Write access[else]Not Write access[/if]",
-        "ex": "~[if.security.pagemod=/admin/home.html]Write access[else]Not Write access[/if]"
-      },
-      {
-        "name": "If Security Page View",
-        "disp": "&#126;[if.security.pageview={pageurl}][/if]",
-        "desc": "Renders content if the current user only has view access to pageurl.",
-        "code": "&#126;[if.security.pageview=/admin/home.html]/admin/home.html = View access[else]Not View access[/if]",
-        "ex": "~[if.security.pageview=/admin/home.html]View access[else]Not View access[/if]"
-      },
-      {
-        "name": "If Security Page None",
-        "disp": "&#126;[if.security.pagenone={pageurl}][/if]",
-        "desc": "Renders content if the current user has no access to pageurl.",
-        "code": "&#126;[if.security.pagenone=/admin/home.html]/admin/home.html = No access[else]Yes access[/if]",
-        "ex": "~[if.security.pagenone=/admin/home.html]/admin/home.html = No access[else]Yes access[/if]"
-      },
-      {
-        "name": "If Security Can Modify Field",
-        "disp": "&#126;[if.security.canmodifyfield={Table.Field}][/if]",
-        "desc": "Tests if the currently logged in user has modify access to the {Table.Field}.",
-        "code": "&#126;[if.security.canmodifyfield=Students.SSN] No access [else] Yes access[/if]",
-        "ex": "~[if.security.canmodifyfield=Students.SSN] Yes access [else] No access[/if]"
-      },
-      {
-        "name": "If Security Can View Field",
-        "disp": "&#126;[if.security.canviewfield={Table.Field}][/if]",
-        "desc": "Tests if the currently logged in user has view access to the {Table.Field}.",
-        "code": "&#126;[if.security.canviewfield=Students.SSN] No access [else] Yes access[/if]",
-        "ex": "~[if.security.canviewfield=Students.SSN] Yes access [else] No access[/if]"
-      },
-      {
-        "name": "If Security Has No Access to Field",
-        "disp": "&#126;[if.security.noaccessfield={Table.Field}][/if]",
-        "desc": "Tests if the currently logged in user has no access to the {Table.Field}.",
-        "code": "&#126;[if.security.noaccessfield=Students.SSN] No access [else] Yes access[/if]",
-        "ex": "~[if.security.noaccessfield=Students.SSN] No access [else] Yes access[/if]"
-      },
-
-      {
-        "name": "If Security Has No Access to Field",
-        "disp": "&#126;[if.security.fieldlevel={Table.Field}{Operator}{Access_level}][/if]",
-        "desc": "Tests if the currently logged in user has no access to the {Table.Field} based on {Access_Level}.<br>Available Operators:<b> >=, <=, !=, >, <, =</b><br>Available Access_level: <b>NoAccess, ViewOnly, FullAccess</b>",
-        "code": "&#126;[if.security.fieldlevel=Students.SSN=NoAccess] No access [else] Yes access[/if]",
-        "ex": "~[if.security.fieldlevel=Students.SSN=NoAccess] No access [else] Yes access[/if]"
-      },
-
-
-      {
-        "name": "If Modify Page Permissions",
-        "disp": "&#126;[if.modifypagepermissions][/if]",
-        "desc": "Renders content if the current user has modify current page permissions.",
-        "code": "&#126;[if.modifypagepermissions]Yes permissions[else]No permissions[/if]",
-        "ex": "~[if.modifypagepermissions]Yes permissions[else]No permissions[/if]"
-      },
-      {
-        "name": "If Configuration",
-        "disp": "&#126;[if.CNFG.{serverconfigname}={expression}][/if]",
-        "desc": "Renders content if the server configuration variable matches the {expression}."
-      },
-      {
-        "name": "If Is Prod",
-        "disp": "&#126;[if.is_prod][/if]",
-        "desc": "Renders content if the server is a production server.",
-        "code": "&#126;[if.is_prod]Production[else]Not Production[/if]",
-        "ex": "~[if.is_prod]Production[else]Not Production[/if]"
-      },
-      {
-        "name": "If Is Logged In",
-        "disp": "&#126;[if.isloggedin][/if]",
-        "desc": "Renders content if the user is logged in.",
-        "code": "&#126;[if.isloggedin]Logged In[else]Not Logged In[/if]",
-        "ex": "~[if.isloggedin]Logged In[else]Not Logged In[/if]"
-      },
-      {
-        "name": "If Is Not Logged In",
-        "disp": "&#126;[if.notloggedin][/if]",
-        "desc": "Renders content if the user is not logged in.",
-        "code": "&#126;[if.notloggedin]Not Logged In[else]Logged In[/if]",
-        "ex": "~[if.notloggedin]Not Logged In[else]Logged In[/if]"
-      }
-
-    ]
-  }
+    {
+        "section": "If Tags",
+        "tags": [
+            {
+                "name": "If Value",
+                "disp": "&#126;[if.{value}={testvalue}][/if]",
+                "desc": "Tests if {value} equals {testvalue}.<br>Available Operators: <b><>=, #, >, >=, <, <=, $ <i>(Contains)</i>, !$ <i>(Does not contain)</i></b>",
+                "code": "&#126;[if.1=1] It Works [/if]",
+                "ex": "~[if.1=1] It Works [/if]"
+            },
+            {
+                "name": "If Value In List",
+                "disp": "&#126;[if.{value} in ({testvalue1}{,testvalueN})][/if]",
+                "desc": "Tests if {value} is in the list of {testvalues}.<br>Optionally, you can wrap {value} and {testvalues} in double quotes.",
+                "code": "&#126;[if.hello in (hello,world)] true [else] false [/if]<br>&#126;[if.\"goodbye\" in (\"hello\",\"world\")] true [else] false [/if]<br>",
+                "ex": "~[if.hello in (hello,world)] true [else] false [/if]<br>~[if.\"goodbye\" in (\"hello\",\"world\")] true [else] false [/if]"
+            },
+            {
+                "name": "If Value Not In List",
+                "disp": "&#126;[if.{value} not in ({testvalue1}{,testvalueN})][/if]",
+                "desc": "Tests if {value} is not in the list of {testvalues}.<br>Optionally, you can wrap {value} and {testvalues} in double quotes.",
+                "code": "&#126;[if.hello not in (hello,world)] true [else] false [/if]<br>&#126;[if.goodbye not in (hello,world)] true [else] false [/if]<br>",
+                "ex": "~[if.hello not in (hello,world)] true [else] false [/if]<br>~[if.goodbye not in (hello,world)] true [else] false [/if]"
+            },
+            {
+                "name": "If String contains Value",
+                "disp": "&#126;[if.{string} contains {value}][/if]",
+                "desc": "Tests if {value} is in the {string}.<br>Optionally, you can wrap {value} and {string} in double quotes.",
+                "code": "&#126;[if.\"hello world\" contains \"bye\"] true [else] false [/if]<br>&#126;[if.hello world contains hello] true [else] false [/if]<br>",
+                "ex": "~[if.\"hello world\" contains \"bye\"] true [else] false [/if]<br>~[if.hello world contains hello] true [else] false [/if]"
+            },
+            {
+                "name": "If String does not contain Value",
+                "disp": "&#126;[if.{string} does not contain {value}][/if]",
+                "desc": "Tests if {value} is in the {string}.<br>Optionally, you can wrap {value} and {string} in double quotes.",
+                "code": "&#126;[if.\"hello world\" does not contain \"bye\"] true [else] false [/if]<br>&#126;[if.hello world does not contain hello] true [else] false [/if]<br>",
+                "ex": "~[if.\"hello world\" does not contain \"bye\"] true [else] false [/if]<br>~[if.hello world does not contain hello] true [else] false [/if]"
+            },
+            {
+                "name": "If is a School",
+                "disp": "&#126;[if.is.a.school][/if]",
+                "desc": "Renders content if the currently selected school is not the District Office.",
+                "code": "&#126;[if.is.a.school]School[else]Not School[/if]",
+                "ex": "~[if.is.a.school]School[else]Not School[/if]"
+            },
+            {
+                "name": "If District Office",
+                "disp": "&#126;[if.district.office][/if]",
+                "desc": "Renders content if the District Office is currently selected.",
+                "code": "&#126;[if.district.office]District Office[else]Not District Office[/if]",
+                "ex": "~[if.district.office]District Office[else]Not District Office[/if]"
+            },
+            {
+                "name": "If District Office or Graduated Students",
+                "disp": "&#126;[if.dist.office.or.grad.students][/if]",
+                "desc": "Renders content if at the District Office or Graduated Students.",
+                "code": "&#126;[if.dist.office.or.grad.students]District Office or Grad Students[else]Not District Office or Grad Students[/if]",
+                "ex": "~[if.dist.office.or.grad.students]District Office or Grad Students[else]Not District Office or Grad Students[/if]"
+            },
+            {
+                "name": "If GPV",
+                "disp": "&#126;[if.gpv.{parameter}={expression}][/if]",
+                "desc": "Renders contents of if statement if the {parameter} value matches the {expression}."
+            },
+            {
+                "name": "If GUV",
+                "disp": "&#126;[if.guv.{user_variable}={expression}][/if]",
+                "desc": "Renders contents of if statement if the {user_variable} value matches the {expression}."
+            },
+            {
+                "name": "If Preference",
+                "disp": "&#126;[if.pref.{prefname}={expression}][/if]",
+                "desc": "Renders contents of if statement if the {prefname} value matches the {expression}."
+            },
+            {
+                "name": "If Preference Year",
+                "disp": "&#126;[if.prefyear.{prefname}={expression}][/if]",
+                "desc": "Renders contents of if statement if the {prefname} value matches the {expression} & year."
+            },
+            {
+                "name": "If User Preference",
+                "disp": "&#126;[if.prefuser.{prefname}={expression}][/if]",
+                "desc": "Renders contents of if statement if the {prefname} value matches the {expression} & user."
+            },
+            {
+                "name": "If School Preference",
+                "disp": "&#126;[if.prefschool.{prefname}={expression}][/if]",
+                "desc": "Renders content if the {prefname} value matches the {expression} for the selected school."
+            },
+            {
+                "name": "If SchoolID Preference",
+                "disp": "&#126;[if.prefschoolid.{prefname}={expression}][/if]",
+                "desc": "Renders content if the {prefname} value matches the {expression} for the selected school ID."
+            },
+            {
+                "name": "If Year School Preference",
+                "disp": "&#126;[if.prefyearschool.{prefname}={expression}][/if]",
+                "desc": "Renders content if the {prefname} value matches the {expression} for the selected school & year."
+            },
+            {
+                "name": "Check Dupe CC Failed",
+                "disp": "&#126;[if.CheckDupCC_Failed][/if]",
+                "desc": "Used in the /admin/students/allenrollments.html page to detect overlapping enrollments.",
+                "code": "&#126;[if.CheckDupCC_Failed]Check Dupe CC Failed[else]Check Dupe CC Success[/if]",
+                "ex": "~[if.CheckDupCC_Failed]Check Dupe CC Failed[else]Check Dupe CC Success[/if]"
+            },
+            {
+                "name": "If Enhanced Menu Enabled",
+                "disp": "&#126;[if.admin_pds_uptake_access][/if]",
+                "desc": "Renders content if the user has the Enhanced Menu enabled.",
+                "code": "&#126;[if.admin_pds_uptake_access]Enhanced Menu Enabled[else]Enhanced Menu Not Enabled[/if]",
+                "ex": "~[if.admin_pds_uptake_access]Enhanced Menu Enabled[else]Enhanced Menu Not Enabled[/if]"
+            },
+            {
+                "name": "If New Look Enabled",
+                "disp": "&#126;[if.is.new.look.enabled][/if]",
+                "desc": "Renders content if the client's operating system is Mac OS.",
+                "code": "&#126;[if.is.new.look.enabled]New Look Enabled[else]Not Look Not Enabled[/if]",
+                "ex": "~[if.is.new.look.enabled]New Look Enabled[else]Not Look Not Enabled[/if]"
+            },
+            {
+                "name": "Client OS - If Mac",
+                "disp": "&#126;[if.mac][/if]",
+                "desc": "Renders content if the client's operating system is Mac OS.",
+                "code": "&#126;[if.mac]Mac OS[else]Not MacOS[/if]",
+                "ex": "~[if.mac]Mac OS[else]Not MacOS[/if]"
+            },
+            {
+                "name": "Client OS - If Windows",
+                "disp": "&#126;[if.win][/if]",
+                "desc": "Renders content if the client's operating system is Windows.",
+                "code": "&#126;[if.win]Windows[else]Not Windows[/if]",
+                "ex": "~[if.win]Windows[else]Not Windows[/if]"
+            },
+            {
+                "name": "Server State Abbreviation",
+                "disp": "&#126;[if.stateAbbr.{abbr}][/if]",
+                "desc": "Renders content if the server's state abbreviation  = {abbr}.",
+                "code": "&#126;[if.stateAbbr.OH]Ohio[else]Not Ohio[/if]",
+                "ex": "~[if.stateAbbr.OH]Ohio[else]Not Ohio[/if]"
+            },
+            {
+                "name": "Server OS - If Mac",
+                "disp": "&#126;[if.server.mac][/if]",
+                "desc": "Renders content if the server's operating system is Mac OS.",
+                "code": "&#126;[if.server.mac]Mac OS[else]Not Mac OS[/if]",
+                "ex": "~[if.server.mac]Mac OS[else]Not Mac OS[/if]"
+            },
+            {
+                "name": "Server OS - If MacX",
+                "disp": "&#126;[if.server.macx][/if]",
+                "desc": "Renders content if the server's operating system is Mac OSX.",
+                "code": "&#126;[if.server.macx]MacOS X[else]Not MacOS X[/if]",
+                "ex": "~[if.server.mac]MacOS X[else]Not MacOS X[/if]"
+            },
+            {
+                "name": "Server OS - If Windows",
+                "disp": "&#126;[if.server.win][/if]",
+                "desc": "Renders content if the server's operating system is Windows.",
+                "code": "&#126;[if.server.win]Windows[else]Not Windows[/if]",
+                "ex": "~[if.server.win]Windows[else]Not Windows[/if]"
+            },
+            {
+                "name": "If is Teacher or Admin",
+                "disp": "&#126;[if.isteacheroradmin][/if]",
+                "desc": "Renders content if the user logged in is a teacher or admin.",
+                "code": "&#126;[if.isteacheroradmin]Teacher or Admin[else]Not Teacher or Admin[/if]",
+                "ex": "~[if.isteacheroradmin]Teacher or Admin[else]Not Teacher or Admin[/if]"
+            },
+            {
+                "name": "If is Student",
+                "disp": "&#126;[if.isstudent][/if]",
+                "desc": "Renders content if the user logged in to the parent portal is a student.",
+                "code": "&#126;[if.isstudent]Student[else]Not Student[/if]",
+                "ex": "~[if.isstudent]Student[else]Not Student[/if]"
+            },
+            {
+                "name": "If is Guardian",
+                "disp": "&#126;[if.isguardian][/if]",
+                "desc": "Renders content if the user logged in to the parent portal is a parent/guardian.",
+                "code": "&#126;[if.isguardian]Guardian[else]Not Guardian[/if]",
+                "ex": "~[if.isguardian]Guardian[else]Not Guardian[/if]"
+            },
+            {
+                "name": "If is Student or Guardian",
+                "disp": "&#126;[if.isstudentorguardian][/if]",
+                "desc": "Renders content if the user logged in to the parent portal is a student, parent, or guardian.",
+                "code": "&#126;[if.isstudentorguardian]Student or Guardian[else]Not Student or Guardian[/if]",
+                "ex": "~[if.isstudentorguardian]Student or Guardian[else]Not Student or Guardian[/if]"
+            },
+            {
+                "name": "If is Guardian and SSO is Enabled",
+                "disp": "&#126;[if.isguardianAndSSOEnabled][/if]",
+                "desc": "Check if student, guardian, and guardian w SSO turned on is logged into the parent portal in PowerSchool.",
+                "code": "&#126;[if.isguardianAndSSOEnabled]Guardian and SSO[else]Not Guradian SSO[/if]",
+                "ex": "~[if.isguardianAndSSOEnabled]Guardian and SSO[else]Not Guradian SSO[/if]"
+            },
+            {
+                "name": "If Plugin is Enabled",
+                "disp": "&#126;[if.plugin.isEnabled.XXX][/if]",
+                "desc": "Renders content if the plugin with Plugin Title is enabled.",
+                "code": "&#126;[if.plugin.isEnabled.META Customizations]META Customizations = Enabled[else]META Customizations Not Enabled[/if]",
+                "ex": "~[if.plugin.isEnabled.META Customizations]META Customizations = Enabled[else]META Customizations Not Enabled[/if]"
+            },
+            {
+                "name": "If Security in Role",
+                "disp": "&#126;[if.security.inrole={comma separted list of groups/roles}][/if]",
+                "desc": "Renders content if the current user is part of one of groups/roles specified in the comma separated list.",
+                "code": "&#126;[if.security.inrole=9]In role = 9[else]Not In roll = 9[/if]",
+                "ex": "~[if.security.inrole=9]In role = 9[else]Not In roll = 9[/if]"
+            },
+            {
+                "name": "If Current Page Write Access",
+                "disp": "&#126;[if.modaccess][/if]",
+                "desc": "Tests if the currently logged in user has modify access to the current page.",
+                "code": "&#126;[if.modaccess]Current page = Write access[else]Not Write access[/if]",
+                "ex": "~[if.modaccess]Current page = Write access[else]Not Write access[/if]"
+            },
+            {
+                "name": "If Current Page View Access",
+                "disp": "&#126;[if.viewaccess][/if]",
+                "desc": "Tests if the currently logged in user has view access to the current page.",
+                "code": "&#126;[if.viewaccess]Current page = View access[else]Not View access[/if]",
+                "ex": "~[if.viewaccess]Current page = View access[else]Not View access[/if]"
+            },
+            {
+                "name": "If Security Page Modification",
+                "disp": "&#126;[if.security.pagemod={pageurl}][/if]",
+                "desc": "Renders content if the current user only has modify access to pageurl.",
+                "code": "&#126;[if.security.pagemod=/admin/home.html]/admin/home.html = Write access[else]Not Write access[/if]",
+                "ex": "~[if.security.pagemod=/admin/home.html]Write access[else]Not Write access[/if]"
+            },
+            {
+                "name": "If Security Page View",
+                "disp": "&#126;[if.security.pageview={pageurl}][/if]",
+                "desc": "Renders content if the current user only has view access to pageurl.",
+                "code": "&#126;[if.security.pageview=/admin/home.html]/admin/home.html = View access[else]Not View access[/if]",
+                "ex": "~[if.security.pageview=/admin/home.html]View access[else]Not View access[/if]"
+            },
+            {
+                "name": "If Security Page None",
+                "disp": "&#126;[if.security.pagenone={pageurl}][/if]",
+                "desc": "Renders content if the current user has no access to pageurl.",
+                "code": "&#126;[if.security.pagenone=/admin/home.html]/admin/home.html = No access[else]Yes access[/if]",
+                "ex": "~[if.security.pagenone=/admin/home.html]/admin/home.html = No access[else]Yes access[/if]"
+            },
+            {
+                "name": "If Security Can Modify Field",
+                "disp": "&#126;[if.security.canmodifyfield={Table.Field}][/if]",
+                "desc": "Tests if the currently logged in user has modify access to the {Table.Field}.",
+                "code": "&#126;[if.security.canmodifyfield=Students.SSN] No access [else] Yes access[/if]",
+                "ex": "~[if.security.canmodifyfield=Students.SSN] Yes access [else] No access[/if]"
+            },
+            {
+                "name": "If Security Can View Field",
+                "disp": "&#126;[if.security.canviewfield={Table.Field}][/if]",
+                "desc": "Tests if the currently logged in user has view access to the {Table.Field}.",
+                "code": "&#126;[if.security.canviewfield=Students.SSN] No access [else] Yes access[/if]",
+                "ex": "~[if.security.canviewfield=Students.SSN] Yes access [else] No access[/if]"
+            },
+            {
+                "name": "If Security Has No Access to Field",
+                "disp": "&#126;[if.security.noaccessfield={Table.Field}][/if]",
+                "desc": "Tests if the currently logged in user has no access to the {Table.Field}.",
+                "code": "&#126;[if.security.noaccessfield=Students.SSN] No access [else] Yes access[/if]",
+                "ex": "~[if.security.noaccessfield=Students.SSN] No access [else] Yes access[/if]"
+            },
+            {
+                "name": "If Security Has No Access to Field",
+                "disp": "&#126;[if.security.fieldlevel={Table.Field}{Operator}{Access_level}][/if]",
+                "desc": "Tests if the currently logged in user has no access to the {Table.Field} based on {Access_Level}.<br>Available Operators:<b> >=, <=, !=, >, <, =</b><br>Available Access_level: <b>NoAccess, ViewOnly, FullAccess</b>",
+                "code": "&#126;[if.security.fieldlevel=Students.SSN=NoAccess] No access [else] Yes access[/if]",
+                "ex": "~[if.security.fieldlevel=Students.SSN=NoAccess] No access [else] Yes access[/if]"
+            },
+            {
+                "name": "If Modify Page Permissions",
+                "disp": "&#126;[if.modifypagepermissions][/if]",
+                "desc": "Renders content if the current user has modify current page permissions.",
+                "code": "&#126;[if.modifypagepermissions]Yes permissions[else]No permissions[/if]",
+                "ex": "~[if.modifypagepermissions]Yes permissions[else]No permissions[/if]"
+            },
+            {
+                "name": "If Configuration",
+                "disp": "&#126;[if.CNFG.{serverconfigname}={expression}][/if]",
+                "desc": "Renders content if the server configuration variable matches the {expression}."
+            },
+            {
+                "name": "If Is Prod",
+                "disp": "&#126;[if.is_prod][/if]",
+                "desc": "Renders content if the server is a production server.",
+                "code": "&#126;[if.is_prod]Production[else]Not Production[/if]",
+                "ex": "~[if.is_prod]Production[else]Not Production[/if]"
+            },
+            {
+                "name": "If Is Logged In",
+                "disp": "&#126;[if.isloggedin][/if]",
+                "desc": "Renders content if the user is logged in.",
+                "code": "&#126;[if.isloggedin]Logged In[else]Not Logged In[/if]",
+                "ex": "~[if.isloggedin]Logged In[else]Not Logged In[/if]"
+            },
+            {
+                "name": "If Is Not Logged In",
+                "disp": "&#126;[if.notloggedin][/if]",
+                "desc": "Renders content if the user is not logged in.",
+                "code": "&#126;[if.notloggedin]Not Logged In[else]Logged In[/if]",
+                "ex": "~[if.notloggedin]Not Logged In[else]Logged In[/if]"
+            }
+        ]
+    }
 ]

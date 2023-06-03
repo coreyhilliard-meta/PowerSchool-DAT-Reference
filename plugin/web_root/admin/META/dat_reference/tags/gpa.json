@@ -1,127 +1,127 @@
 [
-  {
-    "section": "GPA Tags",
-    "description": "<p>The GPA DAT returns a student’s GPA based on the specified parameters. GPAs are calculated on the fly and not stored in a database table.</p>",
-    "tags": [
-      {
-        "name": "Cumulative GPA (Weighted)",
-        "disp": "&#126;(*gpa)",
-        "desc": "The cumulative GPA for the student.",
-        "ex": "~(*gpa)"
-      },
-      {
-        "name": "Cumulative GPA (Custom Method)",
-        "disp": "&#126;(*gpa method=\"{gpa_method}\")",
-        "desc": "The {gpa_method} GPA for the student.",
-        "code": "&#126;(*gpa method=\"Weighted\")",
-        "ex": "~(*gpa method="Weighted")"
-      },
-      {
-        "name": "Cumulative GPA (Simple)",
-        "disp": "&#126;(*gpa.simple)",
-        "desc": "The cumulative GPA for the student using the simple calculation method.",
-        "ex": "~(*gpa.simple)"
-      },
-      {
-        "name": "Cumulative credit hours earned",
-        "disp": "&#126;(*credit_hours)",
-        "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student. The value of credit for each historical grade is stored in [StoredGrades]EarnedCrHrs.",
-        "ex": "~(*credit_hours)"
-      },
-      {
-        "name": "Credit Hours by Credit Types",
-        "disp": "&#126;(*credit_hours;{creditTypes})",
-        "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {creditTypes}.",
-        "code": "&#126;(*credit_hours;MTO,MTA)",
-        "ex": "~(*credit_hours;MTO,MTA)"
-      },
-      {
-        "name": "Credit Hours by Term",
-        "disp": "&#126;(*credit_hours;{terms})",
-        "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {terms}.",
-        "code": "&#126;(*credit_hours;S1,S2)",
-        "ex": "~(*credit_hours;S1,S2)"
-      },
-      {
-        "name": "Credit Hours by Grade",
-        "disp": "&#126;(*credit_hours;{grade_level})",
-        "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {grade_level}.",
-        "code": "&#126;(*credit_hours;10)",
-        "ex": "~(*credit_hours;10)"
-      },
-      {
-        "name": "Credit Hours by Year",
-        "disp": "&#126;(*credit_hours;{year})",
-        "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {year}.",
-        "code": "&#126;(*credit_hours;2020)",
-        "ex": "~(*credit_hours;2020)"
-      },
-      {
-        "name": "Cumulative avg. % earned in all classes (weighted)",
-        "disp": "&#126;(*gpa.percent)",
-        "desc": "Inserts the student's cumulative average percent in all classes using the weighted calculation method.",
-        "ex": "~(*gpa.percent)"
-      },
-      {
-        "name": "Cumulative avg. % earned in all classes (simple)",
-        "disp": "&#126;(*gpa.simple.percent)",
-        "desc": "Inserts the student's cumulative average percent in all classes using the simple calculation method.",
-        "ex": "~(*gpa.simple.percent)"
-      },
-      {
-        "name": "GPA for Term (weighted)",
-        "disp": "&#126;(*gpa;{term})",
-        "desc": "Calculates the GPA for {term} of the current school year (the year in which the user is currently working in PowerSchool SIS).<br><b>Note: </b>Your school must previously store the {term} grades for the code to insert the correct GPA.",
-        "code": "&#126;(*gpa;Q1)",
-        "ex": "~(*gpa;Q1)"
-      },
-      {
-        "name": "GPA for the student's entire {grade_level} year",
-        "disp": "&#126;(*gpa;{grade_level})",
-        "desc": "Calculates the GPA for grade {grade_level}.",
-        "code": "&#126;(*gpa;11)",
-        "ex": "~(*gpa;11)"
-      },
-      {
-        "name": "GPA for {term} of the student's {grade_level} year",
-        "disp": "&#126;(*gpa;{grade_level};{term})",
-        "desc": "Calculates the student's {term} GPA while they were enrolled in Grade {grade_level}.<br><b>Note: </b>You can enter the codes in any order",
-        "code": "&#126;(*gpa;11,Q1)",
-        "ex": "~(*gpa;11;Q1)"
-      },
-      {
-        "name": "GPA for the year {year}",
-        "disp": "&#126;(*gpa;{year})",
-        "desc": "Calculates the GPA for {year} for the current student.",
-        "code": "&#126;(*gpa;2020)",
-        "ex": "~(*gpa;2020)"
-      },
-      {
-        "name": "The current GPA (simple)",
-        "disp": "&#126;(*gpa.current)",
-        "desc": "Inserts each student's current grade from the Quick Lookup page.<br><b>Note:</b> The system always uses the simple calculation method to calculate current grades.",
-        "ex": "~(*gpa.current)"
-      },
-      {
-        "name": "The average % being earned in the current classes (simple)",
-        "disp": "&#126;(*gpa.current.percent)",
-        "desc": "Uses each student's current grades on the Quick Lookup page to calculate.",
-        "ex": "~(*gpa.current.percent)"
-      },
-      {
-        "name": "Weighted GPA by Credit Type",
-        "disp": "&#126;(*gpa.credit_type.{credit_type})",
-        "desc": "The weighted GPA for all historical grades for the current student that are of the credit type {credit_type}.",
-        "code": "&#126;(*gpa.credit_type.ENG)",
-        "ex": "~(*gpa.credit_type.ENG)"
-      },
-      {
-        "name": "Weighted GPA by Credit Type by Grade",
-        "disp": "&#126;(*gpa.credit_type.{credit_type};{grade_level})",
-        "desc": "The student's weighted GPA for all historical grades that are of the credit type {credit_type} that they earned in the {grade_level} grade.",
-        "code": "&#126;(*gpa.credit_type.ENG;12)",
-        "ex": "~(*gpa.credit_type.ENG;12)"
-      }
-    ]
-  }
+    {
+        "section": "GPA Tags",
+        "description": "<p>The GPA DAT returns a student’s GPA based on the specified parameters. GPAs are calculated on the fly and not stored in a database table.</p>",
+        "tags": [
+            {
+                "name": "Cumulative GPA (Weighted)",
+                "disp": "&#126;(*gpa)",
+                "desc": "The cumulative GPA for the student.",
+                "ex": "~(*gpa)"
+            },
+            {
+                "name": "Cumulative GPA (Custom Method)",
+                "disp": "&#126;(*gpa method=\"{gpa_method}\")",
+                "desc": "The {gpa_method} GPA for the student.",
+                "code": "&#126;(*gpa method=\"Weighted\")",
+                "ex": "~(*gpa method=\"Weighted\")"
+            },
+            {
+                "name": "Cumulative GPA (Simple)",
+                "disp": "&#126;(*gpa.simple)",
+                "desc": "The cumulative GPA for the student using the simple calculation method.",
+                "ex": "~(*gpa.simple)"
+            },
+            {
+                "name": "Cumulative credit hours earned",
+                "disp": "&#126;(*credit_hours)",
+                "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student. The value of credit for each historical grade is stored in [StoredGrades]EarnedCrHrs.",
+                "ex": "~(*credit_hours)"
+            },
+            {
+                "name": "Credit Hours by Credit Types",
+                "disp": "&#126;(*credit_hours;{creditTypes})",
+                "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {creditTypes}.",
+                "code": "&#126;(*credit_hours;MTO,MTA)",
+                "ex": "~(*credit_hours;MTO,MTA)"
+            },
+            {
+                "name": "Credit Hours by Term",
+                "disp": "&#126;(*credit_hours;{terms})",
+                "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {terms}.",
+                "code": "&#126;(*credit_hours;S1,S2)",
+                "ex": "~(*credit_hours;S1,S2)"
+            },
+            {
+                "name": "Credit Hours by Grade",
+                "disp": "&#126;(*credit_hours;{grade_level})",
+                "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {grade_level}.",
+                "code": "&#126;(*credit_hours;10)",
+                "ex": "~(*credit_hours;10)"
+            },
+            {
+                "name": "Credit Hours by Year",
+                "disp": "&#126;(*credit_hours;{year})",
+                "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {year}.",
+                "code": "&#126;(*credit_hours;2020)",
+                "ex": "~(*credit_hours;2020)"
+            },
+            {
+                "name": "Cumulative avg. % earned in all classes (weighted)",
+                "disp": "&#126;(*gpa.percent)",
+                "desc": "Inserts the student's cumulative average percent in all classes using the weighted calculation method.",
+                "ex": "~(*gpa.percent)"
+            },
+            {
+                "name": "Cumulative avg. % earned in all classes (simple)",
+                "disp": "&#126;(*gpa.simple.percent)",
+                "desc": "Inserts the student's cumulative average percent in all classes using the simple calculation method.",
+                "ex": "~(*gpa.simple.percent)"
+            },
+            {
+                "name": "GPA for Term (weighted)",
+                "disp": "&#126;(*gpa;{term})",
+                "desc": "Calculates the GPA for {term} of the current school year (the year in which the user is currently working in PowerSchool SIS).<br><b>Note: </b>Your school must previously store the {term} grades for the code to insert the correct GPA.",
+                "code": "&#126;(*gpa;Q1)",
+                "ex": "~(*gpa;Q1)"
+            },
+            {
+                "name": "GPA for the student's entire {grade_level} year",
+                "disp": "&#126;(*gpa;{grade_level})",
+                "desc": "Calculates the GPA for grade {grade_level}.",
+                "code": "&#126;(*gpa;11)",
+                "ex": "~(*gpa;11)"
+            },
+            {
+                "name": "GPA for {term} of the student's {grade_level} year",
+                "disp": "&#126;(*gpa;{grade_level};{term})",
+                "desc": "Calculates the student's {term} GPA while they were enrolled in Grade {grade_level}.<br><b>Note: </b>You can enter the codes in any order",
+                "code": "&#126;(*gpa;11,Q1)",
+                "ex": "~(*gpa;11;Q1)"
+            },
+            {
+                "name": "GPA for the year {year}",
+                "disp": "&#126;(*gpa;{year})",
+                "desc": "Calculates the GPA for {year} for the current student.",
+                "code": "&#126;(*gpa;2020)",
+                "ex": "~(*gpa;2020)"
+            },
+            {
+                "name": "The current GPA (simple)",
+                "disp": "&#126;(*gpa.current)",
+                "desc": "Inserts each student's current grade from the Quick Lookup page.<br><b>Note:</b> The system always uses the simple calculation method to calculate current grades.",
+                "ex": "~(*gpa.current)"
+            },
+            {
+                "name": "The average % being earned in the current classes (simple)",
+                "disp": "&#126;(*gpa.current.percent)",
+                "desc": "Uses each student's current grades on the Quick Lookup page to calculate.",
+                "ex": "~(*gpa.current.percent)"
+            },
+            {
+                "name": "Weighted GPA by Credit Type",
+                "disp": "&#126;(*gpa.credit_type.{credit_type})",
+                "desc": "The weighted GPA for all historical grades for the current student that are of the credit type {credit_type}.",
+                "code": "&#126;(*gpa.credit_type.ENG)",
+                "ex": "~(*gpa.credit_type.ENG)"
+            },
+            {
+                "name": "Weighted GPA by Credit Type by Grade",
+                "disp": "&#126;(*gpa.credit_type.{credit_type};{grade_level})",
+                "desc": "The student's weighted GPA for all historical grades that are of the credit type {credit_type} that they earned in the {grade_level} grade.",
+                "code": "&#126;(*gpa.credit_type.ENG;12)",
+                "ex": "~(*gpa.credit_type.ENG;12)"
+            }
+        ]
+    }
 ]

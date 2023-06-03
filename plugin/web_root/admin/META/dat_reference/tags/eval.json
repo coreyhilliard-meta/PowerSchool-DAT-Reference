@@ -1,194 +1,194 @@
 [
-  {
-    "section": "Evaluate Numeric Tags",
-    "tags": [
-      {
-        "name": "Integer",
-        "disp": "&#126;(*evaluate int(NN))",
-        "desc": "Outputs the whole number without the decimal.",
-        "code": "&#126;(*evaluate int(15.75))",
-        "ex": "~(*evaluate int(15.75))"
-      },
-      {
-        "name": "Absolute Value",
-        "disp": "&#126;(*evaluate abs(-NN))",
-        "desc": "Outputs the magnitude of a numerical value, without regard to its sign.",
-        "code": "&#126;(*evaluate abs(-123))",
-        "ex": "~(*evaluate abs(-123))"
-      },
-      {
-        "name": "Decimal",
-        "disp": "&#126;(*evaluate dec(N.NN))",
-        "desc": "Outputs the decimal of a numerical value.",
-        "code": "&#126;(*evaluate dec(1.23))",
-        "ex": "~(*evaluate dec(1.23))"
-      },
-      {
-        "name": "Fraction",
-        "disp": "&#126;(*evaluate frac(N.NN))",
-        "desc": "Outputs the decimal of a numerical value.",
-        "code": "&#126;(*evaluate frac(23.21))",
-        "ex": "~(*evaluate dec(23.21))"
-      },
-      {
-        "name": "Scientific Notation",
-        "disp": "&#126;(*evaluate int(\"NeN\"))",
-        "desc": "Outputs the value that was written in Scientific Notation.",
-        "code": "&#126;(*evaluate int(\"4e3\"))",
-        "ex": "~(*evaluate int("4e3"))"
-      },
-      {
-        "name": "Summation Function",
-        "disp": "&#126;(*evaluate sum(N,N,N))",
-        "desc": "Outputs the sum of multiple values.",
-        "code": "&#126;(*evaluate sum(3,3,3))",
-        "ex": "~(*evaluate sum(3,3,3))"
-      },
-      {
-        "name": "Summation",
-        "disp": "&#126;(*evaluate N+N+N)",
-        "desc": "Outputs the sum of multiple values.",
-        "code": "&#126;(*evaluate 3+3+3)",
-        "ex": "~(*evaluate 3+3+3)"
-      },
-      {
-        "name": "Subtraction",
-        "disp": "&#126;(*evaluate N-N)",
-        "desc": "Outpus the difference of multiple values.",
-        "code": "&#126;(*evaluate 3-3)",
-        "ex": "~(*evaluate 3-3)"
-      },
-      {
-        "name": "Division",
-        "disp": "&#126;(*evaluate N/N)",
-        "desc": "Outputs the quotient of the divisor and dividend.",
-        "code": "&#126;(*evaluate 3/3)",
-        "ex": "~(*evaluate 3/3)"
-      },
-      {
-        "name": "Multiplication",
-        "disp": "&#126;(*evaluate N*N)",
-        "desc": "Outputs the product of multiple values.",
-        "code": "&#126;(*evaluate 3*3)",
-        "ex": "~(*evaluate 3*3)"
-      },
-      {
-        "name": "Exponential Function",
-        "disp": "&#126;(*evaluate exp(N))",
-        "desc": "Outputs the result of e to the power of x.",
-        "code": "&#126;(*evaluate exp(3))",
-        "ex": "~(*evaluate exp(3))"
-      },
-      {
-        "name": "Natural Logarithm",
-        "disp": "&#126;(*evaluate ln(N))",
-        "desc": "Outputs the logarithm to the base of the mathematical constant e.",
-        "code": "&#126;(*evaluate ln(20.085536923187668))",
-        "ex": "~(*evaluate ln(20.085536923187668))"
-      },
-      {
-        "name": "Base-2 Logarithm",
-        "disp": "&#126;(*evaluate log2(N))",
-        "desc": "Outputs the power to which the number 2 must be raised to obtain the value n.",
-        "code": "&#126;(*evaluate log2(8))",
-        "ex": "~(*evaluate log2(8))"
-      },
-      {
-        "name": "Base-10 Logarithm",
-        "disp": "&#126;(*evaluate log10(N))",
-        "desc": "Outputs the power to which the number 10 must be raised to obtain the value n.",
-        "code": "&#126;(*evaluate log10(100))",
-        "ex": "~(*evaluate log10(100))"
-      },
-      {
-        "name": "Base-n Logarithm",
-        "disp": "&#126;(*evaluate log(N,N))",
-        "desc": "Outputs the power to which the number x must be raised to obtain the value n.",
-        "code": "&#126;(*evaluate log(9,3))",
-        "ex": "~(*evaluate log(9,3))"
-      },
-      {
-        "name": "Pi",
-        "disp": "&#126;(*evaluate pi())",
-        "desc": "Outputs the value of Pi.",
-        "ex": "~(*evaluate pi())"
-      },
-      {
-        "name": "Random Number",
-        "disp": "&#126;(*evaluate rand())",
-        "desc": "Outputs a random number between 0 and 1.",
-        "ex": "~(*evaluate rand())"
-      },
-      {
-        "name": "Random Number",
-        "disp": "&#126;(*evaluate int(rand(N))",
-        "desc": "Outputs a random whole number between 0 and N.",
-        "code": "&#126;(*evaluate int(rand(100))",
-        "ex": "~(*evaluate int(rand(100)))"
-      },
-      {
-        "name": "Round",
-        "disp": "&#126;(*evaluate round(N.NNNN,Y))",
-        "desc": "Outputs a value N.NNNN rounded to the specified Y number of digits.",
-        "code": "&#126;(*evaluate round(1.507,2))",
-        "ex": "~(*evaluate round(1.507,2))"
-      },
-      {
-        "name": "Sign",
-        "disp": "&#126;(*evaluate sign(-N))",
-        "desc": "Outputs a sign of the number (-1,0,1).",
-        "code": "&#126;(*evaluate sign(-54))",
-        "ex": "~(*evaluate sign(-54))"
-      },
-      {
-        "name": "Square Root",
-        "disp": "&#126;(*evaluate sqrt(N))",
-        "desc": "Outputs a square root of a number.",
-        "code": "&#126;(*evaluate sqrt(16))",
-        "ex": "~(*evaluate sqrt(16))"
-      },
-      {
-        "name": "Truncate",
-        "disp": "&#126;(*evaluate trunc(NNN.NNN,Y))",
-        "desc": "Outputs the number truncated to the specified Y number of digits.",
-        "code": "&#126;(*evaluate trunc(123.456,2))",
-        "ex": "~(*evaluate trunc(123.456,2))"
-      },
-      {
-        "name": "Exponentiation Function",
-        "disp": "&#126;(*evaluate power(N,N))",
-        "desc": "Outputs the result of the base and exponent.",
-        "code": "&#126;(*evaluate power(3,3))",
-        "ex": "~(*evaluate power(3,3))"
-      },
-      {
-        "name": "Exponentiation",
-        "disp": "&#126;(*evaluate N^N)",
-        "desc": "Outputs the result of the base and exponent.",
-        "code": "&#126;(*evaluate 3^3)",
-        "ex": "~(*evaluate 3^3)"
-      },
-      {
-        "name": "Factorial",
-        "disp": "&#126;(*evaluate fact(N))",
-        "desc": "Outputs the product of all positive integers less than or equal to n.",
-        "code": "&#126;(*evaluate fact(4))",
-        "ex": "~(*evaluate fact(4))"
-      },
-      {
-        "name": "Modulo Function",
-        "disp": "&#126;(*evaluate mod(N,N))",
-        "desc": "Outputs the remainder after division of the values.",
-        "code": "&#126;(*evaluate mod(11,2))",
-        "ex": "~(*evaluate mod(11,2))"
-      },
-      {
-        "name": "Modulo",
-        "disp": "&#126;(*evaluate N%N)",
-        "desc": "Outputs the remainder after division of the values.",
-        "code": "&#126;(*evaluate 4%3)",
-        "ex": "~(*evaluate 4%3)"
-      }
-    ]
-  }
+    {
+        "section": "Evaluate Numeric Tags",
+        "tags": [
+            {
+                "name": "Integer",
+                "disp": "&#126;(*evaluate int(NN))",
+                "desc": "Outputs the whole number without the decimal.",
+                "code": "&#126;(*evaluate int(15.75))",
+                "ex": "~(*evaluate int(15.75))"
+            },
+            {
+                "name": "Absolute Value",
+                "disp": "&#126;(*evaluate abs(-NN))",
+                "desc": "Outputs the magnitude of a numerical value, without regard to its sign.",
+                "code": "&#126;(*evaluate abs(-123))",
+                "ex": "~(*evaluate abs(-123))"
+            },
+            {
+                "name": "Decimal",
+                "disp": "&#126;(*evaluate dec(N.NN))",
+                "desc": "Outputs the decimal of a numerical value.",
+                "code": "&#126;(*evaluate dec(1.23))",
+                "ex": "~(*evaluate dec(1.23))"
+            },
+            {
+                "name": "Fraction",
+                "disp": "&#126;(*evaluate frac(N.NN))",
+                "desc": "Outputs the decimal of a numerical value.",
+                "code": "&#126;(*evaluate frac(23.21))",
+                "ex": "~(*evaluate dec(23.21))"
+            },
+            {
+                "name": "Scientific Notation",
+                "disp": "&#126;(*evaluate int(\"NeN\"))",
+                "desc": "Outputs the value that was written in Scientific Notation.",
+                "code": "&#126;(*evaluate int(\"4e3\"))",
+                "ex": "~(*evaluate int(\"4e3\"))"
+            },
+            {
+                "name": "Summation Function",
+                "disp": "&#126;(*evaluate sum(N,N,N))",
+                "desc": "Outputs the sum of multiple values.",
+                "code": "&#126;(*evaluate sum(3,3,3))",
+                "ex": "~(*evaluate sum(3,3,3))"
+            },
+            {
+                "name": "Summation",
+                "disp": "&#126;(*evaluate N+N+N)",
+                "desc": "Outputs the sum of multiple values.",
+                "code": "&#126;(*evaluate 3+3+3)",
+                "ex": "~(*evaluate 3+3+3)"
+            },
+            {
+                "name": "Subtraction",
+                "disp": "&#126;(*evaluate N-N)",
+                "desc": "Outpus the difference of multiple values.",
+                "code": "&#126;(*evaluate 3-3)",
+                "ex": "~(*evaluate 3-3)"
+            },
+            {
+                "name": "Division",
+                "disp": "&#126;(*evaluate N/N)",
+                "desc": "Outputs the quotient of the divisor and dividend.",
+                "code": "&#126;(*evaluate 3/3)",
+                "ex": "~(*evaluate 3/3)"
+            },
+            {
+                "name": "Multiplication",
+                "disp": "&#126;(*evaluate N*N)",
+                "desc": "Outputs the product of multiple values.",
+                "code": "&#126;(*evaluate 3*3)",
+                "ex": "~(*evaluate 3*3)"
+            },
+            {
+                "name": "Exponential Function",
+                "disp": "&#126;(*evaluate exp(N))",
+                "desc": "Outputs the result of e to the power of x.",
+                "code": "&#126;(*evaluate exp(3))",
+                "ex": "~(*evaluate exp(3))"
+            },
+            {
+                "name": "Natural Logarithm",
+                "disp": "&#126;(*evaluate ln(N))",
+                "desc": "Outputs the logarithm to the base of the mathematical constant e.",
+                "code": "&#126;(*evaluate ln(20.085536923187668))",
+                "ex": "~(*evaluate ln(20.085536923187668))"
+            },
+            {
+                "name": "Base-2 Logarithm",
+                "disp": "&#126;(*evaluate log2(N))",
+                "desc": "Outputs the power to which the number 2 must be raised to obtain the value n.",
+                "code": "&#126;(*evaluate log2(8))",
+                "ex": "~(*evaluate log2(8))"
+            },
+            {
+                "name": "Base-10 Logarithm",
+                "disp": "&#126;(*evaluate log10(N))",
+                "desc": "Outputs the power to which the number 10 must be raised to obtain the value n.",
+                "code": "&#126;(*evaluate log10(100))",
+                "ex": "~(*evaluate log10(100))"
+            },
+            {
+                "name": "Base-n Logarithm",
+                "disp": "&#126;(*evaluate log(N,N))",
+                "desc": "Outputs the power to which the number x must be raised to obtain the value n.",
+                "code": "&#126;(*evaluate log(9,3))",
+                "ex": "~(*evaluate log(9,3))"
+            },
+            {
+                "name": "Pi",
+                "disp": "&#126;(*evaluate pi())",
+                "desc": "Outputs the value of Pi.",
+                "ex": "~(*evaluate pi())"
+            },
+            {
+                "name": "Random Number",
+                "disp": "&#126;(*evaluate rand())",
+                "desc": "Outputs a random number between 0 and 1.",
+                "ex": "~(*evaluate rand())"
+            },
+            {
+                "name": "Random Number",
+                "disp": "&#126;(*evaluate int(rand(N))",
+                "desc": "Outputs a random whole number between 0 and N.",
+                "code": "&#126;(*evaluate int(rand(100))",
+                "ex": "~(*evaluate int(rand(100)))"
+            },
+            {
+                "name": "Round",
+                "disp": "&#126;(*evaluate round(N.NNNN,Y))",
+                "desc": "Outputs a value N.NNNN rounded to the specified Y number of digits.",
+                "code": "&#126;(*evaluate round(1.507,2))",
+                "ex": "~(*evaluate round(1.507,2))"
+            },
+            {
+                "name": "Sign",
+                "disp": "&#126;(*evaluate sign(-N))",
+                "desc": "Outputs a sign of the number (-1,0,1).",
+                "code": "&#126;(*evaluate sign(-54))",
+                "ex": "~(*evaluate sign(-54))"
+            },
+            {
+                "name": "Square Root",
+                "disp": "&#126;(*evaluate sqrt(N))",
+                "desc": "Outputs a square root of a number.",
+                "code": "&#126;(*evaluate sqrt(16))",
+                "ex": "~(*evaluate sqrt(16))"
+            },
+            {
+                "name": "Truncate",
+                "disp": "&#126;(*evaluate trunc(NNN.NNN,Y))",
+                "desc": "Outputs the number truncated to the specified Y number of digits.",
+                "code": "&#126;(*evaluate trunc(123.456,2))",
+                "ex": "~(*evaluate trunc(123.456,2))"
+            },
+            {
+                "name": "Exponentiation Function",
+                "disp": "&#126;(*evaluate power(N,N))",
+                "desc": "Outputs the result of the base and exponent.",
+                "code": "&#126;(*evaluate power(3,3))",
+                "ex": "~(*evaluate power(3,3))"
+            },
+            {
+                "name": "Exponentiation",
+                "disp": "&#126;(*evaluate N^N)",
+                "desc": "Outputs the result of the base and exponent.",
+                "code": "&#126;(*evaluate 3^3)",
+                "ex": "~(*evaluate 3^3)"
+            },
+            {
+                "name": "Factorial",
+                "disp": "&#126;(*evaluate fact(N))",
+                "desc": "Outputs the product of all positive integers less than or equal to n.",
+                "code": "&#126;(*evaluate fact(4))",
+                "ex": "~(*evaluate fact(4))"
+            },
+            {
+                "name": "Modulo Function",
+                "disp": "&#126;(*evaluate mod(N,N))",
+                "desc": "Outputs the remainder after division of the values.",
+                "code": "&#126;(*evaluate mod(11,2))",
+                "ex": "~(*evaluate mod(11,2))"
+            },
+            {
+                "name": "Modulo",
+                "disp": "&#126;(*evaluate N%N)",
+                "desc": "Outputs the remainder after division of the values.",
+                "code": "&#126;(*evaluate 4%3)",
+                "ex": "~(*evaluate 4%3)"
+            }
+        ]
+    }
 ]
