@@ -64,7 +64,7 @@
       {
         "name": "PowerSchool Last Version",
         "disp": "&#126;[displaypref:lastversionnumber]",
-        "code": "&#126;[if.~[displaypref:lastversionnumber]>=12.0.1.0]You have term suppression![/if]",
+        "code": "&#126;[if.&#126;[displaypref:lastversionnumber]>=12.0.1.0]You have term suppression![/if]",
         "desc": "Returns current version from prefs, works more reliably in if statements.",
         "ex": "~[if.~[displaypref:lastversionnumber]>=12.0.1.0]You have term suppression![/if]"
       },
