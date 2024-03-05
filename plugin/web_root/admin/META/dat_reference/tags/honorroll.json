@@ -1,71 +1,71 @@
 [
-  {
-    "section": "Honor Roll Tags",
-    "description": "<p>The Honor Roll DAT returns results from the [HonorRoll] table. Honor Roll Methods are setup at Start Page > School > Honor Roll. For more information on the Honor Roll click on the help icon in the upper right hand corner of the Honor Roll Levels page to access the PowerSchool Help Files.</p><p>When creating an honor roll level, it is common to choose a GPA Calculation Method. For more information on GPAs, navigate to Start Page > District Setup > GPA Calculations > Calculation Methods > select a calculation and then access the PowerSchool Help Files. You may also refer to Knowledgebase article 11148 on PowerSource.</p>",
-    "tags": [
-      {
-        "name": "Honor Roll Method",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\")",
-        "desc": "Identifies the name of the Honor Roll Method used to determine the honor roll.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\")",
-        "ex": "~(*honorroll method="Honor Roll")"
-      },
-      {
-        "name": "Honor Roll Term",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\")",
-        "desc": "Narrows the honor roll records by the store code used when calculating the Honor Roll.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1")"
-      },
-      {
-        "name": "Honor Roll Grade Level",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" grade=\"{grade_levels}\")",
-        "desc": "Narrows the honor roll records by either a single grade level or a comma separated list of grade levels.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" grade=\"10\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" grade="10")"
-      },
-      {
-        "name": "Honor Roll Grade Year",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" year=\"{year_numbers}\")",
-        "desc": "Narrows the honor roll records by either a single year or a comma separated list of years.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" year=\"2020\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" year="2020")"
-      },
-      {
-        "name": "Honor Roll Grade Level",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"level\")",
-        "desc": "Displays the Name of the honor roll level from [HonorRoll]Level.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"level\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" result="level")"
-      },
-      {
-        "name": "Honor Roll Grade Message",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"message\")",
-        "desc": "Displays the Message associated with the honor roll level from [HonorRoll]Message.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"message\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" result="message")"
-      },
-      {
-        "name": "Honor Roll Grade GPA",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"GPA\")",
-        "desc": "Displays the GPA used to determine the honor roll from [HonorRoll]GPA.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"GPA\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" result="GPA")"
-      },
-      {
-        "name": "Honor Roll Grade School Name",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"SchoolName\")",
-        "desc": "Displays the School associated with the honor roll record from [HonorRoll]SchoolName.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"SchoolName\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" result="SchoolName")"
-      },
-      {
-        "name": "Honor Roll Grade Date",
-        "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"Date\")",
-        "desc": "Displays the Date honor roll was calculated from [HonorRoll]DateStored.",
-        "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"Date\")",
-        "ex": "~(*honorroll method="Honor Roll" term="Q1" result="Date")"
-      }
-    ]
-  }
+    {
+        "section": "Honor Roll Tags",
+        "description": "<p>The Honor Roll DAT returns results from the [HonorRoll] table. Honor Roll Methods are setup at Start Page > School > Honor Roll. For more information on the Honor Roll click on the help icon in the upper right hand corner of the Honor Roll Levels page to access the PowerSchool Help Files.</p><p>When creating an honor roll level, it is common to choose a GPA Calculation Method. For more information on GPAs, navigate to Start Page > District Setup > GPA Calculations > Calculation Methods > select a calculation and then access the PowerSchool Help Files. You may also refer to Knowledgebase article 11148 on PowerSource.</p>",
+        "tags": [
+            {
+                "name": "Honor Roll Method",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\")",
+                "desc": "Identifies the name of the Honor Roll Method used to determine the honor roll.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\")",
+                "ex": "~(*honorroll method=\"Honor Roll\")"
+            },
+            {
+                "name": "Honor Roll Term",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\")",
+                "desc": "Narrows the honor roll records by the store code used when calculating the Honor Roll.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\")"
+            },
+            {
+                "name": "Honor Roll Grade Level",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" grade=\"{grade_levels}\")",
+                "desc": "Narrows the honor roll records by either a single grade level or a comma separated list of grade levels.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" grade=\"10\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" grade=\"10\")"
+            },
+            {
+                "name": "Honor Roll Grade Year",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" year=\"{year_numbers}\")",
+                "desc": "Narrows the honor roll records by either a single year or a comma separated list of years.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" year=\"2020\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" year=\"2020\")"
+            },
+            {
+                "name": "Honor Roll Grade Level",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"level\")",
+                "desc": "Displays the Name of the honor roll level from [HonorRoll]Level.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"level\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"level\")"
+            },
+            {
+                "name": "Honor Roll Grade Message",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"message\")",
+                "desc": "Displays the Message associated with the honor roll level from [HonorRoll]Message.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"message\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"message\")"
+            },
+            {
+                "name": "Honor Roll Grade GPA",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"GPA\")",
+                "desc": "Displays the GPA used to determine the honor roll from [HonorRoll]GPA.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"GPA\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"GPA\")"
+            },
+            {
+                "name": "Honor Roll Grade School Name",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"SchoolName\")",
+                "desc": "Displays the School associated with the honor roll record from [HonorRoll]SchoolName.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"SchoolName\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"SchoolName\")"
+            },
+            {
+                "name": "Honor Roll Grade Date",
+                "disp": "&#126;(*honorroll method=\"{Honor_Roll_Method_name}\" term=\"{term_abbreviation}\" result=\"Date\")",
+                "desc": "Displays the Date honor roll was calculated from [HonorRoll]DateStored.",
+                "code": "&#126;(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"Date\")",
+                "ex": "~(*honorroll method=\"Honor Roll\" term=\"Q1\" result=\"Date\")"
+            }
+        ]
+    }
 ]
