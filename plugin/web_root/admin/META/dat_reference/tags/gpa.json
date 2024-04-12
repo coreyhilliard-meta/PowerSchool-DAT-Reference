@@ -30,10 +30,10 @@
       },
       {
         "name": "Credit Hours by Credit Types",
-        "disp": "&#126;(*credit_hours;{creditTypes})",
+        "disp": "&#126;(*credit_hours,credit_type,{creditTypes})",
         "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {creditTypes}.",
-        "code": "&#126;(*credit_hours;MTO,MTA)",
-        "ex": "~(*credit_hours;MTO,MTA)"
+        "code": "&#126;(*credit_hours,credit_type,MTO,MTA)",
+        "ex": "~(*credit_hours,credit_type,MTO,MTA)"
       },
       {
         "name": "Credit Hours by Term",
@@ -55,6 +55,13 @@
         "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {year}.",
         "code": "&#126;(*credit_hours;2020)",
         "ex": "~(*credit_hours;2020)"
+      },
+      {
+        "name": "Credit Hours by Multiple Attributes",
+        "disp": "&#126;(*credit_hours,credit_type,{creditTypes};{grade_level})",
+        "desc": "This credit_hours DAT returns the number of cumulative historical earned {creditTypes} credit hours earned by the student for the specified {year}.<br><b>Note: </b>credit_type must the the first attribute.",
+        "code": "&#126;(*credit_hours,credit_type,ENG;11)",
+        "ex": "~(*credit_hours,credit_type,ENG;11)"
       },
       {
         "name": "Cumulative avg. % earned in all classes (weighted)",
