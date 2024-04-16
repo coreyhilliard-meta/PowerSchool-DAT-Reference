@@ -120,8 +120,38 @@
         "desc": "Return a field to be passed to a JavaScript function as the encoded format of [01]fieldname (returns using the UF- format)",
         "code": "&#126;(JSFieldParam;[01]LastFirst)",
         "ex": "~(JSFieldParam;[01]LastFirst)"
+      },
+      {
+        "name": "Attendance Code Legend",
+        "disp": "&#126;[x:att_code_legend]",
+        "desc": "Displays the Attendance Code Legend. This works at the school level.",
+        "ex": "<noquote>~[x:att_code_legend]</noquote>"
+      },
+      {
+        "name": "Attendance Code Legend (This School)",
+        "disp": "&#126;[x:att_code_legend;thisschool]",
+        "desc": "Displays the Attendance Code Legend. This works at the school level.",
+        "ex": "<noquote>~[x:att_code_legend;thisschool]</noquote>"
+      },
+      {
+        "name": "Attendance Code Legend (Student School)",
+        "disp": "&#126;[x:att_code_legend;studentschool]",
+        "desc": "Displays the Attendance Code Legend. This works at the school or district level.",
+        "ex": "<noquote>~[x:att_code_legend;studentschool]</noquote>"
+      },
+      {
+        "name": "Attendance Code Legend (If Blank)",
+        "disp": "&#126;[x:att_code_legend;if.blank.then={string}]",
+        "desc": "Displays the Attendance Code Legend, if blank then display the {string}. This works at the school level.",
+        "code": "&#126;[x:att_code_legend;if.blank.then=Blank]",
+        "ex": "<noquote>~[x:att_code_legend;if.blank.then=Blank]</noquote>"
+      },
+      {
+        "name": "Citizenship Code Legend",
+        "disp": "&#126;[x:CitizenshipCodeLegend]",
+        "desc": "Displays the Citizenship Code Legend.",
+        "ex": "<noquote>~[x:CitizenshipCodeLegend]</noquote>"
       }
-      
     ]
   }
 ]
