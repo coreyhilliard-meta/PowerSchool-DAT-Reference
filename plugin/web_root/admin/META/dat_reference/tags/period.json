@@ -1,7 +1,7 @@
 [
   {
     "section": "Period Information",
-    "description": "The period_info DAT is used to section and current grade information based on a student’s course enrollment in the specified period.",
+    "description": "The period_info DAT is used to section and current grade information based on a student's course enrollment in the specified period.",
     "tags": [
       {
         "name": "Letter Grade by Expression",

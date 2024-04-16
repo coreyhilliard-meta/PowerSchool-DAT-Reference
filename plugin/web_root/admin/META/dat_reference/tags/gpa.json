@@ -1,7 +1,7 @@
 [
   {
     "section": "GPA Tags",
-    "description": "<p>The GPA DAT returns a student’s GPA based on the specified parameters. GPAs are calculated on the fly and not stored in a database table.</p>",
+    "description": "<p>The GPA DAT returns a student's GPA based on the specified parameters. GPAs are calculated on the fly and not stored in a database table.</p>",
     "tags": [
       {
         "name": "Cumulative GPA (Weighted)",

@@ -37,27 +37,27 @@
       {
         "name": "School Counselors (with delimiter)",
         "disp": "&#126;(*schoolcounselors;all;{counselor_delimiter})",
-        "desc": "Display all counselors at all schools, not only the student’s school using the {counselor_delimiter} to separate counselors within a single school.",
+        "desc": "Display all counselors at all schools, not only the student's school using the {counselor_delimiter} to separate counselors within a single school.",
         "code": "&#126;(*schoolcounselors;;, )",
         "ex": "~(*schoolcounselors;;, )"
       },
       {
         "name": "All School Counselors",
         "disp": "&#126;(*schoolcounselors;all)",
-        "desc": "Display all counselors at all schools, not only the student’s school.",
+        "desc": "Display all counselors at all schools, not only the student's school.",
         "ex": "<span class='limitOutput'>~(*schoolcounselors;all)</span>"
       },
       {
         "name": "All School Counselors (with school delimiter)",
         "disp": "&#126;(*schoolcounselors;all;{counselor_delimiter};{school_delimiter})",
-        "desc": "Display all counselors at all schools, not only the student’s school using the {school_delimiter} to separate schools from counselors.<br><i>Use newline to separate school by new line</i>",
+        "desc": "Display all counselors at all schools, not only the student's school using the {school_delimiter} to separate schools from counselors.<br><i>Use newline to separate school by new line</i>",
         "code": "&#126;(*schoolcounselors;all;, ;:)",
         "ex": "<span class='limitOutput'>~(*schoolcounselors;all;, ;:)</span>"
       },
       {
         "name": "All School Counselors (with last counselor delimiter)",
         "disp": "&#126;(*schoolcounselors;all;{counselor_delimiter};{school_delimiter};{last_counselor_delimiter})",
-        "desc": "Display all counselors at all schools, not only the student’s school using the {last_counselor_delimiter} to separate the last counselor in a previous school from the next school.",
+        "desc": "Display all counselors at all schools, not only the student's school using the {last_counselor_delimiter} to separate the last counselor in a previous school from the next school.",
         "code": "&#126;(*schoolcounselors;all;, ;: ,|)",
         "ex": "<span class='limitOutput'>~(*schoolcounselors;all;, ;: ,|)</span>"
       }
