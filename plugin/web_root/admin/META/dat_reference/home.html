@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>PowerSchool DAT Reference</title>
+    <title>META PowerSchool DAT Reference</title>
     ~[wc:commonscripts]
     <link href="/images/css/screen.css" rel="stylesheet" media="screen">
     <link href="/images/css/print.css" rel="stylesheet" media="print">
@@ -21,13 +21,13 @@
     [else#school]
     <a href="/admin/district/" target="_top">District Setup</a> &gt;
     [/if#school]
-    PowerSchool DAT Reference
+    META PowerSchool DAT Reference
     <!-- End of breadcrumb navigation -->
 
     ~[wc:admin_navigation_css]
     <div ng-controller="METAReferenceCtrl" ng-cloak>
         <h1>
-            PowerSchool DAT Reference <em>[{{tagCount}}<i data-ng-if="loading">+</i> tags]</em>
+            META PowerSchool DAT Reference <em>[{{tagCount}}<i data-ng-if="loading">+</i> tags]</em>
             ~[if#metaCatalog.plugin.isEnabled.META Customizations]
             <script src="/admin/META/meta.javascript?name=meta_reference"></script>
             [else#metaCatalog]
@@ -79,7 +79,7 @@
 
             <div data-ng-if="data.showEmailForm" id="suggestDATForm">
                 <fieldset>
-                    <legend>Suggest DAT Form</legend>
+                    <legend>Suggest Missing DAT Form</legend>
 
                     <div class="feedback-info">
                         <p>Thank you for your suggestion! Please fill out the form below and we will review your suggestion.</p>
