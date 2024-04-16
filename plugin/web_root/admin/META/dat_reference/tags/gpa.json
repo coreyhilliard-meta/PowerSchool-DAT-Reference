@@ -29,6 +29,12 @@
         "ex": "~(*credit_hours)"
       },
       {
+        "name": "Cumulative credit hours earned, limited by",
+        "disp": "&#126;(*credit_hours;{credit_type,{creditTypes}};{studentGrade};{year};{creditTerms})",
+        "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student. The value can optionally be limited to {creditTypes}, {studentGrade}, {year}, and {creditTerms}.",
+        "ex": "~(*credit_hours;{creditTypes};{studentGrade};{year};{creditTerms})"
+      },
+      {
         "name": "Credit Hours by Credit Types",
         "disp": "&#126;(*credit_hours,credit_type,{creditTypes})",
         "desc": "The credit_hours DAT returns the number of cumulative historical earned credit hours earned by the student for the specified {creditTypes}.",
