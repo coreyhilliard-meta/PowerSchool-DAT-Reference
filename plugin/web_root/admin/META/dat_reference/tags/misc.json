@@ -262,33 +262,53 @@
         "desc": "Returns a 10 digit random number.",
         "ex": "~[randomnumber]"
       },
-
       {
-        "name": "Random String",
+        "name": "Random Number",
+        "disp": "&#126;[f.random{;min=}{;max=}]",
+        "desc": "Returns a random number between the min and max values.",
+        "code": "&#126;[f.random;min=1;max=25]",
+        "ex": "~[f.random;min=1;max=25]"
+      },
+      {
+        "name": "Random Number by Length",
+        "disp": "&#126;[randomnumber{;length}]",
+        "desc": "Returns a random number of the specified length. If no length is specified, it will default to 10.",
+        "code": "&#126;[randomnumber;4]",
+        "ex": "~[randomnumber;4]"
+      },
+      {
+        "name": "Random String by Length",
+        "disp": "&#126;(f.RandomString{;maxlen=}{;minascii=}{;maxascii=}{;usechars=}{;exclude=})",
+        "desc": "Returns a random string between the specified lengths. If minascii and maxascii are specified, the string will only contains characters between those values. If usechars is specified, the string will only contain characters from the usechars string. If exclude is specified, the string will not contain any characters from the exclude string.",
+        "code": "&#126;(f.RandomString;minlen=8;maxlen=10;minascii=65;maxascii=90;exclude=AEIOU)",
+        "ex": "~(f.RandomString;minlen=8;maxlen=10;minascii=65;maxascii=90;exclude=AEIOU)"
+      },
+      {
+        "name": "Random 16 String",
         "disp": "&#126;(random16)",
         "desc": "Returns a 16 character string.",
         "ex": "~(random16)"
       },
       {
-        "name": "Random String",
+        "name": "Random 32 String",
         "disp": "&#126;(random32)",
         "desc": "Returns a 32 character string.",
         "ex": "~(random32)"
       },
       {
-        "name": "Random String",
+        "name": "Random 64 String",
         "disp": "&#126;(random64)",
         "desc": "Returns a 64 character string.",
         "ex": "~(random64)"
       },
       {
-        "name": "Random String",
+        "name": "Random 128 String",
         "disp": "&#126;(random128)",
         "desc": "Returns a 128 character string.",
         "ex": "~(random128)"
       },
       {
-        "name": "Random String",
+        "name": "Random 256 String",
         "disp": "&#126;(random256)",
         "desc": "Returns a 256 character string.",
         "ex": "~(random256)"
